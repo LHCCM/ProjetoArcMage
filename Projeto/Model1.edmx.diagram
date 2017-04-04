@@ -12,7 +12,7 @@
         <InheritanceConnector EntityType="Model1.Administrator" />
         <EntityTypeShape EntityType="Model1.Game" Width="1.5" PointX="0.5" PointY="3" />
         <EntityTypeShape EntityType="Model1.Deck" Width="1.5" PointX="3.125" PointY="3.125" />
-        <EntityTypeShape EntityType="Model1.Card" Width="1.5" PointX="5.375" PointY="3.125" />
+        <EntityTypeShape EntityType="Model1.Card" Width="1.5" PointX="5.75" PointY="3.125" />
         <EntityTypeShape EntityType="Model1.StandardGame" Width="1.5" PointX="0.5" PointY="7.625" />
         <InheritanceConnector EntityType="Model1.StandardGame" />
         <EntityTypeShape EntityType="Model1.TeamGame" Width="1.5" PointX="2.875" PointY="6.125" />

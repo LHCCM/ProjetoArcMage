@@ -81,11 +81,11 @@
     <Compile Include="EditarBaralho.Designer.cs">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormCartas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormCartas.Designer.cs">
+      <DependentUpon>FormCartas.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -109,8 +109,8 @@
     <EmbeddedResource Include="EditarBaralho.resx">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormCartas.resx">
+      <DependentUpon>FormCartas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
