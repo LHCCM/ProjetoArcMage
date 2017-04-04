@@ -75,12 +75,6 @@
     <Compile Include="CriarCarta.Designer.cs">
       <DependentUpon>CriarCarta.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuAdmin.Designer.cs">
-      <DependentUpon>MenuAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,9 +99,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CriarCarta.resx">
       <DependentUpon>CriarCarta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuAdmin.resx">
-      <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
