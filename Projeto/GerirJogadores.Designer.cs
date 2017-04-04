@@ -37,6 +37,8 @@
             this.buttonEditarJogador = new System.Windows.Forms.Button();
             this.buttonApagarJogador = new System.Windows.Forms.Button();
             this.buttonNovoJogador = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelGerirJogadores
@@ -119,11 +121,20 @@
             this.buttonNovoJogador.Text = "Novo Jogador";
             this.buttonNovoJogador.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(178, 82);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 96);
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
             // GerirJogadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 405);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonEditarJogador);
             this.Controls.Add(this.buttonApagarJogador);
@@ -135,6 +146,7 @@
             this.Controls.Add(this.labelGerirJogadores);
             this.Name = "GerirJogadores";
             this.Text = "Gerir Jogadores";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Button buttonEditarJogador;
         private System.Windows.Forms.Button buttonApagarJogador;
         private System.Windows.Forms.Button buttonNovoJogador;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

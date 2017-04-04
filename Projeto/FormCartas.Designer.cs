@@ -68,7 +68,7 @@
             // 
             // buttonAdicionarCarta
             // 
-            this.buttonAdicionarCarta.Location = new System.Drawing.Point(36, 297);
+            this.buttonAdicionarCarta.Location = new System.Drawing.Point(22, 297);
             this.buttonAdicionarCarta.Name = "buttonAdicionarCarta";
             this.buttonAdicionarCarta.Size = new System.Drawing.Size(121, 23);
             this.buttonAdicionarCarta.TabIndex = 17;

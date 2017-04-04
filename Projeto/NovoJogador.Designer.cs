@@ -42,7 +42,9 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.buttonConfirmNovoJogador = new System.Windows.Forms.Button();
             this.buttonCancelarNovoJogador = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNomeCarta
@@ -105,7 +107,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(396, 190);
+            this.button1.Location = new System.Drawing.Point(385, 190);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 23);
             this.button1.TabIndex = 12;
@@ -179,11 +181,20 @@
             this.buttonCancelarNovoJogador.Text = "Cancelar";
             this.buttonCancelarNovoJogador.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(362, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(153, 132);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // buttonNovoJogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 225);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonCancelarNovoJogador);
             this.Controls.Add(this.buttonConfirmNovoJogador);
             this.Controls.Add(this.numericUpDown1);
@@ -201,6 +212,7 @@
             this.Name = "buttonNovoJogador";
             this.Text = "Novo Jogador";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +234,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button buttonConfirmNovoJogador;
         private System.Windows.Forms.Button buttonCancelarNovoJogador;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

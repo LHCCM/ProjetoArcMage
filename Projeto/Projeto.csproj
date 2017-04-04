@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Projeto.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -99,6 +102,24 @@
     <Compile Include="FormCartas.Designer.cs">
       <DependentUpon>FormCartas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GerirEquipas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirEquipas.Designer.cs">
+      <DependentUpon>GerirEquipas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerirEquipasJogadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirEquipasJogadores.Designer.cs">
+      <DependentUpon>GerirEquipasJogadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerirJogadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirJogadores.Designer.cs">
+      <DependentUpon>GerirJogadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +143,18 @@
     <Compile Include="NovoBaralho.Designer.cs">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
     </Compile>
+    <Compile Include="NovoEditarUtilizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoEditarUtilizador.Designer.cs">
+      <DependentUpon>NovoEditarUtilizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovoJogador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoJogador.Designer.cs">
+      <DependentUpon>NovoJogador.cs</DependentUpon>
+    </Compile>
     <Compile Include="NovoJogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +175,12 @@
     <Compile Include="TorneioForm.Designer.cs">
       <DependentUpon>TorneioForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilizadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilizadores.Designer.cs">
+      <DependentUpon>Utilizadores.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Baralhos.resx">
       <DependentUpon>Baralhos.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,11 +199,26 @@
     <EmbeddedResource Include="FormCartas.resx">
       <DependentUpon>FormCartas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GerirEquipas.resx">
+      <DependentUpon>GerirEquipas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerirEquipasJogadores.resx">
+      <DependentUpon>GerirEquipasJogadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerirJogadores.resx">
+      <DependentUpon>GerirJogadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoEditarUtilizador.resx">
+      <DependentUpon>NovoEditarUtilizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoJogador.resx">
+      <DependentUpon>NovoJogador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoJogo.resx">
       <DependentUpon>NovoJogo.cs</DependentUpon>
@@ -183,6 +237,9 @@
     </Compile>
     <EmbeddedResource Include="TorneioForm.resx">
       <DependentUpon>TorneioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilizadores.resx">
+      <DependentUpon>Utilizadores.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
