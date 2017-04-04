@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class Cartas : Form
+    public partial class FormCartas : Form
     {
-        public Cartas()
+        public FormCartas()
         {
             InitializeComponent();
         }
