@@ -103,7 +103,7 @@
             // 
             // buttonEditarBaralho
             // 
-            this.buttonEditarBaralho.Location = new System.Drawing.Point(232, 314);
+            this.buttonEditarBaralho.Location = new System.Drawing.Point(232, 309);
             this.buttonEditarBaralho.Name = "buttonEditarBaralho";
             this.buttonEditarBaralho.Size = new System.Drawing.Size(121, 23);
             this.buttonEditarBaralho.TabIndex = 10;
@@ -112,7 +112,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(232, 343);
+            this.buttonVoltar.Location = new System.Drawing.Point(232, 338);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(121, 23);
             this.buttonVoltar.TabIndex = 11;
