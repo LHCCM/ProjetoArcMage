@@ -98,8 +98,20 @@
     <Compile Include="NovoBaralho.Designer.cs">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
     </Compile>
+    <Compile Include="NovoEditarUtilizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoEditarUtilizador.Designer.cs">
+      <DependentUpon>NovoEditarUtilizador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilizadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilizadores.Designer.cs">
+      <DependentUpon>Utilizadores.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Baralhos.resx">
       <DependentUpon>Baralhos.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +127,9 @@
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NovoEditarUtilizador.resx">
+      <DependentUpon>NovoEditarUtilizador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -124,6 +139,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Utilizadores.resx">
+      <DependentUpon>Utilizadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
