@@ -81,6 +81,18 @@
     <Compile Include="EditarBaralho.Designer.cs">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarJogo.Designer.cs">
+      <DependentUpon>EditarJogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarTorneio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarTorneio.Designer.cs">
+      <DependentUpon>EditarTorneio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCartas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,8 +110,26 @@
     <Compile Include="NovoBaralho.Designer.cs">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
     </Compile>
+    <Compile Include="NovoJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoJogo.Designer.cs">
+      <DependentUpon>NovoJogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovoTorneio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoTorneio.Designer.cs">
+      <DependentUpon>NovoTorneio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TorneioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TorneioForm.Designer.cs">
+      <DependentUpon>TorneioForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Baralhos.resx">
       <DependentUpon>Baralhos.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,11 +139,23 @@
     <EmbeddedResource Include="EditarBaralho.resx">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarJogo.resx">
+      <DependentUpon>EditarJogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarTorneio.resx">
+      <DependentUpon>EditarTorneio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCartas.resx">
       <DependentUpon>FormCartas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoJogo.resx">
+      <DependentUpon>NovoJogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoTorneio.resx">
+      <DependentUpon>NovoTorneio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +166,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TorneioForm.resx">
+      <DependentUpon>TorneioForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
