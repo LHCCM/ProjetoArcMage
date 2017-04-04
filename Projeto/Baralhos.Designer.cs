@@ -94,7 +94,7 @@
             // 
             // buttonApagarBaralho
             // 
-            this.buttonApagarBaralho.Location = new System.Drawing.Point(16, 343);
+            this.buttonApagarBaralho.Location = new System.Drawing.Point(12, 343);
             this.buttonApagarBaralho.Name = "buttonApagarBaralho";
             this.buttonApagarBaralho.Size = new System.Drawing.Size(121, 23);
             this.buttonApagarBaralho.TabIndex = 9;
