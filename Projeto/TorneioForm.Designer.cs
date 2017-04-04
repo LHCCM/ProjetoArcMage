@@ -197,7 +197,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(460, 457);
+            this.buttonVoltar.Location = new System.Drawing.Point(495, 457);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(120, 23);
             this.buttonVoltar.TabIndex = 17;
