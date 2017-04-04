@@ -47,6 +47,7 @@
         <AssociationConnector Association="Model1.TeamTournamentTeam2" />
         <AssociationConnector Association="Model1.TeamPlayer1" />
         <AssociationConnector Association="Model1.TeamPlayer2" />
+        <AssociationConnector Association="Model1.TournamentGame" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

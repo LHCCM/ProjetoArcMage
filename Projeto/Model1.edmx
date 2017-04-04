@@ -76,6 +76,10 @@
             <End Role="Team" EntitySet="Team" />
             <End Role="Player" EntitySet="Player" />
           </AssociationSet>
+          <AssociationSet Name="TournamentGame" Association="Model1.TournamentGame">
+            <End Role="Tournament" EntitySet="Tournament" />
+            <End Role="Game" EntitySet="Game" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -105,6 +109,7 @@
           <Property Name="DeckId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Deck1" Relationship="Model1.DeckGame1" FromRole="Game" ToRole="Deck" />
           <NavigationProperty Name="Deck2" Relationship="Model1.DeckGame2" FromRole="Game" ToRole="Deck" />
+          <NavigationProperty Name="Tournament" Relationship="Model1.TournamentGame" FromRole="Game" ToRole="Tournament" />
         </EntityType>
         <EntityType Name="Deck">
           <Key>
@@ -140,6 +145,7 @@
           <Property Name="Nome" Type="String" Nullable="false" />
           <Property Name="Data" Type="String" Nullable="false" />
           <Property Name="Desc" Type="String" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="Model1.TournamentGame" FromRole="Tournament" ToRole="Game" />
         </EntityType>
         <EntityType Name="TeamTournament" BaseType="Model1.Tournament" >
           <NavigationProperty Name="Team1" Relationship="Model1.TeamTournamentTeam1" FromRole="TeamTournament" ToRole="Team" />
@@ -235,6 +241,10 @@
         <Association Name="TeamPlayer2">
           <End Type="Model1.Team" Role="Team" Multiplicity="*" />
           <End Type="Model1.Player" Role="Player" Multiplicity="*" />
+        </Association>
+        <Association Name="TournamentGame">
+          <End Type="Model1.Tournament" Role="Tournament" Multiplicity="1" />
+          <End Type="Model1.Game" Role="Game" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
