@@ -75,6 +75,12 @@
     <Compile Include="CriarCarta.Designer.cs">
       <DependentUpon>CriarCarta.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarBaralho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarBaralho.Designer.cs">
+      <DependentUpon>EditarBaralho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CriarCarta.resx">
       <DependentUpon>CriarCarta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarBaralho.resx">
+      <DependentUpon>EditarBaralho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
