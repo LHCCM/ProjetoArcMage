@@ -45,7 +45,7 @@
             // 
             this.labelEditarBaralho.AutoSize = true;
             this.labelEditarBaralho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditarBaralho.Location = new System.Drawing.Point(114, 9);
+            this.labelEditarBaralho.Location = new System.Drawing.Point(102, 9);
             this.labelEditarBaralho.Name = "labelEditarBaralho";
             this.labelEditarBaralho.Size = new System.Drawing.Size(127, 24);
             this.labelEditarBaralho.TabIndex = 0;

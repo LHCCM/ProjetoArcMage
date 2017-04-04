@@ -43,7 +43,7 @@
             // 
             this.labelCartas.AutoSize = true;
             this.labelCartas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCartas.Location = new System.Drawing.Point(138, 9);
+            this.labelCartas.Location = new System.Drawing.Point(132, 9);
             this.labelCartas.Name = "labelCartas";
             this.labelCartas.Size = new System.Drawing.Size(89, 25);
             this.labelCartas.TabIndex = 3;
