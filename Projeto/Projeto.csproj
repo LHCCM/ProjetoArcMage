@@ -81,11 +81,35 @@
     <Compile Include="EditarBaralho.Designer.cs">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCartas.cs">
+    <Compile Include="Cartas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCartas.Designer.cs">
-      <DependentUpon>FormCartas.cs</DependentUpon>
+    <Compile Include="Cartas.Designer.cs">
+      <DependentUpon>Cartas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerirEquipas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirEquipas.Designer.cs">
+      <DependentUpon>GerirEquipas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovoJogador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoJogador.Designer.cs">
+      <DependentUpon>NovoJogador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerirEquipasJogadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirEquipasJogadores.Designer.cs">
+      <DependentUpon>GerirEquipasJogadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerirJogadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirJogadores.Designer.cs">
+      <DependentUpon>GerirJogadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -109,11 +133,23 @@
     <EmbeddedResource Include="EditarBaralho.resx">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCartas.resx">
-      <DependentUpon>FormCartas.cs</DependentUpon>
+    <EmbeddedResource Include="Cartas.resx">
+      <DependentUpon>Cartas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerirEquipas.resx">
+      <DependentUpon>GerirEquipas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerirEquipasJogadores.resx">
+      <DependentUpon>GerirEquipasJogadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerirJogadores.resx">
+      <DependentUpon>GerirJogadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoJogador.resx">
+      <DependentUpon>NovoJogador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

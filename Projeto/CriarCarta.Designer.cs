@@ -247,7 +247,7 @@
             this.Controls.Add(this.labelNomeCarta);
             this.Controls.Add(this.labelCartas);
             this.Name = "CriarCarta";
-            this.Text = "CriarCarta";
+            this.Text = "Criar Carta";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAtaque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDefesa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCusto)).EndInit();
