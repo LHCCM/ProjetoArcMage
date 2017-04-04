@@ -37,7 +37,7 @@
             // 
             // buttonNovoBaralhoConfimar
             // 
-            this.buttonNovoBaralhoConfimar.Location = new System.Drawing.Point(112, 116);
+            this.buttonNovoBaralhoConfimar.Location = new System.Drawing.Point(9, 113);
             this.buttonNovoBaralhoConfimar.Name = "buttonNovoBaralhoConfimar";
             this.buttonNovoBaralhoConfimar.Size = new System.Drawing.Size(75, 23);
             this.buttonNovoBaralhoConfimar.TabIndex = 0;
