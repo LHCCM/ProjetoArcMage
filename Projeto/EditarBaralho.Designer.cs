@@ -154,7 +154,7 @@
             this.Controls.Add(this.labelNomeBaralho);
             this.Controls.Add(this.labelEditarBaralho);
             this.Name = "EditarBaralho";
-            this.Text = "EditarBaralho";
+            this.Text = "Editar Baralho";
             this.ResumeLayout(false);
             this.PerformLayout();
 
