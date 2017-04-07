@@ -241,7 +241,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditarJogoArbitroForm";
-            this.Text = "EditarJogoArbitroForm";
+            this.Text = "Editar Jogo ";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHora)).EndInit();
             this.ResumeLayout(false);
