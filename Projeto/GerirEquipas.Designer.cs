@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class GerirEquipas
+    partial class GerirEquipasForm
     {
         /// <summary>
         /// Required designer variable.

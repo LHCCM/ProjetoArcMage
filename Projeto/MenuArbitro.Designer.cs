@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class MenuArbitro
+    partial class MenuArbitroForm
     {
         /// <summary>
         /// Required designer variable.

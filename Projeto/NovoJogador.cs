@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class buttonNovoJogador : Form
+    public partial class NovoJogadorForm : Form
     {
-        public buttonNovoJogador()
+        public NovoJogadorForm()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class MenuArbitro : Form
+    public partial class MenuArbitroForm : Form
     {
-        public MenuArbitro()
+        public MenuArbitroForm()
         {
             InitializeComponent();
         }

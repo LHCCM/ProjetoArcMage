@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class NovoTorneio : Form
+    public partial class NovoTorneioForm : Form
     {
-        public NovoTorneio()
+        public NovoTorneioForm()
         {
             InitializeComponent();
         }

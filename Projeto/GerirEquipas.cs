@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class GerirEquipas : Form
+    public partial class GerirEquipasForm : Form
     {
-        public GerirEquipas()
+        public GerirEquipasForm()
         {
             InitializeComponent();
         }
