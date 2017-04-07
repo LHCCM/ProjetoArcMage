@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxNomeCarta = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
             this.labelNomeJogador = new System.Windows.Forms.Label();
             this.labelNovoJogador = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNick = new System.Windows.Forms.TextBox();
             this.labelNickname = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEscolherAvatar = new System.Windows.Forms.Button();
             this.labelIdJogador = new System.Windows.Forms.Label();
             this.labelIdnome = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.labelIdade = new System.Windows.Forms.Label();
+            this.numericUpDownIdade = new System.Windows.Forms.NumericUpDown();
             this.buttonConfirmNovoJogador = new System.Windows.Forms.Button();
             this.buttonCancelarNovoJogador = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBoxNomeCarta
+            // textBoxNome
             // 
-            this.textBoxNomeCarta.Location = new System.Drawing.Point(108, 74);
-            this.textBoxNomeCarta.Name = "textBoxNomeCarta";
-            this.textBoxNomeCarta.Size = new System.Drawing.Size(230, 20);
-            this.textBoxNomeCarta.TabIndex = 6;
+            this.textBoxNome.Location = new System.Drawing.Point(108, 74);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(230, 20);
+            this.textBoxNome.TabIndex = 6;
             // 
             // labelNomeJogador
             // 
@@ -73,12 +73,12 @@
             this.labelNovoJogador.TabIndex = 7;
             this.labelNovoJogador.Text = "Gerir Jogadores";
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBoxEmail.Location = new System.Drawing.Point(108, 100);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(230, 20);
+            this.textBoxEmail.TabIndex = 9;
             // 
             // labelEmail
             // 
@@ -89,12 +89,12 @@
             this.labelEmail.TabIndex = 8;
             this.labelEmail.Text = "Email do Jogador:";
             // 
-            // textBox2
+            // textBoxNick
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 20);
-            this.textBox2.TabIndex = 11;
+            this.textBoxNick.Location = new System.Drawing.Point(108, 126);
+            this.textBoxNick.Name = "textBoxNick";
+            this.textBoxNick.Size = new System.Drawing.Size(232, 20);
+            this.textBoxNick.TabIndex = 11;
             // 
             // labelNickname
             // 
@@ -105,14 +105,14 @@
             this.labelNickname.TabIndex = 10;
             this.labelNickname.Text = "Nickname :";
             // 
-            // button1
+            // buttonEscolherAvatar
             // 
-            this.button1.Location = new System.Drawing.Point(385, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Escolher Avatar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonEscolherAvatar.Location = new System.Drawing.Point(385, 190);
+            this.buttonEscolherAvatar.Name = "buttonEscolherAvatar";
+            this.buttonEscolherAvatar.Size = new System.Drawing.Size(106, 23);
+            this.buttonEscolherAvatar.TabIndex = 12;
+            this.buttonEscolherAvatar.Text = "Escolher Avatar";
+            this.buttonEscolherAvatar.UseVisualStyleBackColor = true;
             // 
             // labelIdJogador
             // 
@@ -132,32 +132,32 @@
             this.labelIdnome.TabIndex = 14;
             this.labelIdnome.Text = "Id do Jogador :";
             // 
-            // label1
+            // labelIdade
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Idade do Jogador :";
+            this.labelIdade.AutoSize = true;
+            this.labelIdade.Location = new System.Drawing.Point(199, 157);
+            this.labelIdade.Name = "labelIdade";
+            this.labelIdade.Size = new System.Drawing.Size(96, 13);
+            this.labelIdade.TabIndex = 15;
+            this.labelIdade.Text = "Idade do Jogador :";
             // 
-            // numericUpDown1
+            // numericUpDownIdade
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(301, 155);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownIdade.Location = new System.Drawing.Point(301, 155);
+            this.numericUpDownIdade.Maximum = new decimal(new int[] {
             150,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numericUpDownIdade.Minimum = new decimal(new int[] {
             12,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDown1.TabIndex = 16;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDownIdade.Name = "numericUpDownIdade";
+            this.numericUpDownIdade.Size = new System.Drawing.Size(39, 20);
+            this.numericUpDownIdade.TabIndex = 16;
+            this.numericUpDownIdade.Value = new decimal(new int[] {
             12,
             0,
             0,
@@ -189,7 +189,7 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonNovoJogador
+            // NovoJogadorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,21 +197,21 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonCancelarNovoJogador);
             this.Controls.Add(this.buttonConfirmNovoJogador);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericUpDownIdade);
+            this.Controls.Add(this.labelIdade);
             this.Controls.Add(this.labelIdnome);
             this.Controls.Add(this.labelIdJogador);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.buttonEscolherAvatar);
+            this.Controls.Add(this.textBoxNick);
             this.Controls.Add(this.labelNickname);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.labelNovoJogador);
-            this.Controls.Add(this.textBoxNomeCarta);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelNomeJogador);
-            this.Name = "buttonNovoJogador";
+            this.Name = "NovoJogadorForm";
             this.Text = "Novo Jogador";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIdade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,18 +220,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxNomeCarta;
+        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label labelNomeJogador;
         private System.Windows.Forms.Label labelNovoJogador;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNick;
         private System.Windows.Forms.Label labelNickname;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEscolherAvatar;
         private System.Windows.Forms.Label labelIdJogador;
         private System.Windows.Forms.Label labelIdnome;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label labelIdade;
+        private System.Windows.Forms.NumericUpDown numericUpDownIdade;
         private System.Windows.Forms.Button buttonConfirmNovoJogador;
         private System.Windows.Forms.Button buttonCancelarNovoJogador;
         private System.Windows.Forms.PictureBox pictureBox1;

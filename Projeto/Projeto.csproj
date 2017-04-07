@@ -84,6 +84,12 @@
     <Compile Include="EditarBaralho.Designer.cs">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarJogadorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarJogadorForm.Designer.cs">
+      <DependentUpon>EditarJogadorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarJogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="EditarTorneio.Designer.cs">
       <DependentUpon>EditarTorneio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarUtilizadorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarUtilizadorForm.Designer.cs">
+      <DependentUpon>EditarUtilizadorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCartas.cs">
       <SubType>Form</SubType>
@@ -125,6 +137,12 @@
     </Compile>
     <Compile Include="GerirJogadores.Designer.cs">
       <DependentUpon>GerirJogadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JogadoresInscritosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JogadoresInscritosForm.Designer.cs">
+      <DependentUpon>JogadoresInscritosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="JogosArbitroForm.cs">
       <SubType>Form</SubType>
@@ -154,6 +172,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NovaEquipaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaEquipaForm.Designer.cs">
+      <DependentUpon>NovaEquipaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NovoBaralho.cs">
       <SubType>Form</SubType>
@@ -214,6 +238,9 @@
     <EmbeddedResource Include="EditarBaralho.resx">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarJogadorForm.resx">
+      <DependentUpon>EditarJogadorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarJogo.resx">
       <DependentUpon>EditarJogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarTorneio.resx">
       <DependentUpon>EditarTorneio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarUtilizadorForm.resx">
+      <DependentUpon>EditarUtilizadorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCartas.resx">
       <DependentUpon>FormCartas.cs</DependentUpon>
@@ -235,6 +265,9 @@
     <EmbeddedResource Include="GerirJogadores.resx">
       <DependentUpon>GerirJogadores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JogadoresInscritosForm.resx">
+      <DependentUpon>JogadoresInscritosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JogosArbitroForm.resx">
       <DependentUpon>JogosArbitroForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuArbitro.resx">
       <DependentUpon>MenuArbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaEquipaForm.resx">
+      <DependentUpon>NovaEquipaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
@@ -261,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NovoTorneio.resx">
       <DependentUpon>NovoTorneio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoUtilizadorForm.resx">
+      <DependentUpon>NovoUtilizadorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

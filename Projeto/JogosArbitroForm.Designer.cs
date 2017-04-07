@@ -143,7 +143,7 @@
             this.Controls.Add(this.labelTorenios);
             this.Controls.Add(this.labelJogosArbitro);
             this.Name = "JogosArbitroForm";
-            this.Text = "JogosArbitroForm";
+            this.Text = "Jogos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
