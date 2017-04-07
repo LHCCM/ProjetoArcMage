@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class CriarCarta
+    partial class CriarCartaForm
     {
         /// <summary>
         /// Required designer variable.

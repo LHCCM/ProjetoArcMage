@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class Baralhos
+    partial class BaralhosForm
     {
         /// <summary>
         /// Required designer variable.

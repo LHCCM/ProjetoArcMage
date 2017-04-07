@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class MenuAdmin : Form
+    public partial class MenuAdminForm : Form
     {
-        public MenuAdmin()
+        public MenuAdminForm()
         {
             InitializeComponent();
         }

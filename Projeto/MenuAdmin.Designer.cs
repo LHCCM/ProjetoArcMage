@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class MenuAdmin
+    partial class MenuAdminForm
     {
         /// <summary>
         /// Required designer variable.

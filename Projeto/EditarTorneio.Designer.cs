@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class EditarTorneio
+    partial class EditarTorneioForm
     {
         /// <summary>
         /// Required designer variable.

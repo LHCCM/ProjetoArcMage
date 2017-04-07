@@ -19,7 +19,7 @@ namespace Projeto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuAdmin menuadmin = new MenuAdmin();
+            MenuAdminForm menuadmin = new MenuAdminForm();
             menuadmin.Show();
             this.Hide();
         }

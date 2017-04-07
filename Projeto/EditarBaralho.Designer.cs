@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class EditarBaralho
+    partial class EditarBaralhoForm
     {
         /// <summary>
         /// Required designer variable.
