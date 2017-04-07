@@ -81,6 +81,7 @@
             this.buttonSair.TabIndex = 4;
             this.buttonSair.Text = "Sair";
             this.buttonSair.UseVisualStyleBackColor = true;
+            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
             // buttonEditarJogo
             // 
@@ -90,8 +91,9 @@
             this.buttonEditarJogo.TabIndex = 5;
             this.buttonEditarJogo.Text = "Editar Jogo";
             this.buttonEditarJogo.UseVisualStyleBackColor = true;
+            this.buttonEditarJogo.Click += new System.EventHandler(this.buttonEditarJogo_Click);
             // 
-            // MenuArbitro
+            // MenuArbitroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,7 +104,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "MenuArbitro";
+            this.Name = "MenuArbitroForm";
             this.Text = "MenuArbitro";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

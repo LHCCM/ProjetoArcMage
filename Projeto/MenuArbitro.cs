@@ -16,5 +16,17 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void buttonEditarJogo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonSair_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            log.Show();
+            this.Close();
+        }
     }
 }
