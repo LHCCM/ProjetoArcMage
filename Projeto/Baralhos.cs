@@ -16,5 +16,12 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void buttonVoltar_Click(object sender, EventArgs e)
+        {
+            MenuAdminForm menuadmin = new MenuAdminForm();
+            menuadmin.Show();
+            this.Close();
+        }
     }
 }

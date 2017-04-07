@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class FormLogin : Form
+    public partial class LoginForm : Form
     {
-        public FormLogin()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -26,7 +26,9 @@ namespace Projeto
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            MenuArbitroForm menuarbitro = new MenuArbitroForm();
+            menuarbitro.Show();
+            this.Hide();
         }
 
         private void buttonSair_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class FormCartas
+    partial class CartasForm
     {
         /// <summary>
         /// Required designer variable.
@@ -47,6 +47,7 @@
             this.buttonVoltar.TabIndex = 20;
             this.buttonVoltar.Text = "Voltar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
             // buttonEditarCarta
             // 
@@ -119,7 +120,7 @@
             this.labelCartas.TabIndex = 12;
             this.labelCartas.Text = "Cartas";
             // 
-            // Cartas
+            // FormCartas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,7 +134,7 @@
             this.Controls.Add(this.labelListaCartas);
             this.Controls.Add(this.labelCarta);
             this.Controls.Add(this.labelCartas);
-            this.Name = "Cartas";
+            this.Name = "FormCartas";
             this.Text = "Cartas";
             this.ResumeLayout(false);
             this.PerformLayout();

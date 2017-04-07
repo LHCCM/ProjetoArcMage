@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class GerirEquipasJogadores : Form
+    public partial class GerirEquipasJogadoresForm : Form
     {
-        public GerirEquipasJogadores()
+        public GerirEquipasJogadoresForm()
         {
             InitializeComponent();
+        }
+
+        private void buttonVoltar_Click(object sender, EventArgs e)
+        {
+            MenuAdminForm menuadmin = new MenuAdminForm();
+            menuadmin.Show();
+            this.Close();
         }
     }
 }

@@ -118,8 +118,9 @@
             this.buttonVoltar.TabIndex = 11;
             this.buttonVoltar.Text = "Voltar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // Baralhos
+            // BaralhosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,7 +134,7 @@
             this.Controls.Add(this.labelListaCartas);
             this.Controls.Add(this.labelBaralhos);
             this.Controls.Add(this.labelCartas);
-            this.Name = "Baralhos";
+            this.Name = "BaralhosForm";
             this.Text = "Baralhos";
             this.ResumeLayout(false);
             this.PerformLayout();
