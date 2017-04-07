@@ -16,5 +16,12 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void buttonSair_Click(object sender, EventArgs e)
+        {
+            FormLogin log = new FormLogin();
+            log.Show();
+            this.Close();
+        }
     }
 }
