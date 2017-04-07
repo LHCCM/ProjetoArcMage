@@ -23,5 +23,29 @@ namespace Projeto
             menuadmin.Show();
             this.Close();
         }
+
+        private void buttonNovoTorneio_Click(object sender, EventArgs e)
+        {
+            NovoTorneioForm novoTourF = new NovoTorneioForm();
+            novoTourF.Show();
+        }
+
+        private void buttonEditarTorneio_Click(object sender, EventArgs e)
+        {
+            EditarTorneioForm editTourF = new EditarTorneioForm();
+            editTourF.Show();
+        }
+
+        private void buttonCriarJogo_Click(object sender, EventArgs e)
+        {
+            NovoJogoForm novoJogoF = new NovoJogoForm();
+            novoJogoF.Show();
+        }
+
+        private void buttonEditarJogo_Click(object sender, EventArgs e)
+        {
+            EditarJogo editJogoF = new EditarJogo();
+            editJogoF.Show();
+        }
     }
 }

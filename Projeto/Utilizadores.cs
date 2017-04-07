@@ -23,5 +23,16 @@ namespace Projeto
             menuadmin.Show();
             this.Close();
         }
+
+        private void buttonNovoUser_Click(object sender, EventArgs e)
+        {
+            NovoUtilizadorForm userF = new NovoUtilizadorForm();
+            userF.Show();
+        }
+
+        private void buttonEditUser_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

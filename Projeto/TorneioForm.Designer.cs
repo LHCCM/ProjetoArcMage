@@ -80,6 +80,7 @@
             this.buttonNovoTorneio.TabIndex = 3;
             this.buttonNovoTorneio.Text = "Novo Torneio";
             this.buttonNovoTorneio.UseVisualStyleBackColor = true;
+            this.buttonNovoTorneio.Click += new System.EventHandler(this.buttonNovoTorneio_Click);
             // 
             // buttonEditarTorneio
             // 
@@ -89,6 +90,7 @@
             this.buttonEditarTorneio.TabIndex = 4;
             this.buttonEditarTorneio.Text = "Editar Torneio";
             this.buttonEditarTorneio.UseVisualStyleBackColor = true;
+            this.buttonEditarTorneio.Click += new System.EventHandler(this.buttonEditarTorneio_Click);
             // 
             // buttonCancelarTorneio
             // 
@@ -185,6 +187,7 @@
             this.buttonEditarJogo.TabIndex = 15;
             this.buttonEditarJogo.Text = "Editar Jogo";
             this.buttonEditarJogo.UseVisualStyleBackColor = true;
+            this.buttonEditarJogo.Click += new System.EventHandler(this.buttonEditarJogo_Click);
             // 
             // buttonCriarJogo
             // 
@@ -194,6 +197,7 @@
             this.buttonCriarJogo.TabIndex = 14;
             this.buttonCriarJogo.Text = "Criar Jogo";
             this.buttonCriarJogo.UseVisualStyleBackColor = true;
+            this.buttonCriarJogo.Click += new System.EventHandler(this.buttonCriarJogo_Click);
             // 
             // buttonVoltar
             // 

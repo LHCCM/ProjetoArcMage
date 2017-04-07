@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 9);
+            this.label1.Location = new System.Drawing.Point(180, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -105,6 +105,7 @@
             this.buttonCriar.TabIndex = 7;
             this.buttonCriar.Text = "Voltar";
             this.buttonCriar.UseVisualStyleBackColor = true;
+            this.buttonCriar.Click += new System.EventHandler(this.buttonCriar_Click);
             // 
             // label3
             // 
@@ -115,7 +116,7 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Descrição";
             // 
-            // NovoTorneio
+            // NovoTorneioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +130,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.LabelID);
             this.Controls.Add(this.label1);
-            this.Name = "NovoTorneio";
+            this.Name = "NovoTorneioForm";
             this.Text = "NovoTorneio";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -53,9 +53,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(93, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 25);
+            this.label4.Size = new System.Drawing.Size(181, 25);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Novo/Editar Utilizador";
+            this.label4.Text = "Editar Utilizador";
             // 
             // label1
             // 
@@ -74,7 +74,6 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Email:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 

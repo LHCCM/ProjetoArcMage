@@ -198,8 +198,9 @@
             this.buttonVoltar.TabIndex = 17;
             this.buttonVoltar.Text = "Voltar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // NovoJogo
+            // NovoJogoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,7 +221,7 @@
             this.Controls.Add(this.comboBoxEquipa1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "NovoJogo";
+            this.Name = "NovoJogoForm";
             this.Text = "NovoJogo";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).EndInit();

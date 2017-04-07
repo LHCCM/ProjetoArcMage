@@ -56,6 +56,7 @@
             this.buttonCriar.TabIndex = 16;
             this.buttonCriar.Text = "Voltar";
             this.buttonCriar.UseVisualStyleBackColor = true;
+            this.buttonCriar.Click += new System.EventHandler(this.buttonCriar_Click);
             // 
             // buttonCriarTorneio
             // 
@@ -115,7 +116,7 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Editar Torneio";
             // 
-            // EditarTorneio
+            // EditarTorneioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +130,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.LabelID);
             this.Controls.Add(this.label1);
-            this.Name = "EditarTorneio";
+            this.Name = "EditarTorneioForm";
             this.Text = "EditarTorneio";
             this.ResumeLayout(false);
             this.PerformLayout();
