@@ -34,24 +34,28 @@ namespace Projeto
 
         private void buttonEquipaJogadorAdmin_Click(object sender, EventArgs e)
         {
-            GerirEquipasJogadores tpF = new GerirEquipasJogadores();
+            GerirEquipasJogadoresForm tpF = new GerirEquipasJogadoresForm();
             tpF.Show();
             this.Close();
         }
 
         private void buttonBaralhosAdmin_Click(object sender, EventArgs e)
         {
-
+            BaralhosForm baralhosF = new BaralhosForm();
+            baralhosF.Show();
+            this.Close();
         }
 
         private void buttonCartasAdmin_Click(object sender, EventArgs e)
         {
-
+            CartasForm cartasF = new CartasForm();
+            cartasF.Show();
+            this.Close();
         }
 
         private void buttonSair_Click(object sender, EventArgs e)
         {
-            FormLogin log = new FormLogin();
+            LoginForm log = new LoginForm();
             log.Show();
             this.Close();
         }

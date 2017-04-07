@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class FormCartas : Form
+    public partial class CartasForm : Form
     {
-        public FormCartas()
+        public CartasForm()
         {
             InitializeComponent();
         }
 
+        private void buttonVoltar_Click(object sender, EventArgs e)
+        {
+            MenuAdminForm menuadmin = new MenuAdminForm();
+            menuadmin.Show();
+            this.Close();
+        }
     }
 }

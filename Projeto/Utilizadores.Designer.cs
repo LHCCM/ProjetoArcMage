@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEliminarUser = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -49,21 +49,22 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonNovoUser = new System.Windows.Forms.Button();
+            this.buttonEditUser = new System.Windows.Forms.Button();
+            this.buttonVoltar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonEliminarUser
             // 
-            this.button1.Location = new System.Drawing.Point(36, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Eliminar Utilizador";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEliminarUser.Location = new System.Drawing.Point(36, 486);
+            this.buttonEliminarUser.Name = "buttonEliminarUser";
+            this.buttonEliminarUser.Size = new System.Drawing.Size(155, 23);
+            this.buttonEliminarUser.TabIndex = 0;
+            this.buttonEliminarUser.Text = "Eliminar Utilizador";
+            this.buttonEliminarUser.UseVisualStyleBackColor = true;
             // 
             // listBox1
             // 
@@ -92,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 444);
+            this.label2.Location = new System.Drawing.Point(9, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 4;
@@ -101,7 +102,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(80, 430);
+            this.radioButton1.Location = new System.Drawing.Point(52, 16);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(99, 17);
             this.radioButton1.TabIndex = 5;
@@ -112,7 +113,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(80, 453);
+            this.radioButton2.Location = new System.Drawing.Point(52, 38);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(60, 17);
             this.radioButton2.TabIndex = 6;
@@ -165,7 +166,6 @@
             this.label6.Size = new System.Drawing.Size(48, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Nome:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -257,41 +257,54 @@
             this.label15.TabIndex = 19;
             this.label15.Text = "Sampletext";
             // 
-            // button2
+            // buttonNovoUser
             // 
-            this.button2.Location = new System.Drawing.Point(208, 428);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Novo Utilizador";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonNovoUser.Location = new System.Drawing.Point(208, 428);
+            this.buttonNovoUser.Name = "buttonNovoUser";
+            this.buttonNovoUser.Size = new System.Drawing.Size(155, 23);
+            this.buttonNovoUser.TabIndex = 20;
+            this.buttonNovoUser.Text = "Novo Utilizador";
+            this.buttonNovoUser.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonEditUser
             // 
-            this.button3.Location = new System.Drawing.Point(208, 457);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Editar Utilizador";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonEditUser.Location = new System.Drawing.Point(208, 457);
+            this.buttonEditUser.Name = "buttonEditUser";
+            this.buttonEditUser.Size = new System.Drawing.Size(155, 23);
+            this.buttonEditUser.TabIndex = 21;
+            this.buttonEditUser.Text = "Editar Utilizador";
+            this.buttonEditUser.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonVoltar
             // 
-            this.button4.Location = new System.Drawing.Point(208, 486);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(155, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Voltar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Location = new System.Drawing.Point(208, 486);
+            this.buttonVoltar.Name = "buttonVoltar";
+            this.buttonVoltar.Size = new System.Drawing.Size(155, 23);
+            this.buttonVoltar.TabIndex = 22;
+            this.buttonVoltar.Text = "Voltar";
+            this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // Utilizadores
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(36, 416);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(153, 64);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            // 
+            // UtilizadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 522);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonVoltar);
+            this.Controls.Add(this.buttonEditUser);
+            this.Controls.Add(this.buttonNovoUser);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -306,16 +319,15 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Utilizadores";
+            this.Controls.Add(this.buttonEliminarUser);
+            this.Name = "UtilizadoresForm";
             this.Text = "Utilizadores";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,7 +335,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEliminarUser;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
@@ -344,8 +356,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonNovoUser;
+        private System.Windows.Forms.Button buttonEditUser;
+        private System.Windows.Forms.Button buttonVoltar;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
