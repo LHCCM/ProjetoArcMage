@@ -16,5 +16,12 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void buttonVoltar_Click(object sender, EventArgs e)
+        {
+            MenuArbitroForm menuarbitro = new MenuArbitroForm();
+            menuarbitro.Show();
+            this.Close();
+        }
     }
 }

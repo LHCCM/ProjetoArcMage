@@ -19,7 +19,9 @@ namespace Projeto
 
         private void buttonEditarJogo_Click(object sender, EventArgs e)
         {
-            
+            EditarJogoArbitroForm editjogo = new EditarJogoArbitroForm();
+            editjogo.Show();
+            this.Close();
         }
 
         private void buttonSair_Click(object sender, EventArgs e)
