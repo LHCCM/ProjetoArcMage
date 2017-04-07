@@ -185,12 +185,6 @@
     <Compile Include="NovoBaralho.Designer.cs">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NovoEditarUtilizador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NovoEditarUtilizador.Designer.cs">
-      <DependentUpon>NovoEditarUtilizador.cs</DependentUpon>
-    </Compile>
     <Compile Include="NovoJogador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,9 +279,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NovoEditarUtilizador.resx">
-      <DependentUpon>NovoEditarUtilizador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoJogador.resx">
       <DependentUpon>NovoJogador.cs</DependentUpon>
