@@ -16,5 +16,17 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuAdmin menuadmin = new MenuAdmin();
+            menuadmin.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
