@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class Utilizadores : Form
+    public partial class UtilizadoresForm : Form
     {
-        public Utilizadores()
+        public UtilizadoresForm()
         {
             InitializeComponent();
         }

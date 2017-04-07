@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class Utilizadores
+    partial class UtilizadoresForm
     {
         /// <summary>
         /// Required designer variable.

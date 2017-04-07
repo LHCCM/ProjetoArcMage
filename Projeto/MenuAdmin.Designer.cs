@@ -125,6 +125,7 @@
             this.buttonTorneiosAdmin.TabIndex = 8;
             this.buttonTorneiosAdmin.Text = "Torneios";
             this.buttonTorneiosAdmin.UseVisualStyleBackColor = true;
+            this.buttonTorneiosAdmin.Click += new System.EventHandler(this.buttonTorneiosAdmin_Click);
             // 
             // buttonUtilizadoresAdmin
             // 
@@ -134,6 +135,7 @@
             this.buttonUtilizadoresAdmin.TabIndex = 9;
             this.buttonUtilizadoresAdmin.Text = "Utilizadores";
             this.buttonUtilizadoresAdmin.UseVisualStyleBackColor = true;
+            this.buttonUtilizadoresAdmin.Click += new System.EventHandler(this.buttonUtilizadoresAdmin_Click);
             // 
             // buttonEquipaJogadorAdmin
             // 
@@ -143,6 +145,7 @@
             this.buttonEquipaJogadorAdmin.TabIndex = 10;
             this.buttonEquipaJogadorAdmin.Text = "Equipas e Jogadores";
             this.buttonEquipaJogadorAdmin.UseVisualStyleBackColor = true;
+            this.buttonEquipaJogadorAdmin.Click += new System.EventHandler(this.buttonEquipaJogadorAdmin_Click);
             // 
             // buttonBaralhosAdmin
             // 
@@ -152,6 +155,7 @@
             this.buttonBaralhosAdmin.TabIndex = 11;
             this.buttonBaralhosAdmin.Text = "Baralhos";
             this.buttonBaralhosAdmin.UseVisualStyleBackColor = true;
+            this.buttonBaralhosAdmin.Click += new System.EventHandler(this.buttonBaralhosAdmin_Click);
             // 
             // buttonCartasAdmin
             // 
@@ -161,6 +165,7 @@
             this.buttonCartasAdmin.TabIndex = 12;
             this.buttonCartasAdmin.Text = "Cartas";
             this.buttonCartasAdmin.UseVisualStyleBackColor = true;
+            this.buttonCartasAdmin.Click += new System.EventHandler(this.buttonCartasAdmin_Click);
             // 
             // buttonSair
             // 
