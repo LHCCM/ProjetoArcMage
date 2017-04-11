@@ -23,5 +23,19 @@ namespace Projeto
             menuadmin.Show();
             this.Close();
         }
+
+        private void buttonGerirEquipa_Click(object sender, EventArgs e)
+        {
+            GerirEquipasForm gerirE = new GerirEquipasForm();
+            gerirE.Show();
+            this.Close();
+        }
+
+        private void buttonGerirJogadores_Click(object sender, EventArgs e)
+        {
+            GerirJogadoresForm gerirJ = new GerirJogadoresForm();
+            gerirJ.Show();
+            this.Close();
+        }
     }
 }

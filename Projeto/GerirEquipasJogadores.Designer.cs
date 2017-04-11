@@ -56,6 +56,7 @@
             this.buttonGerirEquipa.TabIndex = 1;
             this.buttonGerirEquipa.Text = "Equipas";
             this.buttonGerirEquipa.UseVisualStyleBackColor = true;
+            this.buttonGerirEquipa.Click += new System.EventHandler(this.buttonGerirEquipa_Click);
             // 
             // buttonGerirJogadores
             // 
@@ -65,6 +66,7 @@
             this.buttonGerirJogadores.TabIndex = 2;
             this.buttonGerirJogadores.Text = "Jogadores";
             this.buttonGerirJogadores.UseVisualStyleBackColor = true;
+            this.buttonGerirJogadores.Click += new System.EventHandler(this.buttonGerirJogadores_Click);
             // 
             // pictureBox1
             // 
@@ -92,7 +94,7 @@
             this.buttonVoltar.UseVisualStyleBackColor = true;
             this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // GerirEquipasJogadores
+            // GerirEquipasJogadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +105,7 @@
             this.Controls.Add(this.buttonGerirJogadores);
             this.Controls.Add(this.buttonGerirEquipa);
             this.Controls.Add(this.label1);
-            this.Name = "GerirEquipasJogadores";
+            this.Name = "GerirEquipasJogadoresForm";
             this.Text = "Gerir Equipas ou Jogadores";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

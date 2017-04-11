@@ -72,15 +72,15 @@
             this.listBoxBaralhos.FormattingEnabled = true;
             this.listBoxBaralhos.Location = new System.Drawing.Point(13, 52);
             this.listBoxBaralhos.Name = "listBoxBaralhos";
-            this.listBoxBaralhos.Size = new System.Drawing.Size(120, 251);
+            this.listBoxBaralhos.Size = new System.Drawing.Size(149, 251);
             this.listBoxBaralhos.TabIndex = 6;
             // 
             // listBoxListaCartas
             // 
             this.listBoxListaCartas.FormattingEnabled = true;
-            this.listBoxListaCartas.Location = new System.Drawing.Point(236, 52);
+            this.listBoxListaCartas.Location = new System.Drawing.Point(207, 52);
             this.listBoxListaCartas.Name = "listBoxListaCartas";
-            this.listBoxListaCartas.Size = new System.Drawing.Size(117, 251);
+            this.listBoxListaCartas.Size = new System.Drawing.Size(146, 251);
             this.listBoxListaCartas.TabIndex = 7;
             // 
             // buttonAdicionarBaralho

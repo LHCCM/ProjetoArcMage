@@ -45,7 +45,7 @@
             // 
             this.labelEditarBaralho.AutoSize = true;
             this.labelEditarBaralho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditarBaralho.Location = new System.Drawing.Point(102, 9);
+            this.labelEditarBaralho.Location = new System.Drawing.Point(112, 9);
             this.labelEditarBaralho.Name = "labelEditarBaralho";
             this.labelEditarBaralho.Size = new System.Drawing.Size(127, 24);
             this.labelEditarBaralho.TabIndex = 0;
@@ -65,15 +65,15 @@
             this.listBoxTotalCartas.FormattingEnabled = true;
             this.listBoxTotalCartas.Location = new System.Drawing.Point(12, 85);
             this.listBoxTotalCartas.Name = "listBoxTotalCartas";
-            this.listBoxTotalCartas.Size = new System.Drawing.Size(107, 251);
+            this.listBoxTotalCartas.Size = new System.Drawing.Size(135, 251);
             this.listBoxTotalCartas.TabIndex = 2;
             // 
             // listBoxCartasBaralho
             // 
             this.listBoxCartasBaralho.FormattingEnabled = true;
-            this.listBoxCartasBaralho.Location = new System.Drawing.Point(226, 85);
+            this.listBoxCartasBaralho.Location = new System.Drawing.Point(198, 85);
             this.listBoxCartasBaralho.Name = "listBoxCartasBaralho";
-            this.listBoxCartasBaralho.Size = new System.Drawing.Size(107, 251);
+            this.listBoxCartasBaralho.Size = new System.Drawing.Size(135, 251);
             this.listBoxCartasBaralho.TabIndex = 3;
             // 
             // label1
@@ -81,9 +81,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(223, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Nome do Baralho";
+            this.label1.Text = "Cartas no Baralho";
             // 
             // label2
             // 
@@ -97,7 +97,7 @@
             // labelProcurarCartas
             // 
             this.labelProcurarCartas.AutoSize = true;
-            this.labelProcurarCartas.Location = new System.Drawing.Point(12, 350);
+            this.labelProcurarCartas.Location = new System.Drawing.Point(9, 342);
             this.labelProcurarCartas.Name = "labelProcurarCartas";
             this.labelProcurarCartas.Size = new System.Drawing.Size(80, 13);
             this.labelProcurarCartas.TabIndex = 6;
@@ -105,14 +105,14 @@
             // 
             // textBoxProcura
             // 
-            this.textBoxProcura.Location = new System.Drawing.Point(15, 372);
+            this.textBoxProcura.Location = new System.Drawing.Point(15, 358);
             this.textBoxProcura.Name = "textBoxProcura";
-            this.textBoxProcura.Size = new System.Drawing.Size(104, 20);
+            this.textBoxProcura.Size = new System.Drawing.Size(122, 20);
             this.textBoxProcura.TabIndex = 7;
             // 
             // buttonAdicionarCartaBaralho
             // 
-            this.buttonAdicionarCartaBaralho.Location = new System.Drawing.Point(15, 398);
+            this.buttonAdicionarCartaBaralho.Location = new System.Drawing.Point(15, 387);
             this.buttonAdicionarCartaBaralho.Name = "buttonAdicionarCartaBaralho";
             this.buttonAdicionarCartaBaralho.Size = new System.Drawing.Size(100, 23);
             this.buttonAdicionarCartaBaralho.TabIndex = 8;
@@ -121,7 +121,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(226, 398);
+            this.buttonVoltar.Location = new System.Drawing.Point(226, 387);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(99, 23);
             this.buttonVoltar.TabIndex = 9;
@@ -130,18 +130,18 @@
             // 
             // buttonRemoverCartaBaralho
             // 
-            this.buttonRemoverCartaBaralho.Location = new System.Drawing.Point(226, 369);
+            this.buttonRemoverCartaBaralho.Location = new System.Drawing.Point(226, 358);
             this.buttonRemoverCartaBaralho.Name = "buttonRemoverCartaBaralho";
             this.buttonRemoverCartaBaralho.Size = new System.Drawing.Size(100, 23);
             this.buttonRemoverCartaBaralho.TabIndex = 10;
             this.buttonRemoverCartaBaralho.Text = "Remover Carta";
             this.buttonRemoverCartaBaralho.UseVisualStyleBackColor = true;
             // 
-            // EditarBaralho
+            // EditarBaralhoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 433);
+            this.ClientSize = new System.Drawing.Size(367, 419);
             this.Controls.Add(this.buttonRemoverCartaBaralho);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonAdicionarCartaBaralho);
@@ -153,7 +153,7 @@
             this.Controls.Add(this.listBoxTotalCartas);
             this.Controls.Add(this.labelNomeBaralho);
             this.Controls.Add(this.labelEditarBaralho);
-            this.Name = "EditarBaralho";
+            this.Name = "EditarBaralhoForm";
             this.Text = "Editar Baralho";
             this.ResumeLayout(false);
             this.PerformLayout();

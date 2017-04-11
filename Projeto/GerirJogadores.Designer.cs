@@ -31,8 +31,8 @@
             this.labelGerirJogadores = new System.Windows.Forms.Label();
             this.labelInfoJogador = new System.Windows.Forms.Label();
             this.labelListaJogadores = new System.Windows.Forms.Label();
-            this.listBoxListaJogadores = new System.Windows.Forms.ListBox();
-            this.listBoxInfoJogador = new System.Windows.Forms.ListBox();
+            this.listBoxJogadores = new System.Windows.Forms.ListBox();
+            this.listBoxInfo = new System.Windows.Forms.ListBox();
             this.buttonVoltar = new System.Windows.Forms.Button();
             this.buttonEditarJogador = new System.Windows.Forms.Button();
             this.buttonApagarJogador = new System.Windows.Forms.Button();
@@ -69,57 +69,61 @@
             this.labelListaJogadores.TabIndex = 5;
             this.labelListaJogadores.Text = "Jogadores";
             // 
-            // listBoxListaJogadores
+            // listBoxJogadores
             // 
-            this.listBoxListaJogadores.FormattingEnabled = true;
-            this.listBoxListaJogadores.Location = new System.Drawing.Point(15, 69);
-            this.listBoxListaJogadores.Name = "listBoxListaJogadores";
-            this.listBoxListaJogadores.Size = new System.Drawing.Size(126, 238);
-            this.listBoxListaJogadores.TabIndex = 6;
+            this.listBoxJogadores.FormattingEnabled = true;
+            this.listBoxJogadores.Location = new System.Drawing.Point(15, 69);
+            this.listBoxJogadores.Name = "listBoxJogadores";
+            this.listBoxJogadores.Size = new System.Drawing.Size(126, 238);
+            this.listBoxJogadores.TabIndex = 6;
             // 
-            // listBoxInfoJogador
+            // listBoxInfo
             // 
-            this.listBoxInfoJogador.FormattingEnabled = true;
-            this.listBoxInfoJogador.Location = new System.Drawing.Point(178, 184);
-            this.listBoxInfoJogador.Name = "listBoxInfoJogador";
-            this.listBoxInfoJogador.Size = new System.Drawing.Size(194, 121);
-            this.listBoxInfoJogador.TabIndex = 7;
+            this.listBoxInfo.FormattingEnabled = true;
+            this.listBoxInfo.Location = new System.Drawing.Point(178, 184);
+            this.listBoxInfo.Name = "listBoxInfo";
+            this.listBoxInfo.Size = new System.Drawing.Size(194, 121);
+            this.listBoxInfo.TabIndex = 7;
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(251, 370);
+            this.buttonVoltar.Location = new System.Drawing.Point(251, 351);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(121, 23);
             this.buttonVoltar.TabIndex = 24;
             this.buttonVoltar.Text = "Voltar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
             // buttonEditarJogador
             // 
-            this.buttonEditarJogador.Location = new System.Drawing.Point(251, 341);
+            this.buttonEditarJogador.Location = new System.Drawing.Point(251, 322);
             this.buttonEditarJogador.Name = "buttonEditarJogador";
             this.buttonEditarJogador.Size = new System.Drawing.Size(121, 23);
             this.buttonEditarJogador.TabIndex = 23;
             this.buttonEditarJogador.Text = "Editar Jogador";
             this.buttonEditarJogador.UseVisualStyleBackColor = true;
+            this.buttonEditarJogador.Click += new System.EventHandler(this.buttonEditarJogador_Click);
             // 
             // buttonApagarJogador
             // 
-            this.buttonApagarJogador.Location = new System.Drawing.Point(20, 371);
+            this.buttonApagarJogador.Location = new System.Drawing.Point(20, 352);
             this.buttonApagarJogador.Name = "buttonApagarJogador";
             this.buttonApagarJogador.Size = new System.Drawing.Size(121, 23);
             this.buttonApagarJogador.TabIndex = 22;
             this.buttonApagarJogador.Text = "Apagar Jogador";
             this.buttonApagarJogador.UseVisualStyleBackColor = true;
+            this.buttonApagarJogador.Click += new System.EventHandler(this.buttonApagarJogador_Click);
             // 
             // buttonNovoJogador
             // 
-            this.buttonNovoJogador.Location = new System.Drawing.Point(20, 342);
+            this.buttonNovoJogador.Location = new System.Drawing.Point(20, 323);
             this.buttonNovoJogador.Name = "buttonNovoJogador";
             this.buttonNovoJogador.Size = new System.Drawing.Size(121, 23);
             this.buttonNovoJogador.TabIndex = 21;
             this.buttonNovoJogador.Text = "Novo Jogador";
             this.buttonNovoJogador.UseVisualStyleBackColor = true;
+            this.buttonNovoJogador.Click += new System.EventHandler(this.buttonNovoJogador_Click);
             // 
             // pictureBox1
             // 
@@ -129,22 +133,22 @@
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
-            // GerirJogadores
+            // GerirJogadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 405);
+            this.ClientSize = new System.Drawing.Size(393, 383);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonEditarJogador);
             this.Controls.Add(this.buttonApagarJogador);
             this.Controls.Add(this.buttonNovoJogador);
-            this.Controls.Add(this.listBoxInfoJogador);
-            this.Controls.Add(this.listBoxListaJogadores);
+            this.Controls.Add(this.listBoxInfo);
+            this.Controls.Add(this.listBoxJogadores);
             this.Controls.Add(this.labelListaJogadores);
             this.Controls.Add(this.labelInfoJogador);
             this.Controls.Add(this.labelGerirJogadores);
-            this.Name = "GerirJogadores";
+            this.Name = "GerirJogadoresForm";
             this.Text = "Gerir Jogadores";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -157,8 +161,8 @@
         private System.Windows.Forms.Label labelGerirJogadores;
         private System.Windows.Forms.Label labelInfoJogador;
         private System.Windows.Forms.Label labelListaJogadores;
-        private System.Windows.Forms.ListBox listBoxListaJogadores;
-        private System.Windows.Forms.ListBox listBoxInfoJogador;
+        private System.Windows.Forms.ListBox listBoxJogadores;
+        private System.Windows.Forms.ListBox listBoxInfo;
         private System.Windows.Forms.Button buttonVoltar;
         private System.Windows.Forms.Button buttonEditarJogador;
         private System.Windows.Forms.Button buttonApagarJogador;

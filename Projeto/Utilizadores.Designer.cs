@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonEliminarUser = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxUsers = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
@@ -62,14 +62,15 @@
             this.buttonEliminarUser.TabIndex = 0;
             this.buttonEliminarUser.Text = "Eliminar Utilizador";
             this.buttonEliminarUser.UseVisualStyleBackColor = true;
+            this.buttonEliminarUser.Click += new System.EventHandler(this.buttonEliminarUser_Click);
             // 
-            // listBox1
+            // listBoxUsers
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(36, 68);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(155, 303);
-            this.listBox1.TabIndex = 1;
+            this.listBoxUsers.FormattingEnabled = true;
+            this.listBoxUsers.Location = new System.Drawing.Point(36, 68);
+            this.listBoxUsers.Name = "listBoxUsers";
+            this.listBoxUsers.Size = new System.Drawing.Size(155, 303);
+            this.listBoxUsers.TabIndex = 1;
             // 
             // label1
             // 
@@ -289,7 +290,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxUsers);
             this.Controls.Add(this.buttonEliminarUser);
             this.Name = "UtilizadoresForm";
             this.Text = "Utilizadores";
@@ -304,7 +305,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonEliminarUser;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxUsers;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RadioButton radioButtonAdmin;

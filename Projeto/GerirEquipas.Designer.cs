@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.buttonVoltar = new System.Windows.Forms.Button();
-            this.buttonApagarJogador = new System.Windows.Forms.Button();
+            this.buttonRemoverJogador = new System.Windows.Forms.Button();
             this.buttonApagarEquipa = new System.Windows.Forms.Button();
             this.buttonAdicionarJogador = new System.Windows.Forms.Button();
             this.listBoxJogador = new System.Windows.Forms.ListBox();
-            this.listBoxListaEquipas = new System.Windows.Forms.ListBox();
+            this.listBoxEquipas = new System.Windows.Forms.ListBox();
             this.labelListaEquipas = new System.Windows.Forms.Label();
             this.labelInfoEquipa = new System.Windows.Forms.Label();
             this.labelGerirEquipas = new System.Windows.Forms.Label();
@@ -53,15 +53,17 @@
             this.buttonVoltar.TabIndex = 33;
             this.buttonVoltar.Text = "Voltar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // buttonApagarJogador
+            // buttonRemoverJogador
             // 
-            this.buttonApagarJogador.Location = new System.Drawing.Point(178, 360);
-            this.buttonApagarJogador.Name = "buttonApagarJogador";
-            this.buttonApagarJogador.Size = new System.Drawing.Size(121, 23);
-            this.buttonApagarJogador.TabIndex = 32;
-            this.buttonApagarJogador.Text = "Apagar Jogador";
-            this.buttonApagarJogador.UseVisualStyleBackColor = true;
+            this.buttonRemoverJogador.Location = new System.Drawing.Point(178, 360);
+            this.buttonRemoverJogador.Name = "buttonRemoverJogador";
+            this.buttonRemoverJogador.Size = new System.Drawing.Size(121, 23);
+            this.buttonRemoverJogador.TabIndex = 32;
+            this.buttonRemoverJogador.Text = "Remover Jogador";
+            this.buttonRemoverJogador.UseVisualStyleBackColor = true;
+            this.buttonRemoverJogador.Click += new System.EventHandler(this.buttonRemoverJogador_Click);
             // 
             // buttonApagarEquipa
             // 
@@ -71,6 +73,7 @@
             this.buttonApagarEquipa.TabIndex = 31;
             this.buttonApagarEquipa.Text = "Apagar Equipa";
             this.buttonApagarEquipa.UseVisualStyleBackColor = true;
+            this.buttonApagarEquipa.Click += new System.EventHandler(this.buttonApagarEquipa_Click);
             // 
             // buttonAdicionarJogador
             // 
@@ -80,6 +83,7 @@
             this.buttonAdicionarJogador.TabIndex = 30;
             this.buttonAdicionarJogador.Text = "AdicionarJogador";
             this.buttonAdicionarJogador.UseVisualStyleBackColor = true;
+            this.buttonAdicionarJogador.Click += new System.EventHandler(this.buttonAdicionarJogador_Click);
             // 
             // listBoxJogador
             // 
@@ -89,13 +93,13 @@
             this.listBoxJogador.Size = new System.Drawing.Size(124, 121);
             this.listBoxJogador.TabIndex = 29;
             // 
-            // listBoxListaEquipas
+            // listBoxEquipas
             // 
-            this.listBoxListaEquipas.FormattingEnabled = true;
-            this.listBoxListaEquipas.Location = new System.Drawing.Point(12, 71);
-            this.listBoxListaEquipas.Name = "listBoxListaEquipas";
-            this.listBoxListaEquipas.Size = new System.Drawing.Size(126, 238);
-            this.listBoxListaEquipas.TabIndex = 28;
+            this.listBoxEquipas.FormattingEnabled = true;
+            this.listBoxEquipas.Location = new System.Drawing.Point(12, 71);
+            this.listBoxEquipas.Name = "listBoxEquipas";
+            this.listBoxEquipas.Size = new System.Drawing.Size(126, 238);
+            this.listBoxEquipas.TabIndex = 28;
             // 
             // labelListaEquipas
             // 
@@ -119,7 +123,7 @@
             // 
             this.labelGerirEquipas.AutoSize = true;
             this.labelGerirEquipas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGerirEquipas.Location = new System.Drawing.Point(133, 11);
+            this.labelGerirEquipas.Location = new System.Drawing.Point(103, 9);
             this.labelGerirEquipas.Name = "labelGerirEquipas";
             this.labelGerirEquipas.Size = new System.Drawing.Size(125, 24);
             this.labelGerirEquipas.TabIndex = 25;
@@ -157,6 +161,7 @@
             this.buttonNovaEquipa.TabIndex = 37;
             this.buttonNovaEquipa.Text = "Nova Equipa";
             this.buttonNovaEquipa.UseVisualStyleBackColor = true;
+            this.buttonNovaEquipa.Click += new System.EventHandler(this.buttonNovaEquipa_Click);
             // 
             // label1
             // 
@@ -167,7 +172,7 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "Jogadores";
             // 
-            // GerirEquipas
+            // GerirEquipasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,15 +183,15 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonVoltar);
-            this.Controls.Add(this.buttonApagarJogador);
+            this.Controls.Add(this.buttonRemoverJogador);
             this.Controls.Add(this.buttonApagarEquipa);
             this.Controls.Add(this.buttonAdicionarJogador);
             this.Controls.Add(this.listBoxJogador);
-            this.Controls.Add(this.listBoxListaEquipas);
+            this.Controls.Add(this.listBoxEquipas);
             this.Controls.Add(this.labelListaEquipas);
             this.Controls.Add(this.labelInfoEquipa);
             this.Controls.Add(this.labelGerirEquipas);
-            this.Name = "GerirEquipas";
+            this.Name = "GerirEquipasForm";
             this.Text = "GerirEquipas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -197,11 +202,11 @@
         #endregion
 
         private System.Windows.Forms.Button buttonVoltar;
-        private System.Windows.Forms.Button buttonApagarJogador;
+        private System.Windows.Forms.Button buttonRemoverJogador;
         private System.Windows.Forms.Button buttonApagarEquipa;
         private System.Windows.Forms.Button buttonAdicionarJogador;
         private System.Windows.Forms.ListBox listBoxJogador;
-        private System.Windows.Forms.ListBox listBoxListaEquipas;
+        private System.Windows.Forms.ListBox listBoxEquipas;
         private System.Windows.Forms.Label labelListaEquipas;
         private System.Windows.Forms.Label labelInfoEquipa;
         private System.Windows.Forms.Label labelGerirEquipas;

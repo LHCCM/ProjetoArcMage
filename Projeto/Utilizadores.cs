@@ -32,7 +32,13 @@ namespace Projeto
 
         private void buttonEditUser_Click(object sender, EventArgs e)
         {
-            
+            EditarUtilizadorForm editF = new EditarUtilizadorForm();
+            editF.Show();
+        }
+
+        private void buttonEliminarUser_Click(object sender, EventArgs e)
+        {
+            //função eliminar dados selecionados na listboxUsers
         }
     }
 }
