@@ -128,6 +128,13 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" />
           <NavigationProperty Name="Deck" Relationship="Model1.DeckCard" FromRole="Card" ToRole="Deck" />
+          <Property Name="Atack" Type="String" Nullable="false" />
+          <Property Name="Defense" Type="String" Nullable="false" />
+          <Property Name="Property1" Type="String" Nullable="false" />
+          <Property Name="Loyal" Type="String" Nullable="false" />
+          <Property Name="Rules" Type="String" Nullable="false" />
+          <Property Name="Faction" Type="String" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="StandardGame" BaseType="Model1.Game" >
           <NavigationProperty Name="Player1" Relationship="Model1.PlayerStandardGame1" FromRole="StandardGame" ToRole="Player" />
