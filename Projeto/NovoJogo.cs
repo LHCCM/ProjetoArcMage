@@ -19,8 +19,6 @@ namespace Projeto
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
-            TorneioForm tourF = new TorneioForm();
-            tourF.Show();
             this.Close();
         }
     }

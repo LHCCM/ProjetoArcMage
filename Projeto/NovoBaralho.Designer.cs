@@ -37,7 +37,7 @@
             // 
             // buttonNovoBaralhoConfimar
             // 
-            this.buttonNovoBaralhoConfimar.Location = new System.Drawing.Point(9, 113);
+            this.buttonNovoBaralhoConfimar.Location = new System.Drawing.Point(12, 99);
             this.buttonNovoBaralhoConfimar.Name = "buttonNovoBaralhoConfimar";
             this.buttonNovoBaralhoConfimar.Size = new System.Drawing.Size(75, 23);
             this.buttonNovoBaralhoConfimar.TabIndex = 0;
@@ -46,16 +46,17 @@
             // 
             // buttonNovoBaralhoCancelar
             // 
-            this.buttonNovoBaralhoCancelar.Location = new System.Drawing.Point(193, 116);
+            this.buttonNovoBaralhoCancelar.Location = new System.Drawing.Point(193, 99);
             this.buttonNovoBaralhoCancelar.Name = "buttonNovoBaralhoCancelar";
             this.buttonNovoBaralhoCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonNovoBaralhoCancelar.TabIndex = 1;
             this.buttonNovoBaralhoCancelar.Text = "Cancelar";
             this.buttonNovoBaralhoCancelar.UseVisualStyleBackColor = true;
+            this.buttonNovoBaralhoCancelar.Click += new System.EventHandler(this.buttonNovoBaralhoCancelar_Click);
             // 
             // textBoxNomeNovoBaralho
             // 
-            this.textBoxNomeNovoBaralho.Location = new System.Drawing.Point(9, 76);
+            this.textBoxNomeNovoBaralho.Location = new System.Drawing.Point(9, 63);
             this.textBoxNomeNovoBaralho.Name = "textBoxNomeNovoBaralho";
             this.textBoxNomeNovoBaralho.Size = new System.Drawing.Size(259, 20);
             this.textBoxNomeNovoBaralho.TabIndex = 2;
@@ -63,7 +64,7 @@
             // labelNomeBaralho
             // 
             this.labelNomeBaralho.AutoSize = true;
-            this.labelNomeBaralho.Location = new System.Drawing.Point(12, 60);
+            this.labelNomeBaralho.Location = new System.Drawing.Point(12, 47);
             this.labelNomeBaralho.Name = "labelNomeBaralho";
             this.labelNomeBaralho.Size = new System.Drawing.Size(89, 13);
             this.labelNomeBaralho.TabIndex = 3;

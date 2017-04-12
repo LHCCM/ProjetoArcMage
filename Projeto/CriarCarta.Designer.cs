@@ -57,11 +57,11 @@
             // 
             this.labelCartas.AutoSize = true;
             this.labelCartas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCartas.Location = new System.Drawing.Point(130, 9);
+            this.labelCartas.Location = new System.Drawing.Point(122, 9);
             this.labelCartas.Name = "labelCartas";
-            this.labelCartas.Size = new System.Drawing.Size(70, 25);
+            this.labelCartas.Size = new System.Drawing.Size(113, 25);
             this.labelCartas.TabIndex = 2;
-            this.labelCartas.Text = "Cartas";
+            this.labelCartas.Text = "Crirar Carta";
             // 
             // labelNomeCarta
             // 
@@ -206,7 +206,7 @@
             // 
             // buttonConfirmarCarta
             // 
-            this.buttonConfirmarCarta.Location = new System.Drawing.Point(285, 307);
+            this.buttonConfirmarCarta.Location = new System.Drawing.Point(15, 303);
             this.buttonConfirmarCarta.Name = "buttonConfirmarCarta";
             this.buttonConfirmarCarta.Size = new System.Drawing.Size(75, 23);
             this.buttonConfirmarCarta.TabIndex = 19;
@@ -215,18 +215,19 @@
             // 
             // buttonVoltarCarta
             // 
-            this.buttonVoltarCarta.Location = new System.Drawing.Point(284, 336);
+            this.buttonVoltarCarta.Location = new System.Drawing.Point(285, 303);
             this.buttonVoltarCarta.Name = "buttonVoltarCarta";
             this.buttonVoltarCarta.Size = new System.Drawing.Size(75, 23);
             this.buttonVoltarCarta.TabIndex = 20;
             this.buttonVoltarCarta.Text = "Voltar";
             this.buttonVoltarCarta.UseVisualStyleBackColor = true;
+            this.buttonVoltarCarta.Click += new System.EventHandler(this.buttonVoltarCarta_Click);
             // 
-            // CriarCarta
+            // CriarCartaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 371);
+            this.ClientSize = new System.Drawing.Size(383, 337);
             this.Controls.Add(this.buttonVoltarCarta);
             this.Controls.Add(this.buttonConfirmarCarta);
             this.Controls.Add(this.comboBoxTipoCarta);
@@ -246,7 +247,7 @@
             this.Controls.Add(this.textBoxNomeCarta);
             this.Controls.Add(this.labelNomeCarta);
             this.Controls.Add(this.labelCartas);
-            this.Name = "CriarCarta";
+            this.Name = "CriarCartaForm";
             this.Text = "Criar Carta";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAtaque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDefesa)).EndInit();

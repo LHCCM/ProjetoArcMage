@@ -71,7 +71,7 @@
             // listBoxCartasBaralho
             // 
             this.listBoxCartasBaralho.FormattingEnabled = true;
-            this.listBoxCartasBaralho.Location = new System.Drawing.Point(198, 85);
+            this.listBoxCartasBaralho.Location = new System.Drawing.Point(206, 85);
             this.listBoxCartasBaralho.Name = "listBoxCartasBaralho";
             this.listBoxCartasBaralho.Size = new System.Drawing.Size(135, 251);
             this.listBoxCartasBaralho.TabIndex = 3;
@@ -79,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(223, 69);
+            this.label1.Location = new System.Drawing.Point(212, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 4;

@@ -180,6 +180,7 @@
             this.buttonCancelarNovoJogador.TabIndex = 18;
             this.buttonCancelarNovoJogador.Text = "Cancelar";
             this.buttonCancelarNovoJogador.UseVisualStyleBackColor = true;
+            this.buttonCancelarNovoJogador.Click += new System.EventHandler(this.buttonCancelarNovoJogador_Click);
             // 
             // pictureBox1
             // 

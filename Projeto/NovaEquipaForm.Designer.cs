@@ -95,7 +95,7 @@
             // 
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.buttonProcurar);
-            this.groupBox1.Location = new System.Drawing.Point(12, 233);
+            this.groupBox1.Location = new System.Drawing.Point(12, 226);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(127, 75);
             this.groupBox1.TabIndex = 5;
@@ -126,10 +126,11 @@
             this.buttonCancelar.TabIndex = 7;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(145, 285);
+            this.button3.Location = new System.Drawing.Point(145, 275);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 23);
             this.button3.TabIndex = 8;
@@ -138,7 +139,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(145, 179);
+            this.pictureBox1.Location = new System.Drawing.Point(145, 169);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 100);
             this.pictureBox1.TabIndex = 9;
@@ -164,7 +165,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 153);
+            this.textBox2.Location = new System.Drawing.Point(145, 143);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(123, 20);
             this.textBox2.TabIndex = 6;
@@ -172,7 +173,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(145, 137);
+            this.label3.Location = new System.Drawing.Point(145, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 12;

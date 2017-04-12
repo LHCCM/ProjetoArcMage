@@ -16,5 +16,10 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void buttonNovoBaralhoCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

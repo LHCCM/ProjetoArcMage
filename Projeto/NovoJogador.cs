@@ -16,5 +16,10 @@ namespace Projeto
         {
             InitializeComponent();
         }
+
+        private void buttonCancelarNovoJogador_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

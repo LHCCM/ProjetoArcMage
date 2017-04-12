@@ -32,8 +32,8 @@
             this.buttonEditarCarta = new System.Windows.Forms.Button();
             this.buttonApagarCarta = new System.Windows.Forms.Button();
             this.buttonAdicionarCarta = new System.Windows.Forms.Button();
-            this.listBoxListaCartas = new System.Windows.Forms.ListBox();
-            this.listBoxBaralhos = new System.Windows.Forms.ListBox();
+            this.listBoxInfo = new System.Windows.Forms.ListBox();
+            this.listBoxCartas = new System.Windows.Forms.ListBox();
             this.labelListaCartas = new System.Windows.Forms.Label();
             this.labelCarta = new System.Windows.Forms.Label();
             this.labelCartas = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(241, 354);
+            this.buttonVoltar.Location = new System.Drawing.Point(218, 354);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(121, 23);
             this.buttonVoltar.TabIndex = 20;
@@ -51,7 +51,7 @@
             // 
             // buttonEditarCarta
             // 
-            this.buttonEditarCarta.Location = new System.Drawing.Point(21, 326);
+            this.buttonEditarCarta.Location = new System.Drawing.Point(11, 326);
             this.buttonEditarCarta.Name = "buttonEditarCarta";
             this.buttonEditarCarta.Size = new System.Drawing.Size(121, 23);
             this.buttonEditarCarta.TabIndex = 19;
@@ -60,7 +60,7 @@
             // 
             // buttonApagarCarta
             // 
-            this.buttonApagarCarta.Location = new System.Drawing.Point(22, 355);
+            this.buttonApagarCarta.Location = new System.Drawing.Point(11, 354);
             this.buttonApagarCarta.Name = "buttonApagarCarta";
             this.buttonApagarCarta.Size = new System.Drawing.Size(121, 23);
             this.buttonApagarCarta.TabIndex = 18;
@@ -69,37 +69,37 @@
             // 
             // buttonAdicionarCarta
             // 
-            this.buttonAdicionarCarta.Location = new System.Drawing.Point(22, 297);
+            this.buttonAdicionarCarta.Location = new System.Drawing.Point(12, 297);
             this.buttonAdicionarCarta.Name = "buttonAdicionarCarta";
             this.buttonAdicionarCarta.Size = new System.Drawing.Size(121, 23);
             this.buttonAdicionarCarta.TabIndex = 17;
             this.buttonAdicionarCarta.Text = "Adicionar Carta";
             this.buttonAdicionarCarta.UseVisualStyleBackColor = true;
             // 
-            // listBoxListaCartas
+            // listBoxInfo
             // 
-            this.listBoxListaCartas.FormattingEnabled = true;
-            this.listBoxListaCartas.Location = new System.Drawing.Point(193, 94);
-            this.listBoxListaCartas.Name = "listBoxListaCartas";
-            this.listBoxListaCartas.Size = new System.Drawing.Size(169, 147);
-            this.listBoxListaCartas.TabIndex = 16;
+            this.listBoxInfo.FormattingEnabled = true;
+            this.listBoxInfo.Location = new System.Drawing.Point(170, 66);
+            this.listBoxInfo.Name = "listBoxInfo";
+            this.listBoxInfo.Size = new System.Drawing.Size(169, 147);
+            this.listBoxInfo.TabIndex = 16;
             // 
-            // listBoxBaralhos
+            // listBoxCartas
             // 
-            this.listBoxBaralhos.FormattingEnabled = true;
-            this.listBoxBaralhos.Location = new System.Drawing.Point(22, 66);
-            this.listBoxBaralhos.Name = "listBoxBaralhos";
-            this.listBoxBaralhos.Size = new System.Drawing.Size(120, 225);
-            this.listBoxBaralhos.TabIndex = 15;
+            this.listBoxCartas.FormattingEnabled = true;
+            this.listBoxCartas.Location = new System.Drawing.Point(12, 66);
+            this.listBoxCartas.Name = "listBoxCartas";
+            this.listBoxCartas.Size = new System.Drawing.Size(120, 225);
+            this.listBoxCartas.TabIndex = 15;
             // 
             // labelListaCartas
             // 
             this.labelListaCartas.AutoSize = true;
-            this.labelListaCartas.Location = new System.Drawing.Point(190, 50);
+            this.labelListaCartas.Location = new System.Drawing.Point(167, 50);
             this.labelListaCartas.Name = "labelListaCartas";
-            this.labelListaCartas.Size = new System.Drawing.Size(58, 13);
+            this.labelListaCartas.Size = new System.Drawing.Size(60, 13);
             this.labelListaCartas.TabIndex = 14;
-            this.labelListaCartas.Text = "Info Cartas";
+            this.labelListaCartas.Text = "Informação";
             // 
             // labelCarta
             // 
@@ -114,27 +114,27 @@
             // 
             this.labelCartas.AutoSize = true;
             this.labelCartas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCartas.Location = new System.Drawing.Point(120, 9);
+            this.labelCartas.Location = new System.Drawing.Point(140, 9);
             this.labelCartas.Name = "labelCartas";
             this.labelCartas.Size = new System.Drawing.Size(70, 25);
             this.labelCartas.TabIndex = 12;
             this.labelCartas.Text = "Cartas";
             // 
-            // FormCartas
+            // CartasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 389);
+            this.ClientSize = new System.Drawing.Size(351, 389);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonEditarCarta);
             this.Controls.Add(this.buttonApagarCarta);
             this.Controls.Add(this.buttonAdicionarCarta);
-            this.Controls.Add(this.listBoxListaCartas);
-            this.Controls.Add(this.listBoxBaralhos);
+            this.Controls.Add(this.listBoxInfo);
+            this.Controls.Add(this.listBoxCartas);
             this.Controls.Add(this.labelListaCartas);
             this.Controls.Add(this.labelCarta);
             this.Controls.Add(this.labelCartas);
-            this.Name = "FormCartas";
+            this.Name = "CartasForm";
             this.Text = "Cartas";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,8 +147,8 @@
         private System.Windows.Forms.Button buttonEditarCarta;
         private System.Windows.Forms.Button buttonApagarCarta;
         private System.Windows.Forms.Button buttonAdicionarCarta;
-        private System.Windows.Forms.ListBox listBoxListaCartas;
-        private System.Windows.Forms.ListBox listBoxBaralhos;
+        private System.Windows.Forms.ListBox listBoxInfo;
+        private System.Windows.Forms.ListBox listBoxCartas;
         private System.Windows.Forms.Label labelListaCartas;
         private System.Windows.Forms.Label labelCarta;
         private System.Windows.Forms.Label labelCartas;
