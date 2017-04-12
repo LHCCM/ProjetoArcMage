@@ -75,6 +75,7 @@
             this.buttonAdicionarCarta.TabIndex = 17;
             this.buttonAdicionarCarta.Text = "Adicionar Carta";
             this.buttonAdicionarCarta.UseVisualStyleBackColor = true;
+            this.buttonAdicionarCarta.Click += new System.EventHandler(this.buttonAdicionarCarta_Click);
             // 
             // listBoxInfo
             // 

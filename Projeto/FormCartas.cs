@@ -23,5 +23,11 @@ namespace Projeto
             menuadmin.Show();
             this.Close();
         }
+
+        private void buttonAdicionarCarta_Click(object sender, EventArgs e)
+        {
+            CriarCartaForm novaC = new CriarCartaForm();
+            novaC.Show();
+        }
     }
 }
