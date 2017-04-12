@@ -130,7 +130,6 @@
           <NavigationProperty Name="Deck" Relationship="Model1.DeckCard" FromRole="Card" ToRole="Deck" />
           <Property Name="Atack" Type="String" Nullable="false" />
           <Property Name="Defense" Type="String" Nullable="false" />
-          <Property Name="Property1" Type="String" Nullable="false" />
           <Property Name="Loyal" Type="String" Nullable="false" />
           <Property Name="Rules" Type="String" Nullable="false" />
           <Property Name="Faction" Type="String" Nullable="false" />
