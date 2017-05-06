@@ -19,8 +19,6 @@ namespace Projeto
         {
             this.GameAsTeam1 = new HashSet<TeamGame>();
             this.GameAsTeam2 = new HashSet<TeamGame>();
-            this.Player1 = new HashSet<Player>();
-            this.Player2 = new HashSet<Player>();
         }
     
         public int Id { get; set; }
@@ -33,9 +31,5 @@ namespace Projeto
         public virtual ICollection<TeamGame> GameAsTeam2 { get; set; }
         public virtual TeamTournament TournamentAsTeam1 { get; set; }
         public virtual TeamTournament TournamentAsTeam2 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Player> Player1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Player> Player2 { get; set; }
     }
 }

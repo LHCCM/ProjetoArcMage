@@ -22,12 +22,13 @@ namespace Projeto
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Atack { get; set; }
-        public string Defense { get; set; }
-        public string Loyal { get; set; }
+        public int Atack { get; set; }
+        public int Defense { get; set; }
+        public int Loyal { get; set; }
         public string Rules { get; set; }
         public string Faction { get; set; }
         public string Type { get; set; }
+        public int Cost { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Deck> Deck { get; set; }

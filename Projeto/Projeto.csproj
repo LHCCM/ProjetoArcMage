@@ -75,17 +75,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Baralhos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Baralhos.Designer.cs">
       <DependentUpon>Baralhos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Card.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="CriarCarta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CriarCarta.Designer.cs">
       <DependentUpon>CriarCarta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deck.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagramaDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagramaDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagramaDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="EditarBaralho.cs">
       <SubType>Form</SubType>
@@ -128,6 +147,9 @@
     </Compile>
     <Compile Include="FormCartas.Designer.cs">
       <DependentUpon>FormCartas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="GerirEquipas.cs">
       <SubType>Form</SubType>
@@ -177,10 +199,10 @@
     <Compile Include="MenuArbitro.Designer.cs">
       <DependentUpon>MenuArbitro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
+    <Compile Include="DiagramaDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>DiagramaDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="NovaEquipaForm.cs">
       <SubType>Form</SubType>
@@ -218,13 +240,40 @@
     <Compile Include="NovoUtilizadorForm.Designer.cs">
       <DependentUpon>NovoUtilizadorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referee.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StandardGame.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StandardTournament.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Team.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeamGame.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeamTournament.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="TorneioForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TorneioForm.Designer.cs">
       <DependentUpon>TorneioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tournament.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>DiagramaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Utilizadores.cs">
       <SubType>Form</SubType>
@@ -316,12 +365,12 @@
     <EmbeddedResource Include="Utilizadores.resx">
       <DependentUpon>Utilizadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="DiagramaDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>DiagramaDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="DiagramaDB.edmx.diagram">
+      <DependentUpon>DiagramaDB.edmx</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -350,6 +399,19 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DiagramaDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DiagramaDB.Context.cs</LastGenOutput>
+      <DependentUpon>DiagramaDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="DiagramaDB.edmx.sql" />
+    <Content Include="DiagramaDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DiagramaDB.cs</LastGenOutput>
+      <DependentUpon>DiagramaDB.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

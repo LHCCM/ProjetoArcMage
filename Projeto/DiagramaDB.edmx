@@ -15,15 +15,17 @@
     <EntitySet Name="Player" EntityType="Model1.Store.Player" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="User_Referee" EntityType="Model1.Store.User_Referee" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Game_StandardGame" EntityType="Model1.Store.Game_StandardGame" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Tournament_StandardTournament" EntityType="Model1.Store.Tournament_StandardTournament" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Game_TeamGame" EntityType="Model1.Store.Game_TeamGame" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Tournament_TeamTournament" EntityType="Model1.Store.Tournament_TeamTournament" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tournament_StandardTournament" EntityType="Model1.Store.Tournament_StandardTournament" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="User_Administrator" EntityType="Model1.Store.User_Administrator" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DeckCard" EntityType="Model1.Store.DeckCard" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PlayerStandardTournament1" EntityType="Model1.Store.PlayerStandardTournament1" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PlayerStandardTournament2" EntityType="Model1.Store.PlayerStandardTournament2" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TeamPlayer1" EntityType="Model1.Store.TeamPlayer1" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TeamPlayer2" EntityType="Model1.Store.TeamPlayer2" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="GameReferee" Association="Model1.Store.GameReferee">
+      <End Role="Game" EntitySet="Game" />
+      <End Role="Referee" EntitySet="User_Referee" />
+    </AssociationSet>
     <AssociationSet Name="FK_DeckCard_Deck" Association="Model1.Store.FK_DeckCard_Deck">
       <End Role="Deck" EntitySet="Deck" />
       <End Role="DeckCard" EntitySet="DeckCard" />
@@ -31,10 +33,6 @@
     <AssociationSet Name="FK_DeckCard_Card" Association="Model1.Store.FK_DeckCard_Card">
       <End Role="Card" EntitySet="Card" />
       <End Role="DeckCard" EntitySet="DeckCard" />
-    </AssociationSet>
-    <AssociationSet Name="GameReferee" Association="Model1.Store.GameReferee">
-      <End Role="Game" EntitySet="Game" />
-      <End Role="Referee" EntitySet="User_Referee" />
     </AssociationSet>
     <AssociationSet Name="DeckGame1" Association="Model1.Store.DeckGame1">
       <End Role="Deck" EntitySet="Deck" />
@@ -52,6 +50,26 @@
       <End Role="Player" EntitySet="Player" />
       <End Role="StandardGame" EntitySet="Game_StandardGame" />
     </AssociationSet>
+    <AssociationSet Name="TeamTeamGame1" Association="Model1.Store.TeamTeamGame1">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamGame" EntitySet="Game_TeamGame" />
+    </AssociationSet>
+    <AssociationSet Name="TeamTeamGame2" Association="Model1.Store.TeamTeamGame2">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamGame" EntitySet="Game_TeamGame" />
+    </AssociationSet>
+    <AssociationSet Name="TournamentGame" Association="Model1.Store.TournamentGame">
+      <End Role="Tournament" EntitySet="Tournament" />
+      <End Role="Game" EntitySet="Game" />
+    </AssociationSet>
+    <AssociationSet Name="TeamTournamentTeam1" Association="Model1.Store.TeamTournamentTeam1">
+      <End Role="TeamTournament" EntitySet="Tournament_TeamTournament" />
+      <End Role="Team" EntitySet="Team" />
+    </AssociationSet>
+    <AssociationSet Name="TeamTournamentTeam2" Association="Model1.Store.TeamTournamentTeam2">
+      <End Role="TeamTournament" EntitySet="Tournament_TeamTournament" />
+      <End Role="Team" EntitySet="Team" />
+    </AssociationSet>
     <AssociationSet Name="FK_PlayerStandardTournament1_Player" Association="Model1.Store.FK_PlayerStandardTournament1_Player">
       <End Role="Player" EntitySet="Player" />
       <End Role="PlayerStandardTournament1" EntitySet="PlayerStandardTournament1" />
@@ -68,42 +86,6 @@
       <End Role="StandardTournament" EntitySet="Tournament_StandardTournament" />
       <End Role="PlayerStandardTournament2" EntitySet="PlayerStandardTournament2" />
     </AssociationSet>
-    <AssociationSet Name="TeamTeamGame1" Association="Model1.Store.TeamTeamGame1">
-      <End Role="Team" EntitySet="Team" />
-      <End Role="TeamGame" EntitySet="Game_TeamGame" />
-    </AssociationSet>
-    <AssociationSet Name="TeamTeamGame2" Association="Model1.Store.TeamTeamGame2">
-      <End Role="Team" EntitySet="Team" />
-      <End Role="TeamGame" EntitySet="Game_TeamGame" />
-    </AssociationSet>
-    <AssociationSet Name="TeamTournamentTeam1" Association="Model1.Store.TeamTournamentTeam1">
-      <End Role="TeamTournament" EntitySet="Tournament_TeamTournament" />
-      <End Role="Team" EntitySet="Team" />
-    </AssociationSet>
-    <AssociationSet Name="TeamTournamentTeam2" Association="Model1.Store.TeamTournamentTeam2">
-      <End Role="TeamTournament" EntitySet="Tournament_TeamTournament" />
-      <End Role="Team" EntitySet="Team" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TeamPlayer1_Team" Association="Model1.Store.FK_TeamPlayer1_Team">
-      <End Role="Team" EntitySet="Team" />
-      <End Role="TeamPlayer1" EntitySet="TeamPlayer1" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TeamPlayer1_Player" Association="Model1.Store.FK_TeamPlayer1_Player">
-      <End Role="Player" EntitySet="Player" />
-      <End Role="TeamPlayer1" EntitySet="TeamPlayer1" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TeamPlayer2_Team" Association="Model1.Store.FK_TeamPlayer2_Team">
-      <End Role="Team" EntitySet="Team" />
-      <End Role="TeamPlayer2" EntitySet="TeamPlayer2" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TeamPlayer2_Player" Association="Model1.Store.FK_TeamPlayer2_Player">
-      <End Role="Player" EntitySet="Player" />
-      <End Role="TeamPlayer2" EntitySet="TeamPlayer2" />
-    </AssociationSet>
-    <AssociationSet Name="TournamentGame" Association="Model1.Store.TournamentGame">
-      <End Role="Tournament" EntitySet="Tournament" />
-      <End Role="Game" EntitySet="Game" />
-    </AssociationSet>
     <AssociationSet Name="FK_Referee_inherits_User" Association="Model1.Store.FK_Referee_inherits_User">
       <End Role="User" EntitySet="User" />
       <End Role="Referee" EntitySet="User_Referee" />
@@ -112,10 +94,6 @@
       <End Role="Game" EntitySet="Game" />
       <End Role="StandardGame" EntitySet="Game_StandardGame" />
     </AssociationSet>
-    <AssociationSet Name="FK_StandardTournament_inherits_Tournament" Association="Model1.Store.FK_StandardTournament_inherits_Tournament">
-      <End Role="Tournament" EntitySet="Tournament" />
-      <End Role="StandardTournament" EntitySet="Tournament_StandardTournament" />
-    </AssociationSet>
     <AssociationSet Name="FK_TeamGame_inherits_Game" Association="Model1.Store.FK_TeamGame_inherits_Game">
       <End Role="Game" EntitySet="Game" />
       <End Role="TeamGame" EntitySet="Game_TeamGame" />
@@ -123,6 +101,10 @@
     <AssociationSet Name="FK_TeamTournament_inherits_Tournament" Association="Model1.Store.FK_TeamTournament_inherits_Tournament">
       <End Role="Tournament" EntitySet="Tournament" />
       <End Role="TeamTournament" EntitySet="Tournament_TeamTournament" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StandardTournament_inherits_Tournament" Association="Model1.Store.FK_StandardTournament_inherits_Tournament">
+      <End Role="Tournament" EntitySet="Tournament" />
+      <End Role="StandardTournament" EntitySet="Tournament_StandardTournament" />
     </AssociationSet>
     <AssociationSet Name="FK_Administrator_inherits_User" Association="Model1.Store.FK_Administrator_inherits_User">
       <End Role="User" EntitySet="User" />
@@ -143,8 +125,8 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Number" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
     <Property Name="DeckId" Type="int" Nullable="false" />
     <Property Name="Referee_Id" Type="int" Nullable="false" />
     <Property Name="Deck1_Id" Type="int" Nullable="false" />
@@ -164,12 +146,13 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Atack" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Defense" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Loyal" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Atack" Type="int" Nullable="false" />
+    <Property Name="Defense" Type="int" Nullable="false" />
+    <Property Name="Loyal" Type="int" Nullable="false" />
     <Property Name="Rules" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Faction" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Tournament">
     <Key>
@@ -177,7 +160,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="Desc" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Team">
@@ -198,7 +181,7 @@
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Nickname" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Age" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
     <Property Name="Avatar" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="User_Referee">
@@ -217,12 +200,6 @@
     <Property Name="Player1_Id" Type="int" Nullable="false" />
     <Property Name="Player2_Id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Tournament_StandardTournament">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="Game_TeamGame">
     <Key>
       <PropertyRef Name="Id" />
@@ -237,11 +214,17 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Tournament_StandardTournament">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="User_Administrator">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="DeckCard">
@@ -267,22 +250,6 @@
     </Key>
     <Property Name="Player2_Id" Type="int" Nullable="false" />
     <Property Name="SinglePlayerTournament2_Id" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="TeamPlayer1">
-    <Key>
-      <PropertyRef Name="Team1_Id" />
-      <PropertyRef Name="Player1_Id" />
-    </Key>
-    <Property Name="Team1_Id" Type="int" Nullable="false" />
-    <Property Name="Player1_Id" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="TeamPlayer2">
-    <Key>
-      <PropertyRef Name="Team2_Id" />
-      <PropertyRef Name="Player2_Id" />
-    </Key>
-    <Property Name="Team2_Id" Type="int" Nullable="false" />
-    <Property Name="Player2_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="GameReferee">
     <End Role="Game" Type="Model1.Store.Game" Multiplicity="*" />
@@ -368,6 +335,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="TournamentGame">
+    <End Role="Tournament" Type="Model1.Store.Tournament" Multiplicity="1" />
+    <End Role="Game" Type="Model1.Store.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tournament">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="Tournament_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="TeamTournamentTeam1">
     <End Role="TeamTournament" Type="Model1.Store.Tournament_TeamTournament" Multiplicity="1" />
     <End Role="Team" Type="Model1.Store.Team" Multiplicity="*" />
@@ -389,18 +368,6 @@
       </Principal>
       <Dependent Role="Team">
         <PropertyRef Name="TournamentAsTeam2_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="TournamentGame">
-    <End Role="Tournament" Type="Model1.Store.Tournament" Multiplicity="1" />
-    <End Role="Game" Type="Model1.Store.Game" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Tournament">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Game">
-        <PropertyRef Name="Tournament_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -476,54 +443,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TeamPlayer1_Team">
-    <End Role="Team" Type="Model1.Store.Team" Multiplicity="1" />
-    <End Role="TeamPlayer1" Type="Model1.Store.TeamPlayer1" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Team">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TeamPlayer1">
-        <PropertyRef Name="Team1_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TeamPlayer1_Player">
-    <End Role="TeamPlayer1" Type="Model1.Store.TeamPlayer1" Multiplicity="*" />
-    <End Role="Player" Type="Model1.Store.Player" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Player">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TeamPlayer1">
-        <PropertyRef Name="Player1_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TeamPlayer2_Team">
-    <End Role="Team" Type="Model1.Store.Team" Multiplicity="1" />
-    <End Role="TeamPlayer2" Type="Model1.Store.TeamPlayer2" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Team">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TeamPlayer2">
-        <PropertyRef Name="Team2_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TeamPlayer2_Player">
-    <End Role="TeamPlayer2" Type="Model1.Store.TeamPlayer2" Multiplicity="*" />
-    <End Role="Player" Type="Model1.Store.Player" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Player">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TeamPlayer2">
-        <PropertyRef Name="Player2_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Referee_inherits_User">
     <End Role="User" Type="Model1.Store.User" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -548,20 +467,6 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="StandardGame">
-        <PropertyRef Name="Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_StandardTournament_inherits_Tournament">
-    <End Role="Tournament" Type="Model1.Store.Tournament" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="StandardTournament" Type="Model1.Store.Tournament_StandardTournament" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Tournament">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="StandardTournament">
         <PropertyRef Name="Id" />
       </Dependent>
     </ReferentialConstraint>
@@ -594,6 +499,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_StandardTournament_inherits_Tournament">
+    <End Role="Tournament" Type="Model1.Store.Tournament" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StandardTournament" Type="Model1.Store.Tournament_StandardTournament" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Tournament">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StandardTournament">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Administrator_inherits_User">
     <End Role="User" Type="Model1.Store.User" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -620,13 +539,13 @@
           <EntitySet Name="Tournament" EntityType="Model1.Tournament" />
           <EntitySet Name="Team" EntityType="Model1.Team" />
           <EntitySet Name="Player" EntityType="Model1.Player" />
-          <AssociationSet Name="DeckCard" Association="Model1.DeckCard">
-            <End Role="Deck" EntitySet="Deck" />
-            <End Role="Card" EntitySet="Card" />
-          </AssociationSet>
           <AssociationSet Name="GameReferee" Association="Model1.GameReferee">
             <End Role="Game" EntitySet="Game" />
             <End Role="Referee" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="DeckCard" Association="Model1.DeckCard">
+            <End Role="Deck" EntitySet="Deck" />
+            <End Role="Card" EntitySet="Card" />
           </AssociationSet>
           <AssociationSet Name="DeckGame1" Association="Model1.DeckGame1">
             <End Role="Deck" EntitySet="Deck" />
@@ -644,14 +563,6 @@
             <End Role="Player" EntitySet="Player" />
             <End Role="StandardGame" EntitySet="Game" />
           </AssociationSet>
-          <AssociationSet Name="PlayerStandardTournament1" Association="Model1.PlayerStandardTournament1">
-            <End Role="Player" EntitySet="Player" />
-            <End Role="StandardTournament" EntitySet="Tournament" />
-          </AssociationSet>
-          <AssociationSet Name="PlayerStandardTournament2" Association="Model1.PlayerStandardTournament2">
-            <End Role="Player" EntitySet="Player" />
-            <End Role="StandardTournament" EntitySet="Tournament" />
-          </AssociationSet>
           <AssociationSet Name="TeamTeamGame1" Association="Model1.TeamTeamGame1">
             <End Role="Team" EntitySet="Team" />
             <End Role="TeamGame" EntitySet="Game" />
@@ -659,6 +570,10 @@
           <AssociationSet Name="TeamTeamGame2" Association="Model1.TeamTeamGame2">
             <End Role="Team" EntitySet="Team" />
             <End Role="TeamGame" EntitySet="Game" />
+          </AssociationSet>
+          <AssociationSet Name="TournamentGame" Association="Model1.TournamentGame">
+            <End Role="Tournament" EntitySet="Tournament" />
+            <End Role="Game" EntitySet="Game" />
           </AssociationSet>
           <AssociationSet Name="TeamTournamentTeam1" Association="Model1.TeamTournamentTeam1">
             <End Role="TeamTournament" EntitySet="Tournament" />
@@ -668,17 +583,13 @@
             <End Role="TeamTournament" EntitySet="Tournament" />
             <End Role="Team" EntitySet="Team" />
           </AssociationSet>
-          <AssociationSet Name="TeamPlayer1" Association="Model1.TeamPlayer1">
-            <End Role="Team" EntitySet="Team" />
+          <AssociationSet Name="PlayerStandardTournament1" Association="Model1.PlayerStandardTournament1">
             <End Role="Player" EntitySet="Player" />
+            <End Role="StandardTournament" EntitySet="Tournament" />
           </AssociationSet>
-          <AssociationSet Name="TeamPlayer2" Association="Model1.TeamPlayer2">
-            <End Role="Team" EntitySet="Team" />
+          <AssociationSet Name="PlayerStandardTournament2" Association="Model1.PlayerStandardTournament2">
             <End Role="Player" EntitySet="Player" />
-          </AssociationSet>
-          <AssociationSet Name="TournamentGame" Association="Model1.TournamentGame">
-            <End Role="Tournament" EntitySet="Tournament" />
-            <End Role="Game" EntitySet="Game" />
+            <End Role="StandardTournament" EntitySet="Tournament" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="User">
@@ -689,13 +600,13 @@
           <Property Name="Username" Type="String" Nullable="false" />
           <Property Name="Password" Type="String" Nullable="false" />
         </EntityType>
-        <EntityType Name="Referee" BaseType="Model1.User" >
+        <EntityType Name="Referee" BaseType="Model1.User">
           <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="Avatar" Type="String" Nullable="false" />
           <NavigationProperty Name="Game" Relationship="Model1.GameReferee" FromRole="Referee" ToRole="Game" />
         </EntityType>
-        <EntityType Name="Administrator" BaseType="Model1.User" >
-          <Property Name="email" Type="String" Nullable="false" />
+        <EntityType Name="Administrator" BaseType="Model1.User">
+          <Property Name="Email" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Game">
           <Key>
@@ -703,10 +614,10 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" Nullable="false" />
-          <Property Name="Date" Type="String" Nullable="false" />
-          <Property Name="Number" Type="String" Nullable="false" />
-          <NavigationProperty Name="Referee" Relationship="Model1.GameReferee" FromRole="Game" ToRole="Referee" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
           <Property Name="DeckId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Referee" Relationship="Model1.GameReferee" FromRole="Game" ToRole="Referee" />
           <NavigationProperty Name="Deck1" Relationship="Model1.DeckGame1" FromRole="Game" ToRole="Deck" />
           <NavigationProperty Name="Deck2" Relationship="Model1.DeckGame2" FromRole="Game" ToRole="Deck" />
           <NavigationProperty Name="Tournament" Relationship="Model1.TournamentGame" FromRole="Game" ToRole="Tournament" />
@@ -727,19 +638,20 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" />
-          <NavigationProperty Name="Deck" Relationship="Model1.DeckCard" FromRole="Card" ToRole="Deck" />
-          <Property Name="Atack" Type="String" Nullable="false" />
-          <Property Name="Defense" Type="String" Nullable="false" />
-          <Property Name="Loyal" Type="String" Nullable="false" />
+          <Property Name="Atack" Type="Int32" Nullable="false" />
+          <Property Name="Defense" Type="Int32" Nullable="false" />
+          <Property Name="Loyal" Type="Int32" Nullable="false" />
           <Property Name="Rules" Type="String" Nullable="false" />
           <Property Name="Faction" Type="String" Nullable="false" />
           <Property Name="Type" Type="String" Nullable="false" />
+          <Property Name="Cost" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Deck" Relationship="Model1.DeckCard" FromRole="Card" ToRole="Deck" />
         </EntityType>
-        <EntityType Name="StandardGame" BaseType="Model1.Game" >
+        <EntityType Name="StandardGame" BaseType="Model1.Game">
           <NavigationProperty Name="Player1" Relationship="Model1.PlayerStandardGame1" FromRole="StandardGame" ToRole="Player" />
           <NavigationProperty Name="Player2" Relationship="Model1.PlayerStandardGame2" FromRole="StandardGame" ToRole="Player" />
         </EntityType>
-        <EntityType Name="TeamGame" BaseType="Model1.Game" >
+        <EntityType Name="TeamGame" BaseType="Model1.Game">
           <NavigationProperty Name="Team1" Relationship="Model1.TeamTeamGame1" FromRole="TeamGame" ToRole="Team" />
           <NavigationProperty Name="Team2" Relationship="Model1.TeamTeamGame2" FromRole="TeamGame" ToRole="Team" />
         </EntityType>
@@ -749,15 +661,15 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nome" Type="String" Nullable="false" />
-          <Property Name="Data" Type="String" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" />
           <Property Name="Desc" Type="String" Nullable="false" />
           <NavigationProperty Name="Game" Relationship="Model1.TournamentGame" FromRole="Tournament" ToRole="Game" />
         </EntityType>
-        <EntityType Name="TeamTournament" BaseType="Model1.Tournament" >
+        <EntityType Name="TeamTournament" BaseType="Model1.Tournament">
           <NavigationProperty Name="Team1" Relationship="Model1.TeamTournamentTeam1" FromRole="TeamTournament" ToRole="Team" />
           <NavigationProperty Name="Team2" Relationship="Model1.TeamTournamentTeam2" FromRole="TeamTournament" ToRole="Team" />
         </EntityType>
-        <EntityType Name="StandardTournament" BaseType="Model1.Tournament" >
+        <EntityType Name="StandardTournament" BaseType="Model1.Tournament">
           <NavigationProperty Name="Player1" Relationship="Model1.PlayerStandardTournament1" FromRole="StandardTournament" ToRole="Player" />
           <NavigationProperty Name="Player2" Relationship="Model1.PlayerStandardTournament2" FromRole="StandardTournament" ToRole="Player" />
         </EntityType>
@@ -772,8 +684,6 @@
           <NavigationProperty Name="GameAsTeam2" Relationship="Model1.TeamTeamGame2" FromRole="Team" ToRole="TeamGame" />
           <NavigationProperty Name="TournamentAsTeam1" Relationship="Model1.TeamTournamentTeam1" FromRole="Team" ToRole="TeamTournament" />
           <NavigationProperty Name="TournamentAsTeam2" Relationship="Model1.TeamTournamentTeam2" FromRole="Team" ToRole="TeamTournament" />
-          <NavigationProperty Name="Player1" Relationship="Model1.TeamPlayer1" FromRole="Team" ToRole="Player" />
-          <NavigationProperty Name="Player2" Relationship="Model1.TeamPlayer2" FromRole="Team" ToRole="Player" />
         </EntityType>
         <EntityType Name="Player">
           <Key>
@@ -783,22 +693,20 @@
           <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="Email" Type="String" Nullable="false" />
           <Property Name="Nickname" Type="String" Nullable="false" />
-          <Property Name="Age" Type="String" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
           <Property Name="Avatar" Type="String" Nullable="false" />
           <NavigationProperty Name="StandardGame1" Relationship="Model1.PlayerStandardGame1" FromRole="Player" ToRole="StandardGame" />
           <NavigationProperty Name="StandardGame2" Relationship="Model1.PlayerStandardGame2" FromRole="Player" ToRole="StandardGame" />
           <NavigationProperty Name="SinglePlayerTournament1" Relationship="Model1.PlayerStandardTournament1" FromRole="Player" ToRole="StandardTournament" />
           <NavigationProperty Name="SinglePlayerTournament2" Relationship="Model1.PlayerStandardTournament2" FromRole="Player" ToRole="StandardTournament" />
-          <NavigationProperty Name="Team1" Relationship="Model1.TeamPlayer1" FromRole="Player" ToRole="Team" />
-          <NavigationProperty Name="Team2" Relationship="Model1.TeamPlayer2" FromRole="Player" ToRole="Team" />
         </EntityType>
-        <Association Name="DeckCard">
-          <End Type="Model1.Deck" Role="Deck" Multiplicity="*" />
-          <End Type="Model1.Card" Role="Card" Multiplicity="*" />
-        </Association>
         <Association Name="GameReferee">
           <End Type="Model1.Game" Role="Game" Multiplicity="*" />
           <End Type="Model1.Referee" Role="Referee" Multiplicity="1" />
+        </Association>
+        <Association Name="DeckCard">
+          <End Type="Model1.Deck" Role="Deck" Multiplicity="*" />
+          <End Type="Model1.Card" Role="Card" Multiplicity="*" />
         </Association>
         <Association Name="DeckGame1">
           <End Type="Model1.Deck" Role="Deck" Multiplicity="1" />
@@ -816,14 +724,6 @@
           <End Type="Model1.Player" Role="Player" Multiplicity="1" />
           <End Type="Model1.StandardGame" Role="StandardGame" Multiplicity="*" />
         </Association>
-        <Association Name="PlayerStandardTournament1">
-          <End Type="Model1.Player" Role="Player" Multiplicity="*" />
-          <End Type="Model1.StandardTournament" Role="StandardTournament" Multiplicity="*" />
-        </Association>
-        <Association Name="PlayerStandardTournament2">
-          <End Type="Model1.Player" Role="Player" Multiplicity="*" />
-          <End Type="Model1.StandardTournament" Role="StandardTournament" Multiplicity="*" />
-        </Association>
         <Association Name="TeamTeamGame1">
           <End Type="Model1.Team" Role="Team" Multiplicity="1" />
           <End Type="Model1.TeamGame" Role="TeamGame" Multiplicity="*" />
@@ -831,6 +731,10 @@
         <Association Name="TeamTeamGame2">
           <End Type="Model1.Team" Role="Team" Multiplicity="1" />
           <End Type="Model1.TeamGame" Role="TeamGame" Multiplicity="*" />
+        </Association>
+        <Association Name="TournamentGame">
+          <End Type="Model1.Tournament" Role="Tournament" Multiplicity="1" />
+          <End Type="Model1.Game" Role="Game" Multiplicity="*" />
         </Association>
         <Association Name="TeamTournamentTeam1">
           <End Type="Model1.TeamTournament" Role="TeamTournament" Multiplicity="1" />
@@ -840,17 +744,13 @@
           <End Type="Model1.TeamTournament" Role="TeamTournament" Multiplicity="1" />
           <End Type="Model1.Team" Role="Team" Multiplicity="*" />
         </Association>
-        <Association Name="TeamPlayer1">
-          <End Type="Model1.Team" Role="Team" Multiplicity="*" />
+        <Association Name="PlayerStandardTournament1">
           <End Type="Model1.Player" Role="Player" Multiplicity="*" />
+          <End Type="Model1.StandardTournament" Role="StandardTournament" Multiplicity="*" />
         </Association>
-        <Association Name="TeamPlayer2">
-          <End Type="Model1.Team" Role="Team" Multiplicity="*" />
+        <Association Name="PlayerStandardTournament2">
           <End Type="Model1.Player" Role="Player" Multiplicity="*" />
-        </Association>
-        <Association Name="TournamentGame">
-          <End Type="Model1.Tournament" Role="Tournament" Multiplicity="1" />
-          <End Type="Model1.Game" Role="Game" Multiplicity="*" />
+          <End Type="Model1.StandardTournament" Role="StandardTournament" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -876,7 +776,7 @@
       <EntityTypeMapping TypeName="IsTypeOf(Model1.Administrator)">
         <MappingFragment StoreEntitySet="User_Administrator">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -920,6 +820,7 @@
           <ScalarProperty Name="Rules" ColumnName="Rules" />
           <ScalarProperty Name="Faction" ColumnName="Faction" />
           <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -932,13 +833,13 @@
           <ScalarProperty Name="Desc" ColumnName="Desc" />
         </MappingFragment>
       </EntityTypeMapping>
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.StandardTournament)">
-        <MappingFragment StoreEntitySet="Tournament_StandardTournament">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.TeamTournament)">
+        <MappingFragment StoreEntitySet="Tournament_TeamTournament">
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.TeamTournament)">
-        <MappingFragment StoreEntitySet="Tournament_TeamTournament">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.StandardTournament)">
+        <MappingFragment StoreEntitySet="Tournament_StandardTournament">
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -964,20 +865,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="DeckCard" TypeName="Model1.DeckCard" StoreEntitySet="DeckCard">
-      <EndProperty Name="Deck">
-        <ScalarProperty Name="Id" ColumnName="Deck_Id" />
-      </EndProperty>
-      <EndProperty Name="Card">
-        <ScalarProperty Name="Id" ColumnName="Card_Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="GameReferee" TypeName="Model1.GameReferee" StoreEntitySet="Game">
       <EndProperty Name="Referee">
         <ScalarProperty Name="Id" ColumnName="Referee_Id" />
       </EndProperty>
       <EndProperty Name="Game">
         <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DeckCard" TypeName="Model1.DeckCard" StoreEntitySet="DeckCard">
+      <EndProperty Name="Deck">
+        <ScalarProperty Name="Id" ColumnName="Deck_Id" />
+      </EndProperty>
+      <EndProperty Name="Card">
+        <ScalarProperty Name="Id" ColumnName="Card_Id" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="DeckGame1" TypeName="Model1.DeckGame1" StoreEntitySet="Game">
@@ -1012,22 +913,6 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PlayerStandardTournament1" TypeName="Model1.PlayerStandardTournament1" StoreEntitySet="PlayerStandardTournament1">
-      <EndProperty Name="Player">
-        <ScalarProperty Name="Id" ColumnName="Player1_Id" />
-      </EndProperty>
-      <EndProperty Name="StandardTournament">
-        <ScalarProperty Name="Id" ColumnName="SinglePlayerTournament1_Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="PlayerStandardTournament2" TypeName="Model1.PlayerStandardTournament2" StoreEntitySet="PlayerStandardTournament2">
-      <EndProperty Name="Player">
-        <ScalarProperty Name="Id" ColumnName="Player2_Id" />
-      </EndProperty>
-      <EndProperty Name="StandardTournament">
-        <ScalarProperty Name="Id" ColumnName="SinglePlayerTournament2_Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="TeamTeamGame1" TypeName="Model1.TeamTeamGame1" StoreEntitySet="Game_TeamGame">
       <EndProperty Name="Team">
         <ScalarProperty Name="Id" ColumnName="Team1_Id" />
@@ -1041,6 +926,14 @@
         <ScalarProperty Name="Id" ColumnName="Team2_Id" />
       </EndProperty>
       <EndProperty Name="TeamGame">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TournamentGame" TypeName="Model1.TournamentGame" StoreEntitySet="Game">
+      <EndProperty Name="Tournament">
+        <ScalarProperty Name="Id" ColumnName="Tournament_Id" />
+      </EndProperty>
+      <EndProperty Name="Game">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
@@ -1060,28 +953,20 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="TeamPlayer1" TypeName="Model1.TeamPlayer1" StoreEntitySet="TeamPlayer1">
-      <EndProperty Name="Team">
-        <ScalarProperty Name="Id" ColumnName="Team1_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="PlayerStandardTournament1" TypeName="Model1.PlayerStandardTournament1" StoreEntitySet="PlayerStandardTournament1">
       <EndProperty Name="Player">
         <ScalarProperty Name="Id" ColumnName="Player1_Id" />
       </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="TeamPlayer2" TypeName="Model1.TeamPlayer2" StoreEntitySet="TeamPlayer2">
-      <EndProperty Name="Team">
-        <ScalarProperty Name="Id" ColumnName="Team2_Id" />
+      <EndProperty Name="StandardTournament">
+        <ScalarProperty Name="Id" ColumnName="SinglePlayerTournament1_Id" />
       </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PlayerStandardTournament2" TypeName="Model1.PlayerStandardTournament2" StoreEntitySet="PlayerStandardTournament2">
       <EndProperty Name="Player">
         <ScalarProperty Name="Id" ColumnName="Player2_Id" />
       </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="TournamentGame" TypeName="Model1.TournamentGame" StoreEntitySet="Game">
-      <EndProperty Name="Tournament">
-        <ScalarProperty Name="Id" ColumnName="Tournament_Id" />
-      </EndProperty>
-      <EndProperty Name="Game">
-        <ScalarProperty Name="Id" ColumnName="Id" />
+      <EndProperty Name="StandardTournament">
+        <ScalarProperty Name="Id" ColumnName="SinglePlayerTournament2_Id" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

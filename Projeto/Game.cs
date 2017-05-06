@@ -16,8 +16,8 @@ namespace Projeto
     {
         public int Id { get; set; }
         public string Description { get; set; }
-        public string Date { get; set; }
-        public string Number { get; set; }
+        public System.DateTime Date { get; set; }
+        public int Number { get; set; }
         public int DeckId { get; set; }
     
         public virtual Referee Referee { get; set; }

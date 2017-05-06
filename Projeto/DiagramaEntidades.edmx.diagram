@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="70c2fcf83bf44e49bca28560e9a48b3b" Name="Diagram1" >
+        <EntityTypeShape EntityType="DiagramaEntidades.User" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DiagramaEntidades.Referee" Width="1.5" PointX="5.25" PointY="7.625" />
+        <EntityTypeShape EntityType="DiagramaEntidades.Administrator" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DiagramaEntidades.Game" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="DiagramaEntidades.Deck" Width="1.5" PointX="0.75" PointY="8.375" />
+        <EntityTypeShape EntityType="DiagramaEntidades.Card" Width="1.5" PointX="3" PointY="11.375" />
+        <EntityTypeShape EntityType="DiagramaEntidades.StandardGame" Width="1.5" PointX="3" PointY="3.125" />
+        <EntityTypeShape EntityType="DiagramaEntidades.TeamGame" Width="1.5" PointX="10.25" PointY="1.375" />
+        <EntityTypeShape EntityType="DiagramaEntidades.Tournament" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="DiagramaEntidades.TeamTournament" Width="1.5" PointX="5.75" PointY="1.375" />
+        <EntityTypeShape EntityType="DiagramaEntidades.StandardTournament" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="DiagramaEntidades.Team" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="DiagramaEntidades.Player" Width="1.5" PointX="0.75" PointY="1.25" />
+        <AssociationConnector Association="DiagramaEntidades.GameReferee" />
+        <AssociationConnector Association="DiagramaEntidades.DeckCard" />
+        <AssociationConnector Association="DiagramaEntidades.DeckGame1" />
+        <AssociationConnector Association="DiagramaEntidades.DeckGame2" />
+        <AssociationConnector Association="DiagramaEntidades.PlayerStandardGame1" />
+        <AssociationConnector Association="DiagramaEntidades.PlayerStandardGame2" />
+        <AssociationConnector Association="DiagramaEntidades.TeamTeamGame1" />
+        <AssociationConnector Association="DiagramaEntidades.TeamTeamGame2" />
+        <AssociationConnector Association="DiagramaEntidades.TournamentGame" />
+        <AssociationConnector Association="DiagramaEntidades.TeamTournamentTeam1" />
+        <AssociationConnector Association="DiagramaEntidades.TeamTournamentTeam2" />
+        <AssociationConnector Association="DiagramaEntidades.PlayerStandardTournament1" />
+        <AssociationConnector Association="DiagramaEntidades.PlayerStandardTournament2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
