@@ -12,9 +12,13 @@ namespace Projeto
 {
     public partial class CartasForm : Form
     {
+
+        Model1Container container = new Model1Container();
+
         public CartasForm()
         {
             InitializeComponent();
+
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
@@ -28,6 +32,13 @@ namespace Projeto
         {
             CriarCartaForm novaC = new CriarCartaForm();
             novaC.Show();
+            refreshCards();
+        }
+
+        private void refreshCards()
+        {
+            listBoxCartas.Items.Clear();
+            listBoxCartas.Items.AddRange(container.Card.ToArray<Card>());
         }
     }
 }
