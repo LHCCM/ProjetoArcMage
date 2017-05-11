@@ -42,7 +42,7 @@
             this.labelRegraCarta = new System.Windows.Forms.Label();
             this.textBoxRegraCarta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxFacao = new System.Windows.Forms.ComboBox();
             this.labelTipoCarta = new System.Windows.Forms.Label();
             this.comboBoxTipoCarta = new System.Windows.Forms.ComboBox();
             this.buttonConfirmarCarta = new System.Windows.Forms.Button();
@@ -169,16 +169,16 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Fação";
             // 
-            // comboBox1
+            // comboBoxFacao
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxFacao.FormattingEnabled = true;
+            this.comboBoxFacao.Items.AddRange(new object[] {
             "Gaian Love for Life",
             "Uneasy Alliance"});
-            this.comboBox1.Location = new System.Drawing.Point(150, 214);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 21);
-            this.comboBox1.TabIndex = 16;
+            this.comboBoxFacao.Location = new System.Drawing.Point(150, 214);
+            this.comboBoxFacao.Name = "comboBoxFacao";
+            this.comboBoxFacao.Size = new System.Drawing.Size(210, 21);
+            this.comboBoxFacao.TabIndex = 16;
             // 
             // labelTipoCarta
             // 
@@ -212,6 +212,7 @@
             this.buttonConfirmarCarta.TabIndex = 19;
             this.buttonConfirmarCarta.Text = "Confirmar";
             this.buttonConfirmarCarta.UseVisualStyleBackColor = true;
+            this.buttonConfirmarCarta.Click += new System.EventHandler(this.buttonConfirmarCarta_Click);
             // 
             // buttonVoltarCarta
             // 
@@ -232,7 +233,7 @@
             this.Controls.Add(this.buttonConfirmarCarta);
             this.Controls.Add(this.comboBoxTipoCarta);
             this.Controls.Add(this.labelTipoCarta);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxFacao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxRegraCarta);
             this.Controls.Add(this.labelRegraCarta);
@@ -274,7 +275,7 @@
         private System.Windows.Forms.Label labelRegraCarta;
         private System.Windows.Forms.TextBox textBoxRegraCarta;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxFacao;
         private System.Windows.Forms.Label labelTipoCarta;
         private System.Windows.Forms.ComboBox comboBoxTipoCarta;
         private System.Windows.Forms.Button buttonConfirmarCarta;
