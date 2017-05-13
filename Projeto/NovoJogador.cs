@@ -44,7 +44,7 @@ namespace Projeto
                     Email = email,
 
                     Age = (int)numericUpDownIdade.Value,
-                    Avatar = "nenhum"
+                    Avatar = "none"
 
                 };
                 DialogResult = DialogResult.OK;
