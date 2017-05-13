@@ -14,12 +14,15 @@ namespace Projeto
     {
 
         List<Card> cartas;
+        List<Player> jogadores;
 
         public MenuAdminForm()
         {
             InitializeComponent();
 
             cartas = new List<Card>();
+            jogadores = new List<Player>();
+
         }
 
         //Model1Container container = new Model1Container();

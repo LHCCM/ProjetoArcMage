@@ -59,6 +59,7 @@ namespace Projeto
 
         }
 
+        //dis no work 
         private void buttonApagarCarta_Click(object sender, EventArgs e)
         {
             if (listBoxCartas.SelectedIndex >= 0)
