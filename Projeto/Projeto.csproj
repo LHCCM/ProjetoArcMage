@@ -240,6 +240,7 @@
     <Compile Include="NovoUtilizadorForm.Designer.cs">
       <DependentUpon>NovoUtilizadorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="override\Card.cs" />
     <Compile Include="Player.cs">
       <DependentUpon>DiagramaDB.tt</DependentUpon>
     </Compile>

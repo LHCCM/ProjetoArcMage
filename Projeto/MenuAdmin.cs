@@ -13,8 +13,6 @@ namespace Projeto
     public partial class MenuAdminForm : Form
     {
 
-        Model1Container container = new Model1Container();
-
         List<Card> cartas;
 
         public MenuAdminForm()
@@ -23,6 +21,8 @@ namespace Projeto
 
             cartas = new List<Card>();
         }
+
+        //Model1Container container = new Model1Container();
 
         private void buttonTorneiosAdmin_Click(object sender, EventArgs e)
         {

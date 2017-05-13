@@ -55,11 +55,6 @@ namespace Projeto
                 };
                 DialogResult = DialogResult.OK;
                 Close();
-
-                /*if (DialogResult == DialogResult.OK)
-                {
-                   refreshCards();
-                }*/
             }
 
         }
