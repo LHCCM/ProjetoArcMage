@@ -36,6 +36,14 @@
             this.labelCarta = new System.Windows.Forms.Label();
             this.labelCartas = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelLeal = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelCusto = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelDefesa = new System.Windows.Forms.Label();
+            this.labelAtaque = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.labelTipo = new System.Windows.Forms.Label();
             this.labelFacao = new System.Windows.Forms.Label();
             this.labelRegras = new System.Windows.Forms.Label();
@@ -44,14 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelAtaque = new System.Windows.Forms.Label();
-            this.labelDefesa = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelCusto = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.labelLeal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,15 +143,83 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(145, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(194, 213);
+            this.groupBox1.Size = new System.Drawing.Size(194, 298);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informação";
             // 
+            // labelLeal
+            // 
+            this.labelLeal.AutoSize = true;
+            this.labelLeal.Location = new System.Drawing.Point(70, 116);
+            this.labelLeal.Name = "labelLeal";
+            this.labelLeal.Size = new System.Drawing.Size(0, 13);
+            this.labelLeal.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(10, 116);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Lealdade:";
+            // 
+            // labelCusto
+            // 
+            this.labelCusto.AutoSize = true;
+            this.labelCusto.Location = new System.Drawing.Point(70, 96);
+            this.labelCusto.Name = "labelCusto";
+            this.labelCusto.Size = new System.Drawing.Size(0, 13);
+            this.labelCusto.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Custo:";
+            // 
+            // labelDefesa
+            // 
+            this.labelDefesa.AutoSize = true;
+            this.labelDefesa.Location = new System.Drawing.Point(70, 74);
+            this.labelDefesa.Name = "labelDefesa";
+            this.labelDefesa.Size = new System.Drawing.Size(0, 13);
+            this.labelDefesa.TabIndex = 11;
+            // 
+            // labelAtaque
+            // 
+            this.labelAtaque.AutoSize = true;
+            this.labelAtaque.Location = new System.Drawing.Point(70, 50);
+            this.labelAtaque.Name = "labelAtaque";
+            this.labelAtaque.Size = new System.Drawing.Size(0, 13);
+            this.labelAtaque.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 74);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Defesa:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Ataque:";
+            // 
             // labelTipo
             // 
             this.labelTipo.AutoSize = true;
-            this.labelTipo.Location = new System.Drawing.Point(70, 184);
+            this.labelTipo.Location = new System.Drawing.Point(70, 270);
             this.labelTipo.Name = "labelTipo";
             this.labelTipo.Size = new System.Drawing.Size(0, 13);
             this.labelTipo.TabIndex = 7;
@@ -159,7 +227,7 @@
             // labelFacao
             // 
             this.labelFacao.AutoSize = true;
-            this.labelFacao.Location = new System.Drawing.Point(70, 162);
+            this.labelFacao.Location = new System.Drawing.Point(70, 248);
             this.labelFacao.Name = "labelFacao";
             this.labelFacao.Size = new System.Drawing.Size(0, 13);
             this.labelFacao.TabIndex = 6;
@@ -183,7 +251,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 184);
+            this.label4.Location = new System.Drawing.Point(10, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 3;
@@ -192,7 +260,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 162);
+            this.label3.Location = new System.Drawing.Point(10, 248);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 2;
@@ -215,74 +283,6 @@
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Ataque:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 74);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Defesa:";
-            // 
-            // labelAtaque
-            // 
-            this.labelAtaque.AutoSize = true;
-            this.labelAtaque.Location = new System.Drawing.Point(70, 50);
-            this.labelAtaque.Name = "labelAtaque";
-            this.labelAtaque.Size = new System.Drawing.Size(0, 13);
-            this.labelAtaque.TabIndex = 10;
-            // 
-            // labelDefesa
-            // 
-            this.labelDefesa.AutoSize = true;
-            this.labelDefesa.Location = new System.Drawing.Point(70, 74);
-            this.labelDefesa.Name = "labelDefesa";
-            this.labelDefesa.Size = new System.Drawing.Size(0, 13);
-            this.labelDefesa.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Custo:";
-            // 
-            // labelCusto
-            // 
-            this.labelCusto.AutoSize = true;
-            this.labelCusto.Location = new System.Drawing.Point(70, 96);
-            this.labelCusto.Name = "labelCusto";
-            this.labelCusto.Size = new System.Drawing.Size(0, 13);
-            this.labelCusto.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 116);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Lealdade:";
-            // 
-            // labelLeal
-            // 
-            this.labelLeal.AutoSize = true;
-            this.labelLeal.Location = new System.Drawing.Point(70, 116);
-            this.labelLeal.Name = "labelLeal";
-            this.labelLeal.Size = new System.Drawing.Size(0, 13);
-            this.labelLeal.TabIndex = 15;
             // 
             // CartasForm
             // 

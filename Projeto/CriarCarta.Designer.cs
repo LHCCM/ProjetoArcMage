@@ -157,7 +157,7 @@
             this.textBoxRegraCarta.Location = new System.Drawing.Point(150, 107);
             this.textBoxRegraCarta.Multiline = true;
             this.textBoxRegraCarta.Name = "textBoxRegraCarta";
-            this.textBoxRegraCarta.Size = new System.Drawing.Size(210, 75);
+            this.textBoxRegraCarta.Size = new System.Drawing.Size(148, 75);
             this.textBoxRegraCarta.TabIndex = 14;
             // 
             // label1
