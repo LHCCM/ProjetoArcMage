@@ -46,12 +46,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.labelTipo = new System.Windows.Forms.Label();
             this.labelFacao = new System.Windows.Forms.Label();
-            this.labelRegras = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxRegraCarta = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,6 +125,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxRegraCarta);
             this.groupBox1.Controls.Add(this.labelLeal);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.labelCusto);
@@ -135,7 +136,6 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.labelTipo);
             this.groupBox1.Controls.Add(this.labelFacao);
-            this.groupBox1.Controls.Add(this.labelRegras);
             this.groupBox1.Controls.Add(this.labelNome);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -232,14 +232,6 @@
             this.labelFacao.Size = new System.Drawing.Size(0, 13);
             this.labelFacao.TabIndex = 6;
             // 
-            // labelRegras
-            // 
-            this.labelRegras.AutoSize = true;
-            this.labelRegras.Location = new System.Drawing.Point(70, 139);
-            this.labelRegras.Name = "labelRegras";
-            this.labelRegras.Size = new System.Drawing.Size(0, 13);
-            this.labelRegras.TabIndex = 5;
-            // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
@@ -284,6 +276,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
+            // textBoxRegraCarta
+            // 
+            this.textBoxRegraCarta.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxRegraCarta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxRegraCarta.Location = new System.Drawing.Point(60, 136);
+            this.textBoxRegraCarta.Multiline = true;
+            this.textBoxRegraCarta.Name = "textBoxRegraCarta";
+            this.textBoxRegraCarta.Size = new System.Drawing.Size(128, 75);
+            this.textBoxRegraCarta.TabIndex = 16;
+            // 
             // CartasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,7 +323,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelTipo;
         private System.Windows.Forms.Label labelFacao;
-        private System.Windows.Forms.Label labelRegras;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelLeal;
@@ -332,5 +333,6 @@
         private System.Windows.Forms.Label labelAtaque;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxRegraCarta;
     }
 }

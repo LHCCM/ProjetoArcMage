@@ -78,7 +78,6 @@ namespace Projeto
                 labelNick.Text = jogadorSelecionado.Nickname;
                 labelIdade.Text = Convert.ToString(jogadorSelecionado.Age);
             }
-            refreshJogadores();
         }
     }
 }

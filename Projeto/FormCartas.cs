@@ -81,11 +81,10 @@ namespace Projeto
                 labelDefesa.Text = Convert.ToString(cartaSelecionada.Defense);
                 labelCusto.Text = Convert.ToString(cartaSelecionada.Cost);
                 labelLeal.Text = Convert.ToString(cartaSelecionada.Loyal);
-                labelRegras.Text = cartaSelecionada.Rules;
+                textBoxRegraCarta.Text = cartaSelecionada.Rules;
                 labelFacao.Text = cartaSelecionada.Faction;
                 labelTipo.Text = cartaSelecionada.Type;
             }
-            refreshCards();
         }
     }
 }
