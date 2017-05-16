@@ -234,11 +234,11 @@
     <Compile Include="NovoTorneio.Designer.cs">
       <DependentUpon>NovoTorneio.cs</DependentUpon>
     </Compile>
-    <Compile Include="NovoUtilizadorForm.cs">
+    <Compile Include="NovoArbitroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NovoUtilizadorForm.Designer.cs">
-      <DependentUpon>NovoUtilizadorForm.cs</DependentUpon>
+    <Compile Include="NovoArbitroForm.Designer.cs">
+      <DependentUpon>NovoArbitroForm.cs</DependentUpon>
     </Compile>
     <Compile Include="override\Card.cs" />
     <Compile Include="override\Player.cs" />
@@ -349,8 +349,8 @@
     <EmbeddedResource Include="NovoTorneio.resx">
       <DependentUpon>NovoTorneio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NovoUtilizadorForm.resx">
-      <DependentUpon>NovoUtilizadorForm.cs</DependentUpon>
+    <EmbeddedResource Include="NovoArbitroForm.resx">
+      <DependentUpon>NovoArbitroForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

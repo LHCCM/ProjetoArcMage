@@ -12,6 +12,8 @@ namespace Projeto
 {
     public partial class UtilizadoresForm : Form
     {
+        Model1Container container = new Model1Container();
+
         public UtilizadoresForm()
         {
             InitializeComponent();
@@ -26,8 +28,12 @@ namespace Projeto
 
         private void buttonNovoUser_Click(object sender, EventArgs e)
         {
-            NovoUtilizadorForm userF = new NovoUtilizadorForm();
-            userF.Show();
+            NovoArbitroForm userArbitro = new NovoArbitroForm();
+            DialogResult result = userArbitro.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                AdicionasArbitro(userArbitro.NovoArbitro);
+            }
         }
 
         private void buttonEditUser_Click(object sender, EventArgs e)
@@ -39,6 +45,12 @@ namespace Projeto
         private void buttonEliminarUser_Click(object sender, EventArgs e)
         {
             //função eliminar dados selecionados na listboxUsers
+        }
+
+        private void AdicionarArbitro(Referee arbitro)
+        {
+            container.User.OfType<Referee>.Add(arbitro);
+            container.SaveChanges();
         }
     }
 }

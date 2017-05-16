@@ -50,6 +50,7 @@
             this.buttonEditUser = new System.Windows.Forms.Button();
             this.buttonVoltar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -232,7 +233,7 @@
             this.buttonNovoUser.Name = "buttonNovoUser";
             this.buttonNovoUser.Size = new System.Drawing.Size(155, 23);
             this.buttonNovoUser.TabIndex = 20;
-            this.buttonNovoUser.Text = "Novo Utilizador";
+            this.buttonNovoUser.Text = "Novo Árbitro";
             this.buttonNovoUser.UseVisualStyleBackColor = true;
             this.buttonNovoUser.Click += new System.EventHandler(this.buttonNovoUser_Click);
             // 
@@ -267,11 +268,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(208, 399);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Novo Administrador";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // UtilizadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 522);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonEditUser);
@@ -326,5 +337,6 @@
         private System.Windows.Forms.Button buttonEditUser;
         private System.Windows.Forms.Button buttonVoltar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
