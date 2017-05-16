@@ -55,8 +55,13 @@ namespace Projeto
 
         private void buttonApagarJogador_Click(object sender, EventArgs e)
         {
-            //WIP//
-            //funçao apagar jogador selecionado na listboxJogdores
+            if(listBoxJogadores.SelectedIndex >= 0)
+            {
+                container.Player.Remove((Player)listBoxJogadores.SelectedItem);
+                container.SaveChanges();
+            }
+
+            refreshJogadores();
         }
 
         private void buttonEditarJogador_Click(object sender, EventArgs e)

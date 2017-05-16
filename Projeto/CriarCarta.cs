@@ -30,7 +30,7 @@ namespace Projeto
             {
                 MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (comboBoxTipoCarta.SelectedIndex != 0 || comboBoxFacao.SelectedIndex != 0)
+            else if (comboBoxTipoCarta.SelectedIndex == -1 || comboBoxFacao.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um Tipo/Fação para a carta, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

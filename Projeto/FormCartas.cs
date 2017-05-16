@@ -59,13 +59,15 @@ namespace Projeto
 
         }
 
-        //dis no work 
+        //dis works now :D
         private void buttonApagarCarta_Click(object sender, EventArgs e)
         {
             if (listBoxCartas.SelectedIndex >= 0)
             {
                 container.Card.Remove((Card)listBoxCartas.SelectedItem);
+                container.SaveChanges();
             }
+           
             refreshCards();
         }
 
