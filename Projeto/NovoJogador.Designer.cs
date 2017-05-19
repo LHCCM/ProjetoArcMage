@@ -36,8 +36,6 @@
             this.textBoxNick = new System.Windows.Forms.TextBox();
             this.labelNickname = new System.Windows.Forms.Label();
             this.buttonEscolherAvatar = new System.Windows.Forms.Button();
-            this.labelIdJogador = new System.Windows.Forms.Label();
-            this.labelIdnome = new System.Windows.Forms.Label();
             this.labelIdade = new System.Windows.Forms.Label();
             this.numericUpDownIdade = new System.Windows.Forms.NumericUpDown();
             this.buttonConfirmNovoJogador = new System.Windows.Forms.Button();
@@ -113,24 +111,7 @@
             this.buttonEscolherAvatar.TabIndex = 12;
             this.buttonEscolherAvatar.Text = "Escolher Avatar";
             this.buttonEscolherAvatar.UseVisualStyleBackColor = true;
-            // 
-            // labelIdJogador
-            // 
-            this.labelIdJogador.AutoSize = true;
-            this.labelIdJogador.Location = new System.Drawing.Point(105, 148);
-            this.labelIdJogador.Name = "labelIdJogador";
-            this.labelIdJogador.Size = new System.Drawing.Size(88, 13);
-            this.labelIdJogador.TabIndex = 13;
-            this.labelIdJogador.Text = "AutoIncremented";
-            // 
-            // labelIdnome
-            // 
-            this.labelIdnome.AutoSize = true;
-            this.labelIdnome.Location = new System.Drawing.Point(12, 148);
-            this.labelIdnome.Name = "labelIdnome";
-            this.labelIdnome.Size = new System.Drawing.Size(78, 13);
-            this.labelIdnome.TabIndex = 14;
-            this.labelIdnome.Text = "Id do Jogador :";
+            this.buttonEscolherAvatar.Click += new System.EventHandler(this.buttonEscolherAvatar_Click);
             // 
             // labelIdade
             // 
@@ -201,8 +182,6 @@
             this.Controls.Add(this.buttonConfirmNovoJogador);
             this.Controls.Add(this.numericUpDownIdade);
             this.Controls.Add(this.labelIdade);
-            this.Controls.Add(this.labelIdnome);
-            this.Controls.Add(this.labelIdJogador);
             this.Controls.Add(this.buttonEscolherAvatar);
             this.Controls.Add(this.textBoxNick);
             this.Controls.Add(this.labelNickname);
@@ -230,8 +209,6 @@
         private System.Windows.Forms.TextBox textBoxNick;
         private System.Windows.Forms.Label labelNickname;
         private System.Windows.Forms.Button buttonEscolherAvatar;
-        private System.Windows.Forms.Label labelIdJogador;
-        private System.Windows.Forms.Label labelIdnome;
         private System.Windows.Forms.Label labelIdade;
         private System.Windows.Forms.NumericUpDown numericUpDownIdade;
         private System.Windows.Forms.Button buttonConfirmNovoJogador;

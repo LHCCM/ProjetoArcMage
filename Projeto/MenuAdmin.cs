@@ -16,12 +16,16 @@ namespace Projeto
         List<Card> cartas;
         List<Player> jogadores;
 
+        List<Team> equipas;
+
         public MenuAdminForm()
         {
             InitializeComponent();
 
             cartas = new List<Card>();
             jogadores = new List<Player>();
+
+            equipas = new List<Team>();
 
         }
 

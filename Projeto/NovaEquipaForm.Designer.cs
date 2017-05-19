@@ -41,8 +41,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonRemove = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonAdicionar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             this.listBoxJogadores.Name = "listBoxJogadores";
             this.listBoxJogadores.Size = new System.Drawing.Size(127, 160);
             this.listBoxJogadores.TabIndex = 2;
+            this.listBoxJogadores.SelectedIndexChanged += new System.EventHandler(this.listBoxJogadores_SelectedIndexChanged);
             // 
             // listBoxEquipa
             // 
@@ -95,7 +97,7 @@
             // 
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.buttonProcurar);
-            this.groupBox1.Location = new System.Drawing.Point(12, 226);
+            this.groupBox1.Location = new System.Drawing.Point(12, 267);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(127, 75);
             this.groupBox1.TabIndex = 5;
@@ -111,16 +113,17 @@
             // 
             // buttonConfirm
             // 
-            this.buttonConfirm.Location = new System.Drawing.Point(38, 321);
+            this.buttonConfirm.Location = new System.Drawing.Point(168, 312);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(75, 23);
             this.buttonConfirm.TabIndex = 6;
             this.buttonConfirm.Text = "Confirmar";
             this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(177, 321);
+            this.buttonCancelar.Location = new System.Drawing.Point(168, 348);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 7;
@@ -163,12 +166,12 @@
             this.buttonRemove.Text = "Remover Jogador";
             this.buttonRemove.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBoxNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBoxNome.Location = new System.Drawing.Point(145, 143);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(123, 20);
+            this.textBoxNome.TabIndex = 6;
             // 
             // label3
             // 
@@ -179,13 +182,23 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Nome da Equipa";
             // 
+            // buttonAdicionar
+            // 
+            this.buttonAdicionar.Location = new System.Drawing.Point(38, 226);
+            this.buttonAdicionar.Name = "buttonAdicionar";
+            this.buttonAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdicionar.TabIndex = 13;
+            this.buttonAdicionar.Text = "Adicionar";
+            this.buttonAdicionar.UseVisualStyleBackColor = true;
+            // 
             // NovaEquipaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 355);
+            this.ClientSize = new System.Drawing.Size(284, 383);
+            this.Controls.Add(this.buttonAdicionar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -222,7 +235,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonRemove;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonAdicionar;
     }
 }

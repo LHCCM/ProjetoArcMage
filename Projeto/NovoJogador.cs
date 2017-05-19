@@ -51,5 +51,10 @@ namespace Projeto
                 Close();
             }
         }
+
+        private void buttonEscolherAvatar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,9 @@ namespace Projeto
 {
     public partial class GerirEquipasForm : Form
     {
+
+        Model1Container container = new Model1Container();
+
         public GerirEquipasForm()
         {
             InitializeComponent();
@@ -26,8 +29,14 @@ namespace Projeto
 
         private void buttonNovaEquipa_Click(object sender, EventArgs e)
         {
-            NovaEquipaForm novaE = new NovaEquipaForm();
-            novaE.Show();
+            NovaEquipaForm form = new NovaEquipaForm();
+            DialogResult result = form.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                AdicionarEquipa(form.NovaEquipa);
+            }
+            refreshEquipas();
         }
 
         private void buttonApagarEquipa_Click(object sender, EventArgs e)
@@ -43,6 +52,18 @@ namespace Projeto
         private void buttonRemoverJogador_Click(object sender, EventArgs e)
         {
             //função retirar jogador selecionado da equipa
+        }
+
+        private void AdicionarEquipa(Team equipa)
+        {
+            container.Team.Add(equipa);
+            container.SaveChanges();
+        }
+
+        private void refreshEquipas()
+        {
+            listBoxEquipas.Items.Clear();
+            listBoxEquipas.Items.AddRange(container.Team.ToArray<Team>());
         }
     }
 }
