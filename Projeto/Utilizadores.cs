@@ -49,6 +49,13 @@ namespace Projeto
         private void buttonEliminarUser_Click(object sender, EventArgs e)
         {
             //função eliminar dados selecionados na listboxUsers
+            if (listBoxUsers.SelectedIndex >= 0)
+            {
+                container.User.Remove((User)listBoxUsers.SelectedItem);
+                container.SaveChanges();
+            }
+
+            refreshUtilizadores();
         }
 
         private void AdicionarArbitro(Referee arbitro)
@@ -62,6 +69,18 @@ namespace Projeto
             listBoxUsers.Items.Clear();
             listBoxUsers.Items.AddRange(container.User.OfType<Referee>().ToArray());
             listBoxUsers.Items.AddRange(container.User.OfType<Administrator>().ToArray());
+        }
+
+        private void refreshAdmin()
+        {
+            listBoxUsers.Items.Clear();
+            listBoxUsers.Items.AddRange(container.User.OfType<Administrator>().ToArray());
+        }
+
+        private void refreshArbitro()
+        {
+            listBoxUsers.Items.Clear();
+            listBoxUsers.Items.AddRange(container.User.OfType<Referee>().ToArray());
         }
 
         private void listBoxUsers_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,13 +113,7 @@ namespace Projeto
                     labelEmail.Hide();
                     label555.Hide();
                 }
-            }
-
-            
-
-            
-
-
+            }    
         }
 
         private void buttonNovoAdmin_Click(object sender, EventArgs e)
@@ -120,6 +133,21 @@ namespace Projeto
         {
             container.User.Add(admin);
             container.SaveChanges();
+        }
+
+        private void radioButtonAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            refreshAdmin();
+        }
+
+        private void radioButtonArbitro_CheckedChanged(object sender, EventArgs e)
+        {
+            refreshArbitro();
+        }
+
+        private void radioButtonTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            refreshUtilizadores();
         }
     }
 }

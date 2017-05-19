@@ -250,6 +250,7 @@
     <Compile Include="override\Card.cs" />
     <Compile Include="override\Player.cs" />
     <Compile Include="override\Referee.cs" />
+    <Compile Include="override\Team.cs" />
     <Compile Include="Player.cs">
       <DependentUpon>DBDiagrama.tt</DependentUpon>
     </Compile>

@@ -36,6 +36,7 @@
             this.labelCarta = new System.Windows.Forms.Label();
             this.labelCartas = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxRegraCarta = new System.Windows.Forms.TextBox();
             this.labelLeal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.labelCusto = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxRegraCarta = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,6 +147,16 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informação";
+            // 
+            // textBoxRegraCarta
+            // 
+            this.textBoxRegraCarta.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxRegraCarta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxRegraCarta.Location = new System.Drawing.Point(60, 139);
+            this.textBoxRegraCarta.Multiline = true;
+            this.textBoxRegraCarta.Name = "textBoxRegraCarta";
+            this.textBoxRegraCarta.Size = new System.Drawing.Size(128, 75);
+            this.textBoxRegraCarta.TabIndex = 16;
             // 
             // labelLeal
             // 
@@ -275,16 +285,6 @@
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
-            // 
-            // textBoxRegraCarta
-            // 
-            this.textBoxRegraCarta.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxRegraCarta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxRegraCarta.Location = new System.Drawing.Point(60, 136);
-            this.textBoxRegraCarta.Multiline = true;
-            this.textBoxRegraCarta.Name = "textBoxRegraCarta";
-            this.textBoxRegraCarta.Size = new System.Drawing.Size(128, 75);
-            this.textBoxRegraCarta.TabIndex = 16;
             // 
             // CartasForm
             // 

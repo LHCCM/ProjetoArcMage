@@ -18,6 +18,8 @@ namespace Projeto
         public GerirEquipasForm()
         {
             InitializeComponent();
+
+            refreshEquipas();
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace Projeto
 
             if (result == DialogResult.OK)
             {
-               // AdicionarEquipa(form.NovaEquipa);
+                AdicionarEquipa(form.NovaEquipa);
             }
             refreshEquipas();
         }

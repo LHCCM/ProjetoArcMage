@@ -74,7 +74,6 @@
             this.listBoxJogadores.Name = "listBoxJogadores";
             this.listBoxJogadores.Size = new System.Drawing.Size(127, 160);
             this.listBoxJogadores.TabIndex = 2;
-//            this.listBoxJogadores.SelectedIndexChanged += new System.EventHandler(this.listBoxJogadores_SelectedIndexChanged);
             // 
             // listBoxEquipa
             // 
@@ -165,6 +164,7 @@
             this.buttonRemove.TabIndex = 11;
             this.buttonRemove.Text = "Remover Jogador";
             this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // textBoxNome
             // 
@@ -190,6 +190,7 @@
             this.buttonAdicionar.TabIndex = 13;
             this.buttonAdicionar.Text = "Adicionar";
             this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
             // NovaEquipaForm
             // 

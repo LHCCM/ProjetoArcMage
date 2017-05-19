@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Projeto
 {
-    public partial class Player
-{
+    public partial class Team
+    {
         public override string ToString()
         {
-            return Nickname;
+            return Name;
         }
     }
 }

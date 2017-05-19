@@ -34,7 +34,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,13 +50,16 @@
             this.radioButtonArbitro = new System.Windows.Forms.RadioButton();
             this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonEliminarUser
             // 
-            this.buttonEliminarUser.Location = new System.Drawing.Point(36, 486);
+            this.buttonEliminarUser.Location = new System.Drawing.Point(24, 486);
             this.buttonEliminarUser.Name = "buttonEliminarUser";
             this.buttonEliminarUser.Size = new System.Drawing.Size(155, 23);
             this.buttonEliminarUser.TabIndex = 0;
@@ -68,16 +70,16 @@
             // listBoxUsers
             // 
             this.listBoxUsers.FormattingEnabled = true;
-            this.listBoxUsers.Location = new System.Drawing.Point(36, 68);
+            this.listBoxUsers.Location = new System.Drawing.Point(24, 62);
             this.listBoxUsers.Name = "listBoxUsers";
-            this.listBoxUsers.Size = new System.Drawing.Size(155, 303);
+            this.listBoxUsers.Size = new System.Drawing.Size(155, 290);
             this.listBoxUsers.TabIndex = 1;
             this.listBoxUsers.SelectedIndexChanged += new System.EventHandler(this.listBoxUsers_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 374);
+            this.label1.Location = new System.Drawing.Point(43, 355);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 2;
@@ -85,7 +87,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 390);
+            this.textBox1.Location = new System.Drawing.Point(24, 371);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(155, 20);
             this.textBox1.TabIndex = 3;
@@ -93,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 52);
+            this.label3.Location = new System.Drawing.Point(23, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 7;
@@ -109,18 +111,9 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Utilizadores";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(239, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Info do Utilizador";
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(210, 187);
+            this.pictureBox1.Location = new System.Drawing.Point(209, 165);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 132);
             this.pictureBox1.TabIndex = 10;
@@ -130,7 +123,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(207, 143);
+            this.label6.Location = new System.Drawing.Point(17, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 16);
             this.label6.TabIndex = 11;
@@ -141,7 +134,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(207, 113);
+            this.label7.Location = new System.Drawing.Point(17, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 16);
             this.label7.TabIndex = 12;
@@ -151,7 +144,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(207, 83);
+            this.label10.Location = new System.Drawing.Point(17, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(24, 16);
             this.label10.TabIndex = 15;
@@ -161,7 +154,7 @@
             // 
             this.labelNome.AutoSize = true;
             this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNome.Location = new System.Drawing.Point(288, 143);
+            this.labelNome.Location = new System.Drawing.Point(98, 76);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(75, 16);
             this.labelNome.TabIndex = 16;
@@ -172,7 +165,7 @@
             // 
             this.labelNick.AutoSize = true;
             this.labelNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNick.Location = new System.Drawing.Point(288, 113);
+            this.labelNick.Location = new System.Drawing.Point(98, 46);
             this.labelNick.Name = "labelNick";
             this.labelNick.Size = new System.Drawing.Size(0, 16);
             this.labelNick.TabIndex = 17;
@@ -181,14 +174,14 @@
             // 
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(288, 83);
+            this.labelID.Location = new System.Drawing.Point(98, 16);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(0, 16);
             this.labelID.TabIndex = 18;
             // 
             // buttonNovoUser
             // 
-            this.buttonNovoUser.Location = new System.Drawing.Point(291, 431);
+            this.buttonNovoUser.Location = new System.Drawing.Point(231, 426);
             this.buttonNovoUser.Name = "buttonNovoUser";
             this.buttonNovoUser.Size = new System.Drawing.Size(155, 23);
             this.buttonNovoUser.TabIndex = 20;
@@ -198,7 +191,7 @@
             // 
             // buttonEditUser
             // 
-            this.buttonEditUser.Location = new System.Drawing.Point(291, 460);
+            this.buttonEditUser.Location = new System.Drawing.Point(231, 455);
             this.buttonEditUser.Name = "buttonEditUser";
             this.buttonEditUser.Size = new System.Drawing.Size(155, 23);
             this.buttonEditUser.TabIndex = 21;
@@ -208,7 +201,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(291, 489);
+            this.buttonVoltar.Location = new System.Drawing.Point(231, 484);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(155, 23);
             this.buttonVoltar.TabIndex = 22;
@@ -218,7 +211,7 @@
             // 
             // buttonNovoAdmin
             // 
-            this.buttonNovoAdmin.Location = new System.Drawing.Point(291, 402);
+            this.buttonNovoAdmin.Location = new System.Drawing.Point(231, 397);
             this.buttonNovoAdmin.Name = "buttonNovoAdmin";
             this.buttonNovoAdmin.Size = new System.Drawing.Size(155, 23);
             this.buttonNovoAdmin.TabIndex = 24;
@@ -230,7 +223,7 @@
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(288, 143);
+            this.labelEmail.Location = new System.Drawing.Point(98, 76);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(75, 16);
             this.labelEmail.TabIndex = 26;
@@ -241,7 +234,7 @@
             // 
             this.label555.AutoSize = true;
             this.label555.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label555.Location = new System.Drawing.Point(207, 143);
+            this.label555.Location = new System.Drawing.Point(17, 76);
             this.label555.Name = "label555";
             this.label555.Size = new System.Drawing.Size(49, 16);
             this.label555.TabIndex = 25;
@@ -258,6 +251,7 @@
             this.radioButtonArbitro.TabStop = true;
             this.radioButtonArbitro.Text = "Árbitros";
             this.radioButtonArbitro.UseVisualStyleBackColor = true;
+            this.radioButtonArbitro.CheckedChanged += new System.EventHandler(this.radioButtonArbitro_CheckedChanged);
             // 
             // radioButtonAdmin
             // 
@@ -269,38 +263,61 @@
             this.radioButtonAdmin.TabStop = true;
             this.radioButtonAdmin.Text = "Administradores";
             this.radioButtonAdmin.UseVisualStyleBackColor = true;
+            this.radioButtonAdmin.CheckedChanged += new System.EventHandler(this.radioButtonAdmin_CheckedChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButtonTodos);
             this.groupBox1.Controls.Add(this.radioButtonAdmin);
             this.groupBox1.Controls.Add(this.radioButtonArbitro);
-            this.groupBox1.Location = new System.Drawing.Point(38, 416);
+            this.groupBox1.Location = new System.Drawing.Point(26, 397);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(153, 64);
+            this.groupBox1.Size = new System.Drawing.Size(153, 81);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.labelEmail);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label555);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.labelNome);
+            this.groupBox2.Controls.Add(this.labelNick);
+            this.groupBox2.Controls.Add(this.labelID);
+            this.groupBox2.Location = new System.Drawing.Point(198, 49);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(236, 100);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Informação";
+            // 
+            // radioButtonTodos
+            // 
+            this.radioButtonTodos.AutoSize = true;
+            this.radioButtonTodos.Location = new System.Drawing.Point(29, 58);
+            this.radioButtonTodos.Name = "radioButtonTodos";
+            this.radioButtonTodos.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonTodos.TabIndex = 7;
+            this.radioButtonTodos.TabStop = true;
+            this.radioButtonTodos.Text = "Todos";
+            this.radioButtonTodos.UseVisualStyleBackColor = true;
+            this.radioButtonTodos.CheckedChanged += new System.EventHandler(this.radioButtonTodos_CheckedChanged);
             // 
             // UtilizadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 522);
-            this.Controls.Add(this.labelEmail);
-            this.Controls.Add(this.label555);
+            this.ClientSize = new System.Drawing.Size(447, 521);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.buttonNovoAdmin);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonEditUser);
             this.Controls.Add(this.buttonNovoUser);
-            this.Controls.Add(this.labelID);
-            this.Controls.Add(this.labelNick);
-            this.Controls.Add(this.labelNome);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
@@ -312,6 +329,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,7 +344,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -342,5 +360,7 @@
         private System.Windows.Forms.RadioButton radioButtonArbitro;
         private System.Windows.Forms.RadioButton radioButtonAdmin;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButtonTodos;
     }
 }
