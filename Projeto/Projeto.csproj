@@ -210,6 +210,12 @@
     <Compile Include="NovaEquipaForm.Designer.cs">
       <DependentUpon>NovaEquipaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NovoAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoAdminForm.Designer.cs">
+      <DependentUpon>NovoAdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NovoBaralho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,8 +246,10 @@
     <Compile Include="NovoArbitroForm.Designer.cs">
       <DependentUpon>NovoArbitroForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="override\Administrator.cs" />
     <Compile Include="override\Card.cs" />
     <Compile Include="override\Player.cs" />
+    <Compile Include="override\Referee.cs" />
     <Compile Include="Player.cs">
       <DependentUpon>DiagramaDB.tt</DependentUpon>
     </Compile>
@@ -336,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NovaEquipaForm.resx">
       <DependentUpon>NovaEquipaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoAdminForm.resx">
+      <DependentUpon>NovoAdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovoBaralho.resx">
       <DependentUpon>NovoBaralho.cs</DependentUpon>

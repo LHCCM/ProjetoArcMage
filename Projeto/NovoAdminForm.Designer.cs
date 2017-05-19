@@ -1,6 +1,6 @@
 ﻿namespace Projeto
 {
-    partial class NovoArbitroForm
+    partial class NovoAdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,135 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonConfirmar = new System.Windows.Forms.Button();
-            this.buttonEscolherAvatar = new System.Windows.Forms.Button();
-            this.textBoxNickname = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelNickname = new System.Windows.Forms.Label();
             this.labelNovoUtilizador = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.labelNome = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // textBoxPassword
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(99, 159);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 132);
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
+            this.textBoxPassword.Location = new System.Drawing.Point(81, 124);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(232, 20);
+            this.textBoxPassword.TabIndex = 47;
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(14, 127);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(59, 13);
+            this.labelPassword.TabIndex = 46;
+            this.labelPassword.Text = "Password :";
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(226, 330);
+            this.buttonCancelar.Location = new System.Drawing.Point(223, 183);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(106, 23);
-            this.buttonCancelar.TabIndex = 33;
+            this.buttonCancelar.TabIndex = 44;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(20, 330);
+            this.buttonConfirmar.Location = new System.Drawing.Point(17, 183);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(106, 23);
-            this.buttonConfirmar.TabIndex = 32;
+            this.buttonConfirmar.TabIndex = 43;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
             // 
-            // buttonEscolherAvatar
+            // textBoxEmail
             // 
-            this.buttonEscolherAvatar.Location = new System.Drawing.Point(118, 297);
-            this.buttonEscolherAvatar.Name = "buttonEscolherAvatar";
-            this.buttonEscolherAvatar.Size = new System.Drawing.Size(106, 23);
-            this.buttonEscolherAvatar.TabIndex = 27;
-            this.buttonEscolherAvatar.Text = "Escolher Avatar";
-            this.buttonEscolherAvatar.UseVisualStyleBackColor = true;
-            // 
-            // textBoxNickname
-            // 
-            this.textBoxNickname.Location = new System.Drawing.Point(84, 90);
-            this.textBoxNickname.Name = "textBoxNickname";
-            this.textBoxNickname.Size = new System.Drawing.Size(232, 20);
-            this.textBoxNickname.TabIndex = 26;
+            this.textBoxEmail.Location = new System.Drawing.Point(81, 91);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(232, 20);
+            this.textBoxEmail.TabIndex = 41;
             // 
             // labelNickname
             // 
             this.labelNickname.AutoSize = true;
-            this.labelNickname.Location = new System.Drawing.Point(17, 93);
+            this.labelNickname.Location = new System.Drawing.Point(14, 94);
             this.labelNickname.Name = "labelNickname";
-            this.labelNickname.Size = new System.Drawing.Size(61, 13);
-            this.labelNickname.TabIndex = 25;
-            this.labelNickname.Text = "Nickname :";
+            this.labelNickname.Size = new System.Drawing.Size(41, 13);
+            this.labelNickname.TabIndex = 40;
+            this.labelNickname.Text = "E-mail :";
             // 
             // labelNovoUtilizador
             // 
             this.labelNovoUtilizador.AutoSize = true;
             this.labelNovoUtilizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNovoUtilizador.Location = new System.Drawing.Point(114, 9);
+            this.labelNovoUtilizador.Location = new System.Drawing.Point(77, 9);
             this.labelNovoUtilizador.Name = "labelNovoUtilizador";
-            this.labelNovoUtilizador.Size = new System.Drawing.Size(109, 24);
-            this.labelNovoUtilizador.TabIndex = 22;
-            this.labelNovoUtilizador.Text = "Criar Árbitro";
+            this.labelNovoUtilizador.Size = new System.Drawing.Size(170, 24);
+            this.labelNovoUtilizador.TabIndex = 39;
+            this.labelNovoUtilizador.Text = "Criar Administrador";
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(84, 56);
+            this.textBoxNome.Location = new System.Drawing.Point(81, 57);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(232, 20);
-            this.textBoxNome.TabIndex = 21;
+            this.textBoxNome.TabIndex = 38;
             // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(17, 59);
+            this.labelNome.Location = new System.Drawing.Point(14, 60);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(41, 13);
-            this.labelNome.TabIndex = 20;
+            this.labelNome.TabIndex = 37;
             this.labelNome.Text = "Nome :";
             // 
-            // labelPassword
-            // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(17, 126);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(59, 13);
-            this.labelPassword.TabIndex = 35;
-            this.labelPassword.Text = "Password :";
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.Location = new System.Drawing.Point(84, 123);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(232, 20);
-            this.textBoxPassword.TabIndex = 36;
-            // 
-            // NovoArbitroForm
+            // NovoAdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 369);
+            this.ClientSize = new System.Drawing.Size(342, 219);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonConfirmar);
-            this.Controls.Add(this.buttonEscolherAvatar);
-            this.Controls.Add(this.textBoxNickname);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelNickname);
             this.Controls.Add(this.labelNovoUtilizador);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelNome);
-            this.Name = "NovoArbitroForm";
-            this.Text = "Novo Árbitro";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Name = "NovoAdminForm";
+            this.Text = "Novo Administrador";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,16 +141,14 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonConfirmar;
-        private System.Windows.Forms.Button buttonEscolherAvatar;
-        private System.Windows.Forms.TextBox textBoxNickname;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelNickname;
         private System.Windows.Forms.Label labelNovoUtilizador;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label labelNome;
-        private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.TextBox textBoxPassword;
     }
 }
