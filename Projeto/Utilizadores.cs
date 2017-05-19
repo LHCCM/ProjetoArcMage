@@ -12,9 +12,13 @@ namespace Projeto
 {
     public partial class UtilizadoresForm : Form
     {
+        Model1Container container = new Model1Container();
+
         public UtilizadoresForm()
         {
             InitializeComponent();
+
+            refreshUtilizadores();
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
@@ -26,8 +30,14 @@ namespace Projeto
 
         private void buttonNovoUser_Click(object sender, EventArgs e)
         {
-            NovoUtilizadorForm userF = new NovoUtilizadorForm();
-            userF.Show();
+            NovoArbitroForm userArbitro = new NovoArbitroForm();
+            DialogResult result = userArbitro.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                AdicionarArbitro(userArbitro.NovoArbitro);
+            }
+
+            refreshUtilizadores();
         }
 
         private void buttonEditUser_Click(object sender, EventArgs e)
@@ -39,6 +49,77 @@ namespace Projeto
         private void buttonEliminarUser_Click(object sender, EventArgs e)
         {
             //função eliminar dados selecionados na listboxUsers
+        }
+
+        private void AdicionarArbitro(Referee arbitro)
+        {
+            container.User.Add(arbitro);
+            container.SaveChanges();
+        }
+
+        private void refreshUtilizadores()
+        {
+            listBoxUsers.Items.Clear();
+            listBoxUsers.Items.AddRange(container.User.OfType<Referee>().ToArray());
+            listBoxUsers.Items.AddRange(container.User.OfType<Administrator>().ToArray());
+        }
+
+        private void listBoxUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            if (listBoxUsers.SelectedItem.GetType() == typeof(Administrator))
+            {
+                Administrator adminSelecionado = (Administrator)listBoxUsers.SelectedItem;
+                if (adminSelecionado != null)
+                {
+                    labelID.Text = Convert.ToString(adminSelecionado.Id);
+                    labelNick.Text = adminSelecionado.Username;
+                    label555.Show();
+                    labelEmail.Show();
+                    labelEmail.Text = adminSelecionado.Email;
+
+                }
+            }
+            else
+            {
+                Referee utilizadorSelecionado = (Referee)listBoxUsers.SelectedItem;
+
+                if (utilizadorSelecionado != null)
+                {
+                    labelID.Text = Convert.ToString(utilizadorSelecionado.Id);
+                    label6.Show();
+                    labelNome.Show();
+                    labelNome.Text = utilizadorSelecionado.Name;
+                    labelNick.Text = utilizadorSelecionado.Username;
+                    labelEmail.Hide();
+                    label555.Hide();
+                }
+            }
+
+            
+
+            
+
+
+        }
+
+        private void buttonNovoAdmin_Click(object sender, EventArgs e)
+        {
+            NovoAdminForm novoadmin = new NovoAdminForm();
+            DialogResult result = novoadmin.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                AdicionarAdmin(novoadmin.NovoAdmin);
+            }
+
+            refreshUtilizadores();
+        }
+
+        private void AdicionarAdmin(Administrator admin)
+        {
+            container.User.Add(admin);
+            container.SaveChanges();
         }
     }
 }
