@@ -13,7 +13,7 @@ namespace Projeto
     public partial class GerirEquipasForm : Form
     {
 
-        Model1Container container = new Model1Container();
+        DBDiagramaContainer container = new DBDiagramaContainer();
 
         public GerirEquipasForm()
         {
@@ -34,7 +34,7 @@ namespace Projeto
 
             if (result == DialogResult.OK)
             {
-                AdicionarEquipa(form.NovaEquipa);
+               // AdicionarEquipa(form.NovaEquipa);
             }
             refreshEquipas();
         }

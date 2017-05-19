@@ -52,7 +52,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(180, 391);
+            this.buttonVoltar.Location = new System.Drawing.Point(180, 389);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(121, 23);
             this.buttonVoltar.TabIndex = 33;
@@ -62,7 +62,7 @@
             // 
             // buttonRemoverJogador
             // 
-            this.buttonRemoverJogador.Location = new System.Drawing.Point(11, 110);
+            this.buttonRemoverJogador.Location = new System.Drawing.Point(11, 98);
             this.buttonRemoverJogador.Name = "buttonRemoverJogador";
             this.buttonRemoverJogador.Size = new System.Drawing.Size(121, 23);
             this.buttonRemoverJogador.TabIndex = 32;
@@ -82,7 +82,7 @@
             // 
             // buttonAdicionarJogador
             // 
-            this.buttonAdicionarJogador.Location = new System.Drawing.Point(11, 81);
+            this.buttonAdicionarJogador.Location = new System.Drawing.Point(11, 69);
             this.buttonAdicionarJogador.Name = "buttonAdicionarJogador";
             this.buttonAdicionarJogador.Size = new System.Drawing.Size(121, 23);
             this.buttonAdicionarJogador.TabIndex = 30;
@@ -95,7 +95,7 @@
             this.listBoxJogador.FormattingEnabled = true;
             this.listBoxJogador.Location = new System.Drawing.Point(8, 19);
             this.listBoxJogador.Name = "listBoxJogador";
-            this.listBoxJogador.Size = new System.Drawing.Size(124, 56);
+            this.listBoxJogador.Size = new System.Drawing.Size(124, 43);
             this.listBoxJogador.TabIndex = 29;
             // 
             // listBoxEquipas
@@ -191,7 +191,7 @@
             this.groupBox1.Controls.Add(this.buttonRemoverJogador);
             this.groupBox1.Location = new System.Drawing.Point(169, 244);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(138, 141);
+            this.groupBox1.Size = new System.Drawing.Size(138, 126);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Jogadores";

@@ -12,7 +12,7 @@ namespace Projeto
 {
     public partial class GerirJogadoresForm : Form
     {
-        Model1Container container = new Model1Container();
+        DBDiagramaContainer container = new DBDiagramaContainer();
 
         public GerirJogadoresForm()
         {

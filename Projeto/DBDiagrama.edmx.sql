@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/06/2017 21:07:20
--- Generated from EDMX file: C:\Repos\ProjetoArcMage\Projeto\DiagramaDB.edmx
+-- Date Created: 05/19/2017 16:52:46
+-- Generated from EDMX file: C:\Repos\ProjetoArcMage\Projeto\DBDiagrama.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -84,6 +84,8 @@ CREATE TABLE [dbo].[Team] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [Avatar] nvarchar(max)  NOT NULL,
+    [Player1] nvarchar(max)  NOT NULL,
+    [Player2] nvarchar(max)  NOT NULL,
     [TournamentAsTeam1_Id] int  NOT NULL,
     [TournamentAsTeam2_Id] int  NOT NULL
 );

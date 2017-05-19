@@ -74,7 +74,7 @@
             this.listBoxJogadores.Name = "listBoxJogadores";
             this.listBoxJogadores.Size = new System.Drawing.Size(127, 160);
             this.listBoxJogadores.TabIndex = 2;
-            this.listBoxJogadores.SelectedIndexChanged += new System.EventHandler(this.listBoxJogadores_SelectedIndexChanged);
+//            this.listBoxJogadores.SelectedIndexChanged += new System.EventHandler(this.listBoxJogadores_SelectedIndexChanged);
             // 
             // listBoxEquipa
             // 

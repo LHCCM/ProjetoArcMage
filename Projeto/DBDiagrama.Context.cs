@@ -13,10 +13,10 @@ namespace Projeto
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Model1Container : DbContext
+    public partial class DBDiagramaContainer : DbContext
     {
-        public Model1Container()
-            : base("name=Model1Container")
+        public DBDiagramaContainer()
+            : base("name=DBDiagramaContainer")
         {
         }
     

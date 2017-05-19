@@ -13,7 +13,7 @@ namespace Projeto
     public partial class CartasForm : Form
     {
 
-        Model1Container container = new Model1Container();
+        DBDiagramaContainer container = new DBDiagramaContainer();
 
         public CartasForm()
         {
