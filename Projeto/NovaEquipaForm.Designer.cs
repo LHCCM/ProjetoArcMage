@@ -37,7 +37,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonAvatar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonRemove = new System.Windows.Forms.Button();
@@ -130,14 +130,14 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // button3
+            // buttonAvatar
             // 
-            this.button3.Location = new System.Drawing.Point(145, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Escolher Avatar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonAvatar.Location = new System.Drawing.Point(145, 275);
+            this.buttonAvatar.Name = "buttonAvatar";
+            this.buttonAvatar.Size = new System.Drawing.Size(123, 23);
+            this.buttonAvatar.TabIndex = 8;
+            this.buttonAvatar.Text = "Escolher Avatar";
+            this.buttonAvatar.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonConfirm);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonAvatar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBoxEquipa);
@@ -232,7 +232,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonAvatar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonRemove;

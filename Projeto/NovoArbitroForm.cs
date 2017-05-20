@@ -35,19 +35,28 @@ namespace Projeto
                 string nome = textBoxNome.Text.Trim();
                 string nickname = textBoxNickname.Text.Trim();
                 string password = textBoxPassword.Text.Trim();
+                string avatar = textBoxAvatar.Text.Trim();
 
                 NovoArbitro = new Referee()
                 {
                     Name = nome,
                     Username = nickname,
                     Password = password,
-                    Avatar = "none",
+                    Avatar = avatar,
                 };
 
                 DialogResult = DialogResult.OK;
                 Close();
             }
 
+        }
+
+        private void buttonEscolherAvatar_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.textBoxAvatar.Text = openFileDialog1.FileName;
+            }
         }
     }
 }

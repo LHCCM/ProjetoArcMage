@@ -14,6 +14,8 @@ namespace Projeto
     {
         public Player NovoJogador { get; private set; }
 
+        DialogResult result;
+
         public NovoJogadorForm()
         {
             InitializeComponent();
@@ -30,31 +32,50 @@ namespace Projeto
             {
                 MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (textBoxAvatar.Text.Length == 0)
+            {
+                result = MessageBox.Show("Não escolheu um avatar, continuar mesmo assim?", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    NovoJogadorFunc();
+                }
+            }
             else
             {
-
-                string nome = textBoxNome.Text.Trim();
-                string nick = textBoxNick.Text.Trim();
-                string email = textBoxEmail.Text.Trim();
-
-                NovoJogador = new Player()
-                {
-                    Name = nome,
-                    Nickname = nick,
-                    Email = email,
-
-                    Age = (int)numericUpDownIdade.Value,
-                    Avatar = "none"
-
-                };
-                DialogResult = DialogResult.OK;
-                Close();
+                NovoJogadorFunc();
             }
         }
 
         private void buttonEscolherAvatar_Click(object sender, EventArgs e)
         {
+            string avatar = textBoxAvatar.Text.Trim();
 
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.textBoxAvatar.Text = openFileDialog1.FileName;
+            }
+        }
+
+        private void NovoJogadorFunc()
+        {
+            string nome = textBoxNome.Text.Trim();
+            string nick = textBoxNick.Text.Trim();
+            string email = textBoxEmail.Text.Trim();
+            string avatar = textBoxAvatar.Text.Trim();
+
+            NovoJogador = new Player()
+            {
+                Name = nome,
+                Nickname = nick,
+                Email = email,
+
+                Age = (int)numericUpDownIdade.Value,
+                Avatar = avatar,
+
+            };
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

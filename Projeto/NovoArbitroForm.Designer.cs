@@ -39,14 +39,16 @@
             this.labelNome = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxAvatar = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(99, 159);
+            this.pictureBox1.Location = new System.Drawing.Point(100, 149);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 132);
+            this.pictureBox1.Size = new System.Drawing.Size(140, 125);
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
@@ -72,12 +74,13 @@
             // 
             // buttonEscolherAvatar
             // 
-            this.buttonEscolherAvatar.Location = new System.Drawing.Point(118, 297);
+            this.buttonEscolherAvatar.Location = new System.Drawing.Point(118, 301);
             this.buttonEscolherAvatar.Name = "buttonEscolherAvatar";
             this.buttonEscolherAvatar.Size = new System.Drawing.Size(106, 23);
             this.buttonEscolherAvatar.TabIndex = 27;
             this.buttonEscolherAvatar.Text = "Escolher Avatar";
             this.buttonEscolherAvatar.UseVisualStyleBackColor = true;
+            this.buttonEscolherAvatar.Click += new System.EventHandler(this.buttonEscolherAvatar_Click);
             // 
             // textBoxNickname
             // 
@@ -138,11 +141,25 @@
             this.textBoxPassword.Size = new System.Drawing.Size(232, 20);
             this.textBoxPassword.TabIndex = 36;
             // 
+            // textBoxAvatar
+            // 
+            this.textBoxAvatar.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxAvatar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAvatar.Location = new System.Drawing.Point(56, 278);
+            this.textBoxAvatar.Name = "textBoxAvatar";
+            this.textBoxAvatar.Size = new System.Drawing.Size(232, 13);
+            this.textBoxAvatar.TabIndex = 37;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // NovoArbitroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(356, 369);
+            this.Controls.Add(this.textBoxAvatar);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.pictureBox1);
@@ -175,5 +192,7 @@
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.TextBox textBoxAvatar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

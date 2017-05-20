@@ -41,6 +41,8 @@
             this.buttonConfirmNovoJogador = new System.Windows.Forms.Button();
             this.buttonCancelarNovoJogador = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBoxAvatar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -166,17 +168,31 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(362, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(362, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 132);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // textBoxAvatar
+            // 
+            this.textBoxAvatar.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxAvatar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAvatar.Location = new System.Drawing.Point(362, 167);
+            this.textBoxAvatar.Name = "textBoxAvatar";
+            this.textBoxAvatar.Size = new System.Drawing.Size(153, 13);
+            this.textBoxAvatar.TabIndex = 20;
             // 
             // NovoJogadorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 225);
+            this.Controls.Add(this.textBoxAvatar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonCancelarNovoJogador);
             this.Controls.Add(this.buttonConfirmNovoJogador);
@@ -214,5 +230,7 @@
         private System.Windows.Forms.Button buttonConfirmNovoJogador;
         private System.Windows.Forms.Button buttonCancelarNovoJogador;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textBoxAvatar;
     }
 }
