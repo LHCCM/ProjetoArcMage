@@ -107,7 +107,7 @@
             // 
             // buttonEscolherAvatar
             // 
-            this.buttonEscolherAvatar.Location = new System.Drawing.Point(385, 190);
+            this.buttonEscolherAvatar.Location = new System.Drawing.Point(369, 190);
             this.buttonEscolherAvatar.Name = "buttonEscolherAvatar";
             this.buttonEscolherAvatar.Size = new System.Drawing.Size(106, 23);
             this.buttonEscolherAvatar.TabIndex = 12;
@@ -168,9 +168,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(362, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(359, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 132);
+            this.pictureBox1.Size = new System.Drawing.Size(140, 140);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
@@ -182,16 +182,16 @@
             // 
             this.textBoxAvatar.BackColor = System.Drawing.SystemColors.Menu;
             this.textBoxAvatar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAvatar.Location = new System.Drawing.Point(362, 167);
+            this.textBoxAvatar.Location = new System.Drawing.Point(359, 171);
             this.textBoxAvatar.Name = "textBoxAvatar";
-            this.textBoxAvatar.Size = new System.Drawing.Size(153, 13);
+            this.textBoxAvatar.Size = new System.Drawing.Size(140, 13);
             this.textBoxAvatar.TabIndex = 20;
             // 
             // NovoJogadorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 225);
+            this.ClientSize = new System.Drawing.Size(510, 225);
             this.Controls.Add(this.textBoxAvatar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonCancelarNovoJogador);

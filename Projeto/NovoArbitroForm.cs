@@ -14,6 +14,8 @@ namespace Projeto
     {
         public Referee NovoArbitro { get; private set; }
 
+        DialogResult result;
+
         public NovoArbitroForm()
         {
             InitializeComponent();
@@ -30,23 +32,18 @@ namespace Projeto
             {
                 MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (textBoxAvatar.Text.Length == 0)
+            {
+                result = MessageBox.Show("Não escolheu um avatar, continuar mesmo assim?", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    NovoArbitroFunc();
+                }
+            }
             else
             {
-                string nome = textBoxNome.Text.Trim();
-                string nickname = textBoxNickname.Text.Trim();
-                string password = textBoxPassword.Text.Trim();
-                string avatar = textBoxAvatar.Text.Trim();
-
-                NovoArbitro = new Referee()
-                {
-                    Name = nome,
-                    Username = nickname,
-                    Password = password,
-                    Avatar = avatar,
-                };
-
-                DialogResult = DialogResult.OK;
-                Close();
+                NovoArbitroFunc();
             }
 
         }
@@ -56,7 +53,27 @@ namespace Projeto
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 this.textBoxAvatar.Text = openFileDialog1.FileName;
+                pictureBox1.Image = Properties.Resources.defimg;
             }
+        }
+
+        private void NovoArbitroFunc()
+        {
+            string nome = textBoxNome.Text.Trim();
+            string nickname = textBoxNickname.Text.Trim();
+            string password = textBoxPassword.Text.Trim();
+            string avatar = textBoxAvatar.Text.Trim();
+
+            NovoArbitro = new Referee()
+            {
+                Name = nome,
+                Username = nickname,
+                Password = password,
+                Avatar = avatar,
+            };
+
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

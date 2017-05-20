@@ -54,6 +54,7 @@ namespace Projeto
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 this.textBoxAvatar.Text = openFileDialog1.FileName;
+                pictureBox1.Image = Properties.Resources.defimg;
             }
         }
 

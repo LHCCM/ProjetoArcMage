@@ -77,6 +77,15 @@ namespace Projeto
 
             if (jogadorSelecionado != null)
             {
+                if (jogadorSelecionado.Avatar != "")
+                {
+                    pictureBox1.Image = Properties.Resources.defimg;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.noavatar;
+                }
+
                 labelID.Text = Convert.ToString(jogadorSelecionado.Id);
                 labelNome.Text = jogadorSelecionado.Name;
                 labelEmail.Text = jogadorSelecionado.Email;

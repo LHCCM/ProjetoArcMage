@@ -372,6 +372,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TorneioForm.resx">
       <DependentUpon>TorneioForm.cs</DependentUpon>
@@ -426,6 +427,8 @@
       <LastGenOutput>DBDiagrama.cs</LastGenOutput>
       <DependentUpon>DBDiagrama.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\noavatar.jpg" />
+    <None Include="Resources\defimg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
