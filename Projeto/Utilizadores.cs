@@ -107,7 +107,6 @@ namespace Projeto
                 {
                     if (utilizadorSelecionado.Avatar != "")
                     {
-
                         Image imagem = new Bitmap(utilizadorSelecionado.Avatar);
 
                         pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));

@@ -79,7 +79,9 @@ namespace Projeto
             {
                 if (jogadorSelecionado.Avatar != "")
                 {
-                    pictureBox1.Image = Properties.Resources.defimg;
+                    Image imagem = new Bitmap(jogadorSelecionado.Avatar);
+
+                    pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
                 }
                 else
                 {

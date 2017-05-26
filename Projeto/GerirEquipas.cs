@@ -43,17 +43,13 @@ namespace Projeto
 
         private void buttonApagarEquipa_Click(object sender, EventArgs e)
         {
-            //funçao apagar equipa selecionada na listboxEquipas
-        }
+            if (listBoxEquipas.SelectedIndex >= 0)
+            {
+                container.Team.Remove((Team)listBoxEquipas.SelectedItem);
+                container.SaveChanges();
+            }
 
-        private void buttonAdicionarJogador_Click(object sender, EventArgs e)
-        {
-            //função adicionar jogador existente selecionado a equipa selecionada
-        }
-
-        private void buttonRemoverJogador_Click(object sender, EventArgs e)
-        {
-            //função retirar jogador selecionado da equipa
+            refreshEquipas();
         }
 
         private void AdicionarEquipa(Team equipa)
@@ -66,6 +62,36 @@ namespace Projeto
         {
             listBoxEquipas.Items.Clear();
             listBoxEquipas.Items.AddRange(container.Team.ToArray());
+        }
+
+        private void listBoxEquipas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Team equipaSelecionada = (Team)listBoxEquipas.SelectedItem;
+
+            if (equipaSelecionada != null)
+            {
+                if (equipaSelecionada.Avatar != "")
+                {
+
+                    Image imagem = new Bitmap(equipaSelecionada.Avatar);
+
+                    pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.noavatar;
+                }
+                labelID.Text = Convert.ToString(equipaSelecionada.Id);
+                labelNome.Text = equipaSelecionada.Name;
+                labelP1.Text = equipaSelecionada.Player1;
+                labelP2.Text = equipaSelecionada.Player2;
+                
+            }
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

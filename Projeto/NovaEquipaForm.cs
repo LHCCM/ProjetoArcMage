@@ -19,6 +19,8 @@ namespace Projeto
         public Player Jogador { get; private set; }
         public Team NovaEquipa { get; private set; }
 
+        DialogResult result;
+
         public NovaEquipaForm()
         {
             InitializeComponent();
@@ -45,24 +47,18 @@ namespace Projeto
             {
                 MessageBox.Show("Jogador repetido, selecione um diferente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (textBoxAvatar.Text.Length == 0)
+            {
+                result = MessageBox.Show("Não escolheu um avatar, continuar mesmo assim?", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    NovaEquipaFunc();
+                }
+            }
             else
             {
-                string nome = textBoxNome.Text.Trim();
-                string p1 = listBoxEquipa.Items[0].ToString();
-                string p2 = listBoxEquipa.Items[1].ToString();
-                string avatar = "";
-
-                NovaEquipa = new Team()
-                {
-                    Name = nome,
-                    Player1 = p1,
-                    Player2 = p2,
-                    Avatar = avatar,
-                    TournamentAsTeam1=null,
-                    TournamentAsTeam2=null,
-                };
-                DialogResult = DialogResult.OK;
-                Close();
+                NovaEquipaFunc();
             }
         }
 
@@ -94,6 +90,35 @@ namespace Projeto
                 listBoxEquipa.Items.RemoveAt(index);
                 return;
             }
+        }
+
+        private void buttonEscolherAvatar_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                this.textBoxAvatar.Text = openFileDialog1.FileName;
+                Image imagem = new Bitmap(openFileDialog1.FileName);
+                pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
+            }
+        }
+
+        private void NovaEquipaFunc()
+        {
+            string nome = textBoxNome.Text.Trim();
+            string p1 = listBoxEquipa.Items[0].ToString();
+            string p2 = listBoxEquipa.Items[1].ToString();
+            string avatar = textBoxAvatar.Text.Trim();
+
+            NovaEquipa = new Team()
+            {
+                Name = nome,
+                Player1 = p1,
+                Player2 = p2,
+                Avatar = avatar,
+            };
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }
