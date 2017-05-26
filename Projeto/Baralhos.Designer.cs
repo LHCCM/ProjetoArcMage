@@ -91,6 +91,7 @@
             this.buttonAdicionarBaralho.TabIndex = 8;
             this.buttonAdicionarBaralho.Text = "Adicionar Baralho";
             this.buttonAdicionarBaralho.UseVisualStyleBackColor = true;
+            this.buttonAdicionarBaralho.Click += new System.EventHandler(this.buttonAdicionarBaralho_Click);
             // 
             // buttonApagarBaralho
             // 

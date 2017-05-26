@@ -23,5 +23,10 @@ namespace Projeto
             menuadmin.Show();
             this.Close();
         }
+
+        private void buttonAdicionarBaralho_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

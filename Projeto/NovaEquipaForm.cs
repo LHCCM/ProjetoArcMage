@@ -12,7 +12,7 @@ namespace Projeto
 {
     public partial class NovaEquipaForm : Form
     {
-        private const int MAX = 10;
+        //private const int MAX = 10;
 
         DBDiagramaContainer container = new DBDiagramaContainer();
 
@@ -50,18 +50,16 @@ namespace Projeto
                 string nome = textBoxNome.Text.Trim();
                 string p1 = listBoxEquipa.Items[0].ToString();
                 string p2 = listBoxEquipa.Items[1].ToString();
+                string avatar = "";
 
                 NovaEquipa = new Team()
                 {
                     Name = nome,
-                    Avatar = "null",
                     Player1 = p1,
                     Player2 = p2,
-                    TournamentAsTeam1 = null,
-                    TournamentAsTeam2 = null,
-                    GameAsTeam1 = null,
-                    GameAsTeam2 = null
-
+                    Avatar = avatar,
+                    TournamentAsTeam1=null,
+                    TournamentAsTeam2=null,
                 };
                 DialogResult = DialogResult.OK;
                 Close();

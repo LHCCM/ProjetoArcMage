@@ -65,7 +65,7 @@ namespace Projeto
         private void refreshEquipas()
         {
             listBoxEquipas.Items.Clear();
-            listBoxEquipas.Items.AddRange(container.Team.ToArray<Team>());
+            listBoxEquipas.Items.AddRange(container.Team.ToArray());
         }
     }
 }
