@@ -91,7 +91,6 @@ namespace Projeto
                 Administrator adminSelecionado = (Administrator)listBoxUsers.SelectedItem;
                 if (adminSelecionado != null)
                 {
-                    pictureBox1.Image = Properties.Resources.noavatar;
                     labelID.Text = Convert.ToString(adminSelecionado.Id);
                     labelNick.Text = adminSelecionado.Username;
                     label555.Show();
@@ -108,7 +107,10 @@ namespace Projeto
                 {
                     if (utilizadorSelecionado.Avatar != "")
                     {
-                        pictureBox1.Image = Properties.Resources.defimg;
+
+                        Image imagem = new Bitmap(utilizadorSelecionado.Avatar);
+
+                        pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
                     }
                     else
                     {

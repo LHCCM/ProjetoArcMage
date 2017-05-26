@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto
 {
     public partial class NovoArbitroForm : Form
     {
         public Referee NovoArbitro { get; private set; }
+
+        string destinationpath = "C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Projeto\\Resources";
 
         DialogResult result;
 
@@ -52,8 +55,10 @@ namespace Projeto
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                
                 this.textBoxAvatar.Text = openFileDialog1.FileName;
-                pictureBox1.Image = Properties.Resources.defimg;
+                Image imagem = new Bitmap(openFileDialog1.FileName);
+                pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
             }
         }
 
