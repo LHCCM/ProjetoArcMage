@@ -17,7 +17,6 @@ namespace Projeto
         public BaralhosForm()
         {
             InitializeComponent();
-
             refreshBaralhos();
         }
         private void refreshBaralhos()

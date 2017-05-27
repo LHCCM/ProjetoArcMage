@@ -31,8 +31,20 @@ namespace Projeto
             {
                 Name = nome
             };
-            container.Deck.Add(baralho);
-            container.SaveChanges();
+            int NumeroDecks = 1;
+            int Check = 0;
+            do {
+                if(container.Deck.Find(NumeroDecks).ToString() == nome)
+                {
+                    Check = 1;
+                }
+            } while (NumeroDecks <= container.Deck.Count<Deck>());
+            if(Check == 0)
+            {
+                container.Deck.Add(baralho);
+                container.SaveChanges();
+            }            
+            this.Close();
         }
     }
 }
