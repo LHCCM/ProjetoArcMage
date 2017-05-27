@@ -142,6 +142,7 @@
             this.Controls.Add(this.labelCartas);
             this.Name = "BaralhosForm";
             this.Text = "Baralhos";
+            this.Load += new System.EventHandler(this.BaralhosForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
