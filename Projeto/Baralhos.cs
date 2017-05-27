@@ -17,6 +17,8 @@ namespace Projeto
         public BaralhosForm()
         {
             InitializeComponent();
+
+            refreshBaralhos();
         }
         private void refreshBaralhos()
         {
@@ -57,6 +59,7 @@ namespace Projeto
             {
                 container.Deck.Remove((Deck)listBoxBaralhos.SelectedItem);
                 container.SaveChanges();
+                refreshBaralhos();
             }
             
         }

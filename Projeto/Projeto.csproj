@@ -111,6 +111,12 @@
     <Compile Include="Deck.cs">
       <DependentUpon>DBDiagrama.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditarArbitroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarArbitroForm.Designer.cs">
+      <DependentUpon>EditarArbitroForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarBaralho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +153,11 @@
     <Compile Include="EditarTorneio.Designer.cs">
       <DependentUpon>EditarTorneio.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarUtilizadorForm.cs">
+    <Compile Include="EditarAdministradorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarUtilizadorForm.Designer.cs">
-      <DependentUpon>EditarUtilizadorForm.cs</DependentUpon>
+    <Compile Include="EditarAdministradorForm.Designer.cs">
+      <DependentUpon>EditarAdministradorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCartas.cs">
       <SubType>Form</SubType>
@@ -247,6 +253,7 @@
       <DependentUpon>NovoArbitroForm.cs</DependentUpon>
     </Compile>
     <Compile Include="override\Administrator.cs" />
+    <Compile Include="override\Deck.cs" />
     <Compile Include="override\Card.cs" />
     <Compile Include="override\Player.cs" />
     <Compile Include="override\Referee.cs" />
@@ -298,6 +305,9 @@
     <EmbeddedResource Include="CriarCarta.resx">
       <DependentUpon>CriarCarta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarArbitroForm.resx">
+      <DependentUpon>EditarArbitroForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarBaralho.resx">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,8 +326,8 @@
     <EmbeddedResource Include="EditarTorneio.resx">
       <DependentUpon>EditarTorneio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarUtilizadorForm.resx">
-      <DependentUpon>EditarUtilizadorForm.cs</DependentUpon>
+    <EmbeddedResource Include="EditarAdministradorForm.resx">
+      <DependentUpon>EditarAdministradorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCartas.resx">
       <DependentUpon>FormCartas.cs</DependentUpon>

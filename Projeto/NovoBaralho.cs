@@ -26,7 +26,11 @@ namespace Projeto
 
         private void buttonNovoBaralhoConfimar_Click(object sender, EventArgs e)
         {
-            Deck baralho = new Deck();
+            string nome = textBoxNomeNovoBaralho.Text.Trim();
+            Deck baralho = new Deck()
+            {
+                Name = nome
+            };
             container.Deck.Add(baralho);
             container.SaveChanges();
         }
