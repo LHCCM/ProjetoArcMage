@@ -72,7 +72,7 @@ namespace Projeto
 
             if (result == DialogResult.OK)
             {
-                AdicionarJogador(form.NovoJogador);
+                //AdicionarJogador(form.NovoJogador);
             }
             refreshJogadores();
         }
