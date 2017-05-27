@@ -31,8 +31,8 @@
             this.labelEditarJogador = new System.Windows.Forms.Label();
             this.textBoxAvatar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonCancelarNovoJogador = new System.Windows.Forms.Button();
-            this.buttonConfirmNovoJogador = new System.Windows.Forms.Button();
+            this.buttonVoltar = new System.Windows.Forms.Button();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             this.numericUpDownIdade = new System.Windows.Forms.NumericUpDown();
             this.labelIdade = new System.Windows.Forms.Label();
             this.buttonEscolherAvatar = new System.Windows.Forms.Button();
@@ -42,6 +42,11 @@
             this.labelEmail = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.labelNomeJogador = new System.Windows.Forms.Label();
+            this.listBoxJogadores = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIdade)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +55,7 @@
             // 
             this.labelEditarJogador.AutoSize = true;
             this.labelEditarJogador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditarJogador.Location = new System.Drawing.Point(176, 9);
+            this.labelEditarJogador.Location = new System.Drawing.Point(316, 9);
             this.labelEditarJogador.Name = "labelEditarJogador";
             this.labelEditarJogador.Size = new System.Drawing.Size(132, 24);
             this.labelEditarJogador.TabIndex = 22;
@@ -60,40 +65,42 @@
             // 
             this.textBoxAvatar.BackColor = System.Drawing.SystemColors.Menu;
             this.textBoxAvatar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAvatar.Location = new System.Drawing.Point(359, 171);
+            this.textBoxAvatar.Location = new System.Drawing.Point(499, 171);
             this.textBoxAvatar.Name = "textBoxAvatar";
             this.textBoxAvatar.Size = new System.Drawing.Size(140, 13);
             this.textBoxAvatar.TabIndex = 35;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(348, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(488, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 132);
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonCancelarNovoJogador
+            // buttonVoltar
             // 
-            this.buttonCancelarNovoJogador.Location = new System.Drawing.Point(202, 190);
-            this.buttonCancelarNovoJogador.Name = "buttonCancelarNovoJogador";
-            this.buttonCancelarNovoJogador.Size = new System.Drawing.Size(106, 23);
-            this.buttonCancelarNovoJogador.TabIndex = 33;
-            this.buttonCancelarNovoJogador.Text = "Cancelar";
-            this.buttonCancelarNovoJogador.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Location = new System.Drawing.Point(342, 203);
+            this.buttonVoltar.Name = "buttonVoltar";
+            this.buttonVoltar.Size = new System.Drawing.Size(106, 23);
+            this.buttonVoltar.TabIndex = 33;
+            this.buttonVoltar.Text = "Voltar";
+            this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // buttonConfirmNovoJogador
+            // buttonGuardar
             // 
-            this.buttonConfirmNovoJogador.Location = new System.Drawing.Point(12, 190);
-            this.buttonConfirmNovoJogador.Name = "buttonConfirmNovoJogador";
-            this.buttonConfirmNovoJogador.Size = new System.Drawing.Size(106, 23);
-            this.buttonConfirmNovoJogador.TabIndex = 32;
-            this.buttonConfirmNovoJogador.Text = "Confirmar";
-            this.buttonConfirmNovoJogador.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Location = new System.Drawing.Point(152, 203);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(106, 23);
+            this.buttonGuardar.TabIndex = 32;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // numericUpDownIdade
             // 
-            this.numericUpDownIdade.Location = new System.Drawing.Point(301, 146);
+            this.numericUpDownIdade.Location = new System.Drawing.Point(441, 146);
             this.numericUpDownIdade.Maximum = new decimal(new int[] {
             99,
             0,
@@ -116,7 +123,7 @@
             // labelIdade
             // 
             this.labelIdade.AutoSize = true;
-            this.labelIdade.Location = new System.Drawing.Point(199, 148);
+            this.labelIdade.Location = new System.Drawing.Point(339, 148);
             this.labelIdade.Name = "labelIdade";
             this.labelIdade.Size = new System.Drawing.Size(96, 13);
             this.labelIdade.TabIndex = 30;
@@ -124,16 +131,17 @@
             // 
             // buttonEscolherAvatar
             // 
-            this.buttonEscolherAvatar.Location = new System.Drawing.Point(369, 190);
+            this.buttonEscolherAvatar.Location = new System.Drawing.Point(509, 203);
             this.buttonEscolherAvatar.Name = "buttonEscolherAvatar";
             this.buttonEscolherAvatar.Size = new System.Drawing.Size(106, 23);
             this.buttonEscolherAvatar.TabIndex = 29;
             this.buttonEscolherAvatar.Text = "Escolher Avatar";
             this.buttonEscolherAvatar.UseVisualStyleBackColor = true;
+            this.buttonEscolherAvatar.Click += new System.EventHandler(this.buttonEscolherAvatar_Click);
             // 
             // textBoxNick
             // 
-            this.textBoxNick.Location = new System.Drawing.Point(108, 117);
+            this.textBoxNick.Location = new System.Drawing.Point(248, 117);
             this.textBoxNick.Name = "textBoxNick";
             this.textBoxNick.Size = new System.Drawing.Size(232, 20);
             this.textBoxNick.TabIndex = 28;
@@ -141,7 +149,7 @@
             // labelNickname
             // 
             this.labelNickname.AutoSize = true;
-            this.labelNickname.Location = new System.Drawing.Point(12, 120);
+            this.labelNickname.Location = new System.Drawing.Point(152, 120);
             this.labelNickname.Name = "labelNickname";
             this.labelNickname.Size = new System.Drawing.Size(61, 13);
             this.labelNickname.TabIndex = 27;
@@ -149,7 +157,7 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(108, 91);
+            this.textBoxEmail.Location = new System.Drawing.Point(248, 91);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(230, 20);
             this.textBoxEmail.TabIndex = 26;
@@ -157,7 +165,7 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(12, 94);
+            this.labelEmail.Location = new System.Drawing.Point(152, 94);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(91, 13);
             this.labelEmail.TabIndex = 25;
@@ -165,29 +173,73 @@
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(108, 65);
+            this.textBoxNome.Location = new System.Drawing.Point(248, 65);
             this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.ReadOnly = true;
             this.textBoxNome.Size = new System.Drawing.Size(230, 20);
             this.textBoxNome.TabIndex = 24;
             // 
             // labelNomeJogador
             // 
             this.labelNomeJogador.AutoSize = true;
-            this.labelNomeJogador.Location = new System.Drawing.Point(12, 68);
+            this.labelNomeJogador.Location = new System.Drawing.Point(152, 68);
             this.labelNomeJogador.Name = "labelNomeJogador";
             this.labelNomeJogador.Size = new System.Drawing.Size(94, 13);
             this.labelNomeJogador.TabIndex = 23;
             this.labelNomeJogador.Text = "Nome do Jogador:";
             // 
+            // listBoxJogadores
+            // 
+            this.listBoxJogadores.FormattingEnabled = true;
+            this.listBoxJogadores.Location = new System.Drawing.Point(12, 27);
+            this.listBoxJogadores.Name = "listBoxJogadores";
+            this.listBoxJogadores.Size = new System.Drawing.Size(134, 199);
+            this.listBoxJogadores.TabIndex = 36;
+            this.listBoxJogadores.SelectedIndexChanged += new System.EventHandler(this.listBoxJogadores_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Jogadores";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(152, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "ID:";
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(179, 27);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(0, 13);
+            this.labelID.TabIndex = 39;
+            // 
             // EditarJogadorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 225);
+            this.ClientSize = new System.Drawing.Size(654, 238);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listBoxJogadores);
             this.Controls.Add(this.textBoxAvatar);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonCancelarNovoJogador);
-            this.Controls.Add(this.buttonConfirmNovoJogador);
+            this.Controls.Add(this.buttonVoltar);
+            this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.numericUpDownIdade);
             this.Controls.Add(this.labelIdade);
             this.Controls.Add(this.buttonEscolherAvatar);
@@ -211,8 +263,8 @@
         private System.Windows.Forms.Label labelEditarJogador;
         private System.Windows.Forms.TextBox textBoxAvatar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonCancelarNovoJogador;
-        private System.Windows.Forms.Button buttonConfirmNovoJogador;
+        private System.Windows.Forms.Button buttonVoltar;
+        private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.NumericUpDown numericUpDownIdade;
         private System.Windows.Forms.Label labelIdade;
         private System.Windows.Forms.Button buttonEscolherAvatar;
@@ -222,5 +274,10 @@
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label labelNomeJogador;
+        private System.Windows.Forms.ListBox listBoxJogadores;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelID;
     }
 }

@@ -95,7 +95,7 @@
             this.buttonEditarJogador.Name = "buttonEditarJogador";
             this.buttonEditarJogador.Size = new System.Drawing.Size(121, 23);
             this.buttonEditarJogador.TabIndex = 23;
-            this.buttonEditarJogador.Text = "Editar Jogador";
+            this.buttonEditarJogador.Text = "Editar Jogadores";
             this.buttonEditarJogador.UseVisualStyleBackColor = true;
             this.buttonEditarJogador.Click += new System.EventHandler(this.buttonEditarJogador_Click);
             // 
