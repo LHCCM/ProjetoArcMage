@@ -56,7 +56,10 @@ namespace Projeto
 
         private void buttonEditarCarta_Click(object sender, EventArgs e)
         {
+            FormEditarCartas form = new FormEditarCartas();
+            DialogResult result = form.ShowDialog();
 
+            Close();
         }
 
         //dis works now :D

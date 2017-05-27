@@ -165,6 +165,12 @@
     <Compile Include="FormCartas.Designer.cs">
       <DependentUpon>FormCartas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditarCartas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarCartas.Designer.cs">
+      <DependentUpon>FormEditarCartas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs">
       <DependentUpon>DBDiagrama.tt</DependentUpon>
     </Compile>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCartas.resx">
       <DependentUpon>FormCartas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarCartas.resx">
+      <DependentUpon>FormEditarCartas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GerirEquipas.resx">
       <DependentUpon>GerirEquipas.cs</DependentUpon>
