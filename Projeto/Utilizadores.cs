@@ -91,6 +91,7 @@ namespace Projeto
                 Administrator adminSelecionado = (Administrator)listBoxUsers.SelectedItem;
                 if (adminSelecionado != null)
                 {
+                    pictureBox1.Hide();
                     labelID.Text = Convert.ToString(adminSelecionado.Id);
                     labelNick.Text = adminSelecionado.Username;
                     label555.Show();
@@ -116,6 +117,7 @@ namespace Projeto
                     {
                         pictureBox1.Image = Properties.Resources.noavatar;
                     }
+                    pictureBox1.Show();
                     labelID.Text = Convert.ToString(utilizadorSelecionado.Id);
                     label6.Show();
                     labelNome.Show();
