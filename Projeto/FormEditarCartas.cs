@@ -35,7 +35,6 @@ namespace Projeto
 
                 if (result == DialogResult.Yes)
                 {
-
                     string regra = textBoxRegraCarta.Text.Trim();
 
                     cartaSelecionada.Rules = regra;
