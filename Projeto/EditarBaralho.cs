@@ -21,9 +21,13 @@ namespace Projeto
         {
             listBoxTotalCartas.Items.Clear();
             listBoxTotalCartas.Items.AddRange(container.Deck.ToArray<Deck>());
-
         }
         private void textBoxProcura_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             string myString = textBoxProcura.Text;
             int index = listBoxTotalCartas.FindString(myString, -1);
