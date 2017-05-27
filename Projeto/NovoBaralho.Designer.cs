@@ -43,6 +43,7 @@
             this.buttonNovoBaralhoConfimar.TabIndex = 0;
             this.buttonNovoBaralhoConfimar.Text = "Confirmar";
             this.buttonNovoBaralhoConfimar.UseVisualStyleBackColor = true;
+            this.buttonNovoBaralhoConfimar.Click += new System.EventHandler(this.buttonNovoBaralhoConfimar_Click);
             // 
             // buttonNovoBaralhoCancelar
             // 

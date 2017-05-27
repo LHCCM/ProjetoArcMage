@@ -42,8 +42,23 @@ namespace Projeto
 
         private void buttonEditUser_Click(object sender, EventArgs e)
         {
-            EditarUtilizadorForm editF = new EditarUtilizadorForm();
-            editF.Show();
+            if (listBoxUsers.SelectedItem == null)
+            {
+                MessageBox.Show("Não foi selecionado nenhum utilizador.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (listBoxUsers.SelectedItem.GetType() == typeof(Administrator))
+                {
+                    EditarAdministradorForm userAdministrador = new EditarAdministradorForm();
+                    DialogResult result = userAdministrador.ShowDialog();
+                }
+                else
+                {
+                    EditarArbitroForm userArbitro = new EditarArbitroForm();
+                    DialogResult result = userArbitro.ShowDialog();
+                }
+            }
         }
 
         private void buttonEliminarUser_Click(object sender, EventArgs e)

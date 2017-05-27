@@ -12,6 +12,8 @@ namespace Projeto
 {
     public partial class NovoBaralho : Form
     {
+        DBDiagramaContainer container = new DBDiagramaContainer();
+
         public NovoBaralho()
         {
             InitializeComponent();
@@ -20,6 +22,17 @@ namespace Projeto
         private void buttonNovoBaralhoCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonNovoBaralhoConfimar_Click(object sender, EventArgs e)
+        {
+            string nome = textBoxNomeNovoBaralho.Text.Trim();
+            Deck baralho = new Deck()
+            {
+                Name = nome
+            };
+            container.Deck.Add(baralho);
+            container.SaveChanges();
         }
     }
 }

@@ -17,7 +17,10 @@ namespace Projeto
         public NovoAdminForm()
         {
             InitializeComponent();
+
+            //textBoxNome.Text = 
         }
+
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
