@@ -15,7 +15,7 @@ namespace Projeto
     {
         public Referee NovoArbitro { get; private set; }
 
-        string destinationpath = @"C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Projeto\\Resources";
+        //string destinationpath = @"C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Avatares";
 
 
         DialogResult result;
@@ -65,7 +65,7 @@ namespace Projeto
                 Image imagem = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
 
-                //File.Copy(openFileDialog1.FileName, @"C:\Users\User\Desktop\Talk");
+                //File.Copy(openFileDialog1.FileName, destinationpath);
             }
         }
 

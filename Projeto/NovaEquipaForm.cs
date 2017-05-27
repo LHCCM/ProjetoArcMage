@@ -94,6 +94,10 @@ namespace Projeto
 
         private void buttonEscolherAvatar_Click(object sender, EventArgs e)
         {
+
+            openFileDialog1.Filter = "Image Files(*.png, *.jpg) | *.png; *.jpg";
+            openFileDialog1.FilterIndex = 1;
+
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
