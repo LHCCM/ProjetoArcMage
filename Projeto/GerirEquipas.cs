@@ -93,5 +93,17 @@ namespace Projeto
         {
 
         }
+
+        private void buttonProcurar_Click(object sender, EventArgs e)
+        {
+            string myString = textBoxProcura.Text;
+            int index = listBoxEquipas.FindString(myString, -1);
+            if (index != -1)
+            {
+                listBoxEquipas.SetSelected(index, true);
+            }
+            else
+                MessageBox.Show("Não encontrado");
+        }
     }
 }

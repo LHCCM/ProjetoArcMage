@@ -35,7 +35,7 @@
             this.labelInfoEquipa = new System.Windows.Forms.Label();
             this.labelGerirEquipas = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxProcura = new System.Windows.Forms.TextBox();
             this.labelPesquisa = new System.Windows.Forms.Label();
             this.buttonNovaEquipa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@
             this.labelP1 = new System.Windows.Forms.Label();
             this.labelP2 = new System.Windows.Forms.Label();
             this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonProcurar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +76,7 @@
             this.listBoxEquipas.FormattingEnabled = true;
             this.listBoxEquipas.Location = new System.Drawing.Point(12, 71);
             this.listBoxEquipas.Name = "listBoxEquipas";
-            this.listBoxEquipas.Size = new System.Drawing.Size(126, 238);
+            this.listBoxEquipas.Size = new System.Drawing.Size(126, 212);
             this.listBoxEquipas.TabIndex = 28;
             this.listBoxEquipas.SelectedIndexChanged += new System.EventHandler(this.listBoxEquipas_SelectedIndexChanged);
             // 
@@ -115,17 +116,17 @@
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // textBoxProcura
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 334);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 35;
+            this.textBoxProcura.Location = new System.Drawing.Point(17, 302);
+            this.textBoxProcura.Name = "textBoxProcura";
+            this.textBoxProcura.Size = new System.Drawing.Size(121, 20);
+            this.textBoxProcura.TabIndex = 35;
             // 
             // labelPesquisa
             // 
             this.labelPesquisa.AutoSize = true;
-            this.labelPesquisa.Location = new System.Drawing.Point(14, 318);
+            this.labelPesquisa.Location = new System.Drawing.Point(14, 286);
             this.labelPesquisa.Name = "labelPesquisa";
             this.labelPesquisa.Size = new System.Drawing.Size(83, 13);
             this.labelPesquisa.TabIndex = 36;
@@ -219,11 +220,22 @@
             this.buttonEditar.UseVisualStyleBackColor = true;
             this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
+            // buttonProcurar
+            // 
+            this.buttonProcurar.Location = new System.Drawing.Point(17, 332);
+            this.buttonProcurar.Name = "buttonProcurar";
+            this.buttonProcurar.Size = new System.Drawing.Size(121, 23);
+            this.buttonProcurar.TabIndex = 53;
+            this.buttonProcurar.Text = "Procurar";
+            this.buttonProcurar.UseVisualStyleBackColor = true;
+            this.buttonProcurar.Click += new System.EventHandler(this.buttonProcurar_Click);
+            // 
             // GerirEquipasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 393);
+            this.Controls.Add(this.buttonProcurar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.labelP2);
             this.Controls.Add(this.labelP1);
@@ -235,7 +247,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonNovaEquipa);
             this.Controls.Add(this.labelPesquisa);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxProcura);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonApagarEquipa);
@@ -260,7 +272,7 @@
         private System.Windows.Forms.Label labelInfoEquipa;
         private System.Windows.Forms.Label labelGerirEquipas;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxProcura;
         private System.Windows.Forms.Label labelPesquisa;
         private System.Windows.Forms.Button buttonNovaEquipa;
         private System.Windows.Forms.Label label1;
@@ -272,5 +284,6 @@
         private System.Windows.Forms.Label labelP1;
         private System.Windows.Forms.Label labelP2;
         private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.Button buttonProcurar;
     }
 }

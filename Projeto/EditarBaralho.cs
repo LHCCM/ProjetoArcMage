@@ -36,7 +36,7 @@ namespace Projeto
                 listBoxTotalCartas.SetSelected(index, true);
             }
             else
-                MessageBox.Show("Item not found.");
+                MessageBox.Show("Não encontrado");
         }
     }
 }
