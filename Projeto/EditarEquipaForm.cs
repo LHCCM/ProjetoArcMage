@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class JogadoresInscritosForm : Form
+    public partial class EditarEquipaForm : Form
     {
-        public JogadoresInscritosForm()
+        public EditarEquipaForm()
         {
             InitializeComponent();
         }

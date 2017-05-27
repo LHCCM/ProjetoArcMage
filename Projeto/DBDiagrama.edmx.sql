@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/19/2017 16:52:46
+-- Date Created: 05/26/2017 15:34:47
 -- Generated from EDMX file: C:\Repos\ProjetoArcMage\Projeto\DBDiagrama.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,125 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_GameReferee]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game] DROP CONSTRAINT [FK_GameReferee];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DeckCard_Deck]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DeckCard] DROP CONSTRAINT [FK_DeckCard_Deck];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DeckCard_Card]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DeckCard] DROP CONSTRAINT [FK_DeckCard_Card];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DeckGame1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game] DROP CONSTRAINT [FK_DeckGame1];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DeckGame2]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game] DROP CONSTRAINT [FK_DeckGame2];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PlayerStandardGame1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game_StandardGame] DROP CONSTRAINT [FK_PlayerStandardGame1];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PlayerStandardGame2]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game_StandardGame] DROP CONSTRAINT [FK_PlayerStandardGame2];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TeamTeamGame1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game_TeamGame] DROP CONSTRAINT [FK_TeamTeamGame1];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TeamTeamGame2]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game_TeamGame] DROP CONSTRAINT [FK_TeamTeamGame2];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TournamentGame]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game] DROP CONSTRAINT [FK_TournamentGame];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TeamTournamentTeam1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Team] DROP CONSTRAINT [FK_TeamTournamentTeam1];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TeamTournamentTeam2]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Team] DROP CONSTRAINT [FK_TeamTournamentTeam2];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PlayerStandardTournament1_Player]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PlayerStandardTournament1] DROP CONSTRAINT [FK_PlayerStandardTournament1_Player];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PlayerStandardTournament1_StandardTournament]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PlayerStandardTournament1] DROP CONSTRAINT [FK_PlayerStandardTournament1_StandardTournament];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PlayerStandardTournament2_Player]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PlayerStandardTournament2] DROP CONSTRAINT [FK_PlayerStandardTournament2_Player];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PlayerStandardTournament2_StandardTournament]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PlayerStandardTournament2] DROP CONSTRAINT [FK_PlayerStandardTournament2_StandardTournament];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Referee_inherits_User]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[User_Referee] DROP CONSTRAINT [FK_Referee_inherits_User];
+GO
+IF OBJECT_ID(N'[dbo].[FK_StandardGame_inherits_Game]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game_StandardGame] DROP CONSTRAINT [FK_StandardGame_inherits_Game];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TeamGame_inherits_Game]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Game_TeamGame] DROP CONSTRAINT [FK_TeamGame_inherits_Game];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TeamTournament_inherits_Tournament]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Tournament_TeamTournament] DROP CONSTRAINT [FK_TeamTournament_inherits_Tournament];
+GO
+IF OBJECT_ID(N'[dbo].[FK_StandardTournament_inherits_Tournament]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Tournament_StandardTournament] DROP CONSTRAINT [FK_StandardTournament_inherits_Tournament];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Administrator_inherits_User]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[User_Administrator] DROP CONSTRAINT [FK_Administrator_inherits_User];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[User]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[User];
+GO
+IF OBJECT_ID(N'[dbo].[Game]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Game];
+GO
+IF OBJECT_ID(N'[dbo].[Deck]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Deck];
+GO
+IF OBJECT_ID(N'[dbo].[Card]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Card];
+GO
+IF OBJECT_ID(N'[dbo].[Tournament]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Tournament];
+GO
+IF OBJECT_ID(N'[dbo].[Team]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Team];
+GO
+IF OBJECT_ID(N'[dbo].[Player]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Player];
+GO
+IF OBJECT_ID(N'[dbo].[User_Referee]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[User_Referee];
+GO
+IF OBJECT_ID(N'[dbo].[Game_StandardGame]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Game_StandardGame];
+GO
+IF OBJECT_ID(N'[dbo].[Game_TeamGame]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Game_TeamGame];
+GO
+IF OBJECT_ID(N'[dbo].[Tournament_TeamTournament]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Tournament_TeamTournament];
+GO
+IF OBJECT_ID(N'[dbo].[Tournament_StandardTournament]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Tournament_StandardTournament];
+GO
+IF OBJECT_ID(N'[dbo].[User_Administrator]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[User_Administrator];
+GO
+IF OBJECT_ID(N'[dbo].[DeckCard]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DeckCard];
+GO
+IF OBJECT_ID(N'[dbo].[PlayerStandardTournament1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PlayerStandardTournament1];
+GO
+IF OBJECT_ID(N'[dbo].[PlayerStandardTournament2]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PlayerStandardTournament2];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -43,8 +157,8 @@ CREATE TABLE [dbo].[Game] (
     [Number] int  NOT NULL,
     [DeckId] int  NOT NULL,
     [Referee_Id] int  NOT NULL,
-    [Deck1_Id] int  NOT NULL,
-    [Deck2_Id] int  NOT NULL,
+    [Deck1_Id] int  NULL,
+    [Deck2_Id] int  NULL,
     [Tournament_Id] int  NOT NULL
 );
 GO
@@ -86,8 +200,8 @@ CREATE TABLE [dbo].[Team] (
     [Avatar] nvarchar(max)  NOT NULL,
     [Player1] nvarchar(max)  NOT NULL,
     [Player2] nvarchar(max)  NOT NULL,
-    [TournamentAsTeam1_Id] int  NOT NULL,
-    [TournamentAsTeam2_Id] int  NOT NULL
+    [TournamentAsTeam1_Id] int  NULL,
+    [TournamentAsTeam2_Id] int  NULL
 );
 GO
 
@@ -121,8 +235,8 @@ GO
 -- Creating table 'Game_TeamGame'
 CREATE TABLE [dbo].[Game_TeamGame] (
     [Id] int  NOT NULL,
-    [Team1_Id] int  NOT NULL,
-    [Team2_Id] int  NOT NULL
+    [Team1_Id] int  NULL,
+    [Team2_Id] int  NULL
 );
 GO
 

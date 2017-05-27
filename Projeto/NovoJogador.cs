@@ -48,13 +48,13 @@ namespace Projeto
         }
 
         private void buttonEscolherAvatar_Click(object sender, EventArgs e)
-        {
-            string avatar = textBoxAvatar.Text.Trim();
-
+        { 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+
                 this.textBoxAvatar.Text = openFileDialog1.FileName;
-                pictureBox1.Image = Properties.Resources.defimg;
+                Image imagem = new Bitmap(openFileDialog1.FileName);
+                pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
             }
         }
 

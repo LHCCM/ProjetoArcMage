@@ -117,6 +117,12 @@
     <Compile Include="EditarBaralho.Designer.cs">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarEquipaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarEquipaForm.Designer.cs">
+      <DependentUpon>EditarEquipaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarJogadorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,12 +179,6 @@
     </Compile>
     <Compile Include="GerirJogadores.Designer.cs">
       <DependentUpon>GerirJogadores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="JogadoresInscritosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JogadoresInscritosForm.Designer.cs">
-      <DependentUpon>JogadoresInscritosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="JogosArbitroForm.cs">
       <SubType>Form</SubType>
@@ -301,6 +301,9 @@
     <EmbeddedResource Include="EditarBaralho.resx">
       <DependentUpon>EditarBaralho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarEquipaForm.resx">
+      <DependentUpon>EditarEquipaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarJogadorForm.resx">
       <DependentUpon>EditarJogadorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,9 +330,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GerirJogadores.resx">
       <DependentUpon>GerirJogadores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="JogadoresInscritosForm.resx">
-      <DependentUpon>JogadoresInscritosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JogosArbitroForm.resx">
       <DependentUpon>JogosArbitroForm.cs</DependentUpon>
@@ -427,6 +427,8 @@
       <LastGenOutput>DBDiagrama.cs</LastGenOutput>
       <DependentUpon>DBDiagrama.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\no_avatar.png" />
+    <None Include="Resources\noavatar.bmp" />
     <None Include="Resources\noavatar.jpg" />
     <None Include="Resources\defimg.jpg" />
   </ItemGroup>
