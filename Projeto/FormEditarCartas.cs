@@ -31,7 +31,7 @@ namespace Projeto
 
             if (cartaSelecionada != null)
             {
-                MessageBox.Show("Tem a certeza que deseja guardar as alterações?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                result = MessageBox.Show("Tem a certeza que deseja guardar as alterações?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
@@ -44,8 +44,6 @@ namespace Projeto
                     cartaSelecionada.Loyal = (int)numericUpDownLealdade.Value;
                     cartaSelecionada.Faction = comboBoxFacao.SelectedItem.ToString();
                     cartaSelecionada.Type = comboBoxTipoCarta.SelectedItem.ToString();
-
-
 
                     container.SaveChanges();
                 }
