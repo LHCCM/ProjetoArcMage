@@ -34,7 +34,7 @@ namespace Projeto
             int NumeroDecks = 1;
             int Check = 0;
             do {
-                if(container.Deck.Find(NumeroDecks).ToString() == nome)
+                if(container.Deck.Find(NumeroDecks).Name.ToString() == nome)
                 {
                     Check = 1;
                 }

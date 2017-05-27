@@ -19,7 +19,8 @@ namespace Projeto
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
     }
 }

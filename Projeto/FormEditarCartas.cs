@@ -14,6 +14,8 @@ namespace Projeto
     {
         DBDiagramaContainer container = new DBDiagramaContainer();
 
+        DialogResult result;
+
         //private Card cartalSelecionada;
 
         public FormEditarCartas()
@@ -29,26 +31,33 @@ namespace Projeto
 
             if (cartaSelecionada != null)
             {
+                MessageBox.Show("Tem a certeza que deseja guardar as alterações?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+
+                    string regra = textBoxRegraCarta.Text.Trim();
+
+                    cartaSelecionada.Rules = regra;
+                    cartaSelecionada.Atack = (int)numericUpDownAtaque.Value;
+                    cartaSelecionada.Defense = (int)numericUpDownDefesa.Value;
+                    cartaSelecionada.Cost = (int)numericUpDownCusto.Value;
+                    cartaSelecionada.Loyal = (int)numericUpDownLealdade.Value;
+                    cartaSelecionada.Faction = comboBoxFacao.SelectedItem.ToString();
+                    cartaSelecionada.Type = comboBoxTipoCarta.SelectedItem.ToString();
+
+
+
+                    container.SaveChanges();
+                }
                 
-
-                string regra = textBoxRegraCarta.Text.Trim();
-
-                cartaSelecionada.Rules = regra;
-                cartaSelecionada.Atack = (int)numericUpDownAtaque.Value;
-                cartaSelecionada.Defense = (int)numericUpDownDefesa.Value;
-                cartaSelecionada.Cost = (int)numericUpDownCusto.Value;
-                cartaSelecionada.Loyal = (int)numericUpDownLealdade.Value;
-                cartaSelecionada.Faction = comboBoxFacao.SelectedItem.ToString();
-                cartaSelecionada.Type = comboBoxTipoCarta.SelectedItem.ToString();
-
-                container.SaveChanges();
             }
 
             else
             {
                 MessageBox.Show("Nenhuma carta selecionada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            refreshCards();
+            
         }
 
         private void buttonVoltarCarta_Click(object sender, EventArgs e)
