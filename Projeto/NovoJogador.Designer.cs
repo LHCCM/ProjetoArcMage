@@ -67,7 +67,7 @@
             // 
             this.labelNovoJogador.AutoSize = true;
             this.labelNovoJogador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNovoJogador.Location = new System.Drawing.Point(193, 9);
+            this.labelNovoJogador.Location = new System.Drawing.Point(179, 9);
             this.labelNovoJogador.Name = "labelNovoJogador";
             this.labelNovoJogador.Size = new System.Drawing.Size(129, 24);
             this.labelNovoJogador.TabIndex = 7;
@@ -128,7 +128,7 @@
             // 
             this.numericUpDownIdade.Location = new System.Drawing.Point(301, 146);
             this.numericUpDownIdade.Maximum = new decimal(new int[] {
-            150,
+            99,
             0,
             0,
             0});

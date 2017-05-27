@@ -63,16 +63,6 @@ namespace Projeto.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap defimg {
-            get {
-                object obj = ResourceManager.GetObject("defimg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap noavatar {
             get {
                 object obj = ResourceManager.GetObject("noavatar", resourceCulture);
