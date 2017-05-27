@@ -16,12 +16,14 @@ namespace Projeto
         public EditarBaralhoForm()
         {
             InitializeComponent();
+            refreshCartas();
         }
         private void refreshCartas()
         {
             listBoxTotalCartas.Items.Clear();
-            listBoxTotalCartas.Items.AddRange(container.Deck.ToArray<Deck>());
+            listBoxTotalCartas.Items.AddRange(container.Card.ToArray<Card>());
         }
+
         private void textBoxProcura_TextChanged(object sender, EventArgs e)
         {
             
