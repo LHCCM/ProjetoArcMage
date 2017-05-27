@@ -25,12 +25,16 @@ namespace Projeto
 
         private void listBoxUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Administrator adminSelecionado = (Administrator)listBoxAdmin.SelectedItem;
-            if (adminSelecionado != null)
+            if (listBoxAdmin.SelectedItem.GetType() == typeof(Administrator))
             {
-                textBoxNome.Text = adminSelecionado.Username;
-                textBoxEmail.Text = adminSelecionado.Email;
-                textBoxPassword.Text = adminSelecionado.Password;
+                Administrator adminSelecionado = (Administrator)listBoxAdmin.SelectedItem;
+                if (adminSelecionado != null)
+                {
+                    textBoxNome.Text = adminSelecionado.Username;
+                    textBoxEmail.Text = adminSelecionado.Email;
+                    textBoxPassword.Text = adminSelecionado.Password;
+
+                }
             }
         }
 
