@@ -15,13 +15,15 @@ namespace Projeto
     {
         public Referee NovoArbitro { get; private set; }
 
-        string destinationpath = "C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Projeto\\Resources";
+        //string destinationpath = @"C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Avatares";
+
 
         DialogResult result;
 
         public NovoArbitroForm()
         {
             InitializeComponent();
+
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -53,12 +55,17 @@ namespace Projeto
 
         private void buttonEscolherAvatar_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "Image Files(*.png, *.jpg) | *.png; *.jpg";
+            openFileDialog1.FilterIndex = 1;
+
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 
-                this.textBoxAvatar.Text = openFileDialog1.FileName;
+                this.textBoxAvatar.Text = openFileDialog1.FileName;              
                 Image imagem = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
+
+                //File.Copy(openFileDialog1.FileName, destinationpath);
             }
         }
 
