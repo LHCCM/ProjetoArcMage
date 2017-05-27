@@ -12,7 +12,6 @@ namespace Projeto
 {
     public partial class NovaEquipaForm : Form
     {
-        //private const int MAX = 10;
 
         DBDiagramaContainer container = new DBDiagramaContainer();
 
@@ -39,7 +38,7 @@ namespace Projeto
             {
                 MessageBox.Show("Preencha o nome da equipa, por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (listBoxEquipa.Items.Count < 1)
+            else if (listBoxEquipa.Items.Count < 2)
             {
                 MessageBox.Show("Uma equipa tem de ter 2 elementos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
