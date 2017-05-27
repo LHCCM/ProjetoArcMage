@@ -114,6 +114,7 @@
             this.buttonEditarBaralho.TabIndex = 10;
             this.buttonEditarBaralho.Text = "Editar Baralho";
             this.buttonEditarBaralho.UseVisualStyleBackColor = true;
+            this.buttonEditarBaralho.Click += new System.EventHandler(this.buttonEditarBaralho_Click);
             // 
             // buttonVoltar
             // 

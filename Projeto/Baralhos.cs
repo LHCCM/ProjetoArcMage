@@ -62,5 +62,11 @@ namespace Projeto
             }
             
         }
+
+        private void buttonEditarBaralho_Click(object sender, EventArgs e)
+        {
+            EditarBaralhoForm Open = new EditarBaralhoForm();
+            Open.ShowDialog();
+        }
     }
 }

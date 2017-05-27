@@ -109,6 +109,7 @@
             this.textBoxProcura.Name = "textBoxProcura";
             this.textBoxProcura.Size = new System.Drawing.Size(122, 20);
             this.textBoxProcura.TabIndex = 7;
+            this.textBoxProcura.TextChanged += new System.EventHandler(this.textBoxProcura_TextChanged);
             // 
             // buttonAdicionarCartaBaralho
             // 

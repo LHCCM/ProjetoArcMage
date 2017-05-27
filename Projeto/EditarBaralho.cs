@@ -12,9 +12,27 @@ namespace Projeto
 {
     public partial class EditarBaralhoForm : Form
     {
+        DBDiagramaContainer container = new DBDiagramaContainer();
         public EditarBaralhoForm()
         {
             InitializeComponent();
+        }
+        private void refreshCartas()
+        {
+            listBoxTotalCartas.Items.Clear();
+            listBoxTotalCartas.Items.AddRange(container.Deck.ToArray<Deck>());
+
+        }
+        private void textBoxProcura_TextChanged(object sender, EventArgs e)
+        {
+            string myString = textBoxProcura.Text;
+            int index = listBoxTotalCartas.FindString(myString, -1);
+            if (index != -1)
+            {
+                listBoxTotalCartas.SetSelected(index, true);
+            }
+            else
+                MessageBox.Show("Item not found.");
         }
     }
 }
