@@ -71,7 +71,7 @@
             this.buttonEditarCarta.Name = "buttonEditarCarta";
             this.buttonEditarCarta.Size = new System.Drawing.Size(121, 23);
             this.buttonEditarCarta.TabIndex = 19;
-            this.buttonEditarCarta.Text = "Editar Carta";
+            this.buttonEditarCarta.Text = "Editar Cartas";
             this.buttonEditarCarta.UseVisualStyleBackColor = true;
             this.buttonEditarCarta.Click += new System.EventHandler(this.buttonEditarCarta_Click);
             // 
