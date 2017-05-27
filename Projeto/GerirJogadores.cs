@@ -66,8 +66,15 @@ namespace Projeto
 
         private void buttonEditarJogador_Click(object sender, EventArgs e)
         {
-            EditarJogadorForm editJ = new EditarJogadorForm();
-            editJ.Show();
+            // EDITAR JOGADOR
+            EditarJogadorForm form = new EditarJogadorForm();
+            DialogResult result = form.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                //AdicionarJogador(form.NovoJogador);
+            }
+            refreshJogadores();
         }
 
         //Mostrar info do jogador selecionado
