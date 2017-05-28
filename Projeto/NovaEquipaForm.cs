@@ -71,23 +71,31 @@ namespace Projeto
         {
             Player jogadorSelecionado = (Player)listBoxJogadores.SelectedItem;
 
-            if (listBoxEquipa.Items.Count <2)
+            if (listBoxEquipa.Items.Count <2 && listBoxJogadores.SelectedItem != null)
             {
                 listBoxEquipa.Items.Add(jogadorSelecionado.Nickname);
             }
-            else
+            else if (listBoxEquipa.Items.Count == 2)
             {
                 MessageBox.Show("Apenas 2 jogadores por equipa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (listBoxJogadores.SelectedItem == null)
+            {
+                MessageBox.Show("Nenhum jogador selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-            int index = listBoxEquipa.SelectedIndex;
-            if (index >= 0)
+            if (listBoxEquipa.SelectedItem != null)
             {
-                listBoxEquipa.Items.RemoveAt(index);
+                listBoxEquipa.Items.RemoveAt(listBoxEquipa.SelectedIndex);
                 return;
+            }
+
+            else
+            {
+                MessageBox.Show("Nenhum elemento selecionado para remover", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -122,6 +130,18 @@ namespace Projeto
             };
             DialogResult = DialogResult.OK;
             Close();
+        }
+
+        private void buttonProcurar_Click(object sender, EventArgs e)
+        {
+            string myString = textBoxProcura.Text;
+            int index = listBoxJogadores.FindString(myString, -1);
+            if (index != -1)
+            {
+                listBoxJogadores.SetSelected(index, true);
+            }
+            else
+                MessageBox.Show("Não encontrado");
         }
     }
 }

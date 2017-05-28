@@ -91,7 +91,10 @@ namespace Projeto
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
+            EditarEquipaForm form = new EditarEquipaForm();
+            DialogResult result = form.ShowDialog();
 
+            Close();
         }
 
         private void buttonProcurar_Click(object sender, EventArgs e)

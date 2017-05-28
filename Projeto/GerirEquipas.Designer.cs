@@ -134,7 +134,7 @@
             // 
             // buttonNovaEquipa
             // 
-            this.buttonNovaEquipa.Location = new System.Drawing.Point(17, 360);
+            this.buttonNovaEquipa.Location = new System.Drawing.Point(175, 303);
             this.buttonNovaEquipa.Name = "buttonNovaEquipa";
             this.buttonNovaEquipa.Size = new System.Drawing.Size(121, 23);
             this.buttonNovaEquipa.TabIndex = 37;
@@ -212,7 +212,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(175, 303);
+            this.buttonEditar.Location = new System.Drawing.Point(17, 361);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(121, 23);
             this.buttonEditar.TabIndex = 52;

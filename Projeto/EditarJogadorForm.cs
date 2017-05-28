@@ -58,7 +58,7 @@ namespace Projeto
 
             else
             {
-                MessageBox.Show("Nenhuma carta selecionada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nenhum jogador selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

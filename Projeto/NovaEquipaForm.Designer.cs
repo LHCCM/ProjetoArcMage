@@ -34,7 +34,7 @@
             this.listBoxEquipa = new System.Windows.Forms.ListBox();
             this.buttonProcurar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxProcura = new System.Windows.Forms.TextBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonEscolherAvatar = new System.Windows.Forms.Button();
@@ -93,10 +93,11 @@
             this.buttonProcurar.TabIndex = 4;
             this.buttonProcurar.Text = "Procurar";
             this.buttonProcurar.UseVisualStyleBackColor = true;
+            this.buttonProcurar.Click += new System.EventHandler(this.buttonProcurar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxProcura);
             this.groupBox1.Controls.Add(this.buttonProcurar);
             this.groupBox1.Location = new System.Drawing.Point(12, 255);
             this.groupBox1.Name = "groupBox1";
@@ -105,12 +106,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar Jogador";
             // 
-            // textBox1
+            // textBoxProcura
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxProcura.Location = new System.Drawing.Point(6, 19);
+            this.textBoxProcura.Name = "textBoxProcura";
+            this.textBoxProcura.Size = new System.Drawing.Size(115, 20);
+            this.textBoxProcura.TabIndex = 5;
             // 
             // buttonConfirm
             // 
@@ -246,7 +247,7 @@
         private System.Windows.Forms.ListBox listBoxEquipa;
         private System.Windows.Forms.Button buttonProcurar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxProcura;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonEscolherAvatar;
