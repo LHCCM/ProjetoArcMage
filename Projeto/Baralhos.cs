@@ -40,6 +40,7 @@ namespace Projeto
         {
             NovoBaralho NBaralho = new NovoBaralho();
             NBaralho.ShowDialog();
+            refreshBaralhos();
         }
 
         private void listBoxBaralhos_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,8 +67,10 @@ namespace Projeto
         private void buttonEditarBaralho_Click(object sender, EventArgs e)
         {
             AussiliaryVars Aussi = new AussiliaryVars();
-            
-            Aussi.Var1 = listBoxBaralhos.SelectedIndex;
+            Deck deck = (Deck)listBoxBaralhos.SelectedItem;
+
+
+            Aussi.deck = deck;
            
             EditarBaralhoForm Open = new EditarBaralhoForm();
             Open.ShowDialog();
