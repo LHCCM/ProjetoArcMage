@@ -9,5 +9,6 @@ namespace Projeto
     class AussiliaryVars
     {
         public int Var1 { get; set; }
+        public Deck deck;
     }
 }

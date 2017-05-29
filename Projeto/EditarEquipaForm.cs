@@ -152,7 +152,6 @@ namespace Projeto
         private void listBoxEquipas_SelectedIndexChanged(object sender, EventArgs e)
         {
             Team equipaSelecionada = (Team)listBoxEquipas.SelectedItem;
-
             if (equipaSelecionada != null)
             {
                 if (equipaSelecionada.Avatar != "")
@@ -164,7 +163,6 @@ namespace Projeto
                 {
                     pictureBox1.Image = Properties.Resources.noavatar;
                 }
-
                 labelID.Text = Convert.ToString(equipaSelecionada.Id);
                 textBoxNome.Text = equipaSelecionada.Name;
                 listBoxEquipa.Items.Clear();

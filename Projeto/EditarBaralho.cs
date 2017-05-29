@@ -17,6 +17,7 @@ namespace Projeto
         {
             InitializeComponent();
             refreshCartas();
+            refreshCartasBaralho();
         }
         private void refreshCartas()
         {
@@ -26,8 +27,19 @@ namespace Projeto
         }
         private void refreshCartasBaralho()
         {
-            AussiliaryVars var = new AussiliaryVars();
-              
+            Card CartaSelecionada;
+            AussiliaryVars Var = new AussiliaryVars();
+            int i = 0;
+            listBoxCartasBaralho.Items.Clear();
+            do
+            {
+                CartaSelecionada = (Card)listBoxTotalCartas.Items[i];
+                if (CartaSelecionada.Id == Var.deck.Id)
+                {
+                    listBoxCartasBaralho.Items.Add(CartaSelecionada);
+                }
+                i++;
+             } while (i < listBoxTotalCartas.Items.Count);
         }
         private void textBoxProcura_TextChanged(object sender, EventArgs e)
         {
@@ -48,12 +60,20 @@ namespace Projeto
 
         private void buttonAdicionarCartaBaralho_Click(object sender, EventArgs e)
         {
-            
+            Card CartaSelecionada = (Card)listBoxTotalCartas.SelectedItem;
+            listBoxCartasBaralho.Items.Add(CartaSelecionada.Name);
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
-
+            int i = 0;
+            AussiliaryVars var = new AussiliaryVars();
+            Deck DeckSelecionado = var.deck;
+            do
+            {
+                Card DeckCard = (Card)listBoxCartasBaralho.Items[i];
+                DeckSelecionado.Card.Add(DeckCard);
+            } while (i < listBoxCartasBaralho.Items.Count);
         }
 
         private void EditarBaralhoForm_Load(object sender, EventArgs e)
