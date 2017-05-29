@@ -16,7 +16,7 @@ namespace Projeto
         public EditarBaralhoForm()
         {
             InitializeComponent();
-            AussiliaryVars var = new AussiliaryVars;
+            AussiliaryVars var = new AussiliaryVars();
             MessageBox.Show(var.deck.Name, "OKAYYY", MessageBoxButtons.OK);
             refreshCartas();
             refreshCartasBaralho();
