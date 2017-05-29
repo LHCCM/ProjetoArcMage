@@ -16,6 +16,8 @@ namespace Projeto
         public EditarBaralhoForm()
         {
             InitializeComponent();
+            AussiliaryVars var = new AussiliaryVars;
+            MessageBox.Show(var.deck.Name, "OKAYYY", MessageBoxButtons.OK);
             refreshCartas();
             refreshCartasBaralho();
         }
@@ -40,7 +42,7 @@ namespace Projeto
 
                 if (CartaSelecionada.Id == CartaDeck.Id)
                 {
-                    listBoxCartasBaralho.Items.Add(CartaSelecionada);
+                   listBoxCartasBaralho.Items.Add(CartaSelecionada);
                 }
                 i++;
              } while (i < listBoxTotalCartas.Items.Count);
