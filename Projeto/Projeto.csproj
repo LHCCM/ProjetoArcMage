@@ -78,6 +78,7 @@
     <Compile Include="Administrator.cs">
       <DependentUpon>DBDiagrama.tt</DependentUpon>
     </Compile>
+    <Compile Include="AussiliaryVars.cs" />
     <Compile Include="Baralhos.cs">
       <SubType>Form</SubType>
     </Compile>

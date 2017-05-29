@@ -16,11 +16,18 @@ namespace Projeto
         public EditarBaralhoForm()
         {
             InitializeComponent();
+            refreshCartas();
         }
         private void refreshCartas()
         {
             listBoxTotalCartas.Items.Clear();
-            listBoxTotalCartas.Items.AddRange(container.Deck.ToArray<Deck>());
+            listBoxTotalCartas.Items.AddRange(container.Card.ToArray<Card>());
+            
+        }
+        private void refreshCartasBaralho()
+        {
+            AussiliaryVars var = new AussiliaryVars();
+              
         }
         private void textBoxProcura_TextChanged(object sender, EventArgs e)
         {
@@ -36,7 +43,43 @@ namespace Projeto
                 listBoxTotalCartas.SetSelected(index, true);
             }
             else
-                MessageBox.Show("Item not found.");
+                MessageBox.Show("Baralho Inexistente.");
+        }
+
+        private void buttonAdicionarCartaBaralho_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonVoltar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditarBaralhoForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxCartasBaralho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listBoxCartasBaralho.SelectedIndex != 0)
+            {
+                buttonRemoverCartaBaralho.Enabled = true;
+            }
+        }
+
+        private void buttonRemoverCartaBaralho_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxTotalCartas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxTotalCartas.SelectedIndex != 0)
+            {
+                buttonAdicionarCartaBaralho.Enabled = true;
+            }
         }
     }
 }
