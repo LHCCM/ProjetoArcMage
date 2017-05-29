@@ -68,9 +68,11 @@ namespace Projeto
 
             if (openFileDialog1.FileName != null)
             {
+                //acessede apenas ao nome do ficheiro
                 string filename = Path.GetFileName(openFileDialog1.FileName);
-
-                File.Copy(openFileDialog1.FileName, Path.Combine(destinationpath, filename));
+                
+                //copia o ficheiro para uma pasta e faz overwrite se o ficheiro já exitir
+                File.Copy(openFileDialog1.FileName, Path.Combine(destinationpath, filename), true);
             }
         }
 
