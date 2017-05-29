@@ -67,7 +67,6 @@ namespace Projeto
                 deck.Card.Add(DeckCard);
                 i++;
             }while(i < listBoxCartasBaralho.Items.Count);
-            container.Deck.Add(deck);
             container.SaveChanges();
         }
 
