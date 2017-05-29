@@ -16,36 +16,24 @@ namespace Projeto
         public EditarBaralhoForm()
         {
             InitializeComponent();
-            AussiliaryVars var = new AussiliaryVars();
-            MessageBox.Show(var.deck.Name, "OKAYYY", MessageBoxButtons.OK);
             refreshCartas();
-            refreshCartasBaralho();
+            refreshBaralhos();
+        }
+        private void refreshBaralhos()
+        {
+            listBoxBaralhos.Items.Clear();
+            listBoxBaralhos.Items.AddRange(container.Deck.ToArray<Deck>());
         }
         private void refreshCartas()
         {
             listBoxTotalCartas.Items.Clear();
             listBoxTotalCartas.Items.AddRange(container.Card.ToArray<Card>());
-            
         }
         private void refreshCartasBaralho()
         {
-            Card CartaSelecionada;
-            
-            AussiliaryVars Var = new AussiliaryVars();
-            Card CartaDeck = (Card)Var.deck.Card;
-            int i = 0;
+            Deck deck = (Deck)listBoxBaralhos.SelectedItem;
             listBoxCartasBaralho.Items.Clear();
-            do
-            {
-                if (listBoxCartasBaralho.Items[i] != null);
-                CartaSelecionada = (Card)listBoxTotalCartas.Items[i];
-
-                if (CartaSelecionada.Id == CartaDeck.Id)
-                {
-                   listBoxCartasBaralho.Items.Add(CartaSelecionada);
-                }
-                i++;
-             } while (i < listBoxTotalCartas.Items.Count);
+            listBoxCartasBaralho.Items.AddRange(deck.Card.ToArray<Card>());
         }
         private void textBoxProcura_TextChanged(object sender, EventArgs e)
         {
@@ -73,12 +61,12 @@ namespace Projeto
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             int i = 0;
-            AussiliaryVars var = new AussiliaryVars();
-            Deck DeckSelecionado = var.deck;
+            Deck deck = (Deck)listBoxBaralhos.SelectedItem;
             do
             {
                 Card DeckCard = (Card)listBoxCartasBaralho.Items[i];
-                DeckSelecionado.Card.Add(DeckCard);
+                deck.Card.Add(DeckCard);
+                i++;
             } while (i < listBoxCartasBaralho.Items.Count);
         }
 
@@ -97,7 +85,9 @@ namespace Projeto
 
         private void buttonRemoverCartaBaralho_Click(object sender, EventArgs e)
         {
-
+            container.Deck.Remove((Deck)listBoxCartasBaralho.SelectedItem);
+            container.SaveChanges();
+            refreshCartasBaralho();
         }
 
         private void listBoxTotalCartas_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,6 +95,14 @@ namespace Projeto
             if (listBoxTotalCartas.SelectedIndex != 0)
             {
                 buttonAdicionarCartaBaralho.Enabled = true;
+            }
+        }
+
+        private void listBoxBaralhos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listBoxBaralhos != null)
+            {
+                refreshBaralhos();
             }
         }
     }
