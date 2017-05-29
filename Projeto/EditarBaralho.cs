@@ -57,7 +57,6 @@ namespace Projeto
             Card CartaSelecionada = (Card)listBoxTotalCartas.SelectedItem;
             listBoxCartasBaralho.Items.Add(CartaSelecionada.Name);
         }
-
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             int i = 0;
@@ -102,7 +101,7 @@ namespace Projeto
         {
             if(listBoxBaralhos != null)
             {
-                refreshBaralhos();
+                refreshCartasBaralho();
             }
         }
     }
