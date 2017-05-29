@@ -129,9 +129,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(215, 357);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Pesquisar Torneios";
+            this.label2.Text = "Pesquisar Jogos";
             // 
             // label3
             // 

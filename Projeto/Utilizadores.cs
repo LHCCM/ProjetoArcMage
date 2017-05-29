@@ -42,23 +42,10 @@ namespace Projeto
 
         private void buttonEditUser_Click(object sender, EventArgs e)
         {
-            if (listBoxUsers.SelectedItem == null)
-            {
-                MessageBox.Show("Não foi selecionado nenhum utilizador.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (listBoxUsers.SelectedItem.GetType() == typeof(Administrator))
-                {
-                    EditarAdministradorForm userAdministrador = new EditarAdministradorForm();
-                    DialogResult result = userAdministrador.ShowDialog();
-                }
-                else
-                {
-                    EditarArbitroForm userArbitro = new EditarArbitroForm();
-                    DialogResult result = userArbitro.ShowDialog();
-                }
-            }
+            EditarUtilizadoresForm form = new EditarUtilizadoresForm();
+            form.ShowDialog();
+
+            Close();
         }
 
         private void buttonEliminarUser_Click(object sender, EventArgs e)
@@ -68,9 +55,15 @@ namespace Projeto
             {
                 container.User.Remove((User)listBoxUsers.SelectedItem);
                 container.SaveChanges();
-            }
 
-            refreshUtilizadores();
+                labelID.Text = "";
+                labelNick.Text = "";
+                labelNome.Text = "";
+                labelEmail.Text = "";
+                pictureBox1.Hide();
+
+                refreshUtilizadores();
+            }
         }
 
         private void AdicionarArbitro(Referee arbitro)
@@ -175,6 +168,18 @@ namespace Projeto
         private void radioButtonTodos_CheckedChanged(object sender, EventArgs e)
         {
             refreshUtilizadores();
+        }
+
+        private void buttonPesquisar_Click(object sender, EventArgs e)
+        {
+            string myString = textBoxProcura.Text;
+            int index = listBoxUsers.FindString(myString, -1);
+            if (index != -1)
+            {
+                listBoxUsers.SetSelected(index, true);
+            }
+            else
+                MessageBox.Show("Não encontrado");
         }
     }
 }

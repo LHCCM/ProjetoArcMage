@@ -160,6 +160,12 @@
     <Compile Include="EditarAdministradorForm.Designer.cs">
       <DependentUpon>EditarAdministradorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarUtilizadoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarUtilizadoresForm.Designer.cs">
+      <DependentUpon>EditarUtilizadoresForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCartas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarAdministradorForm.resx">
       <DependentUpon>EditarAdministradorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarUtilizadoresForm.resx">
+      <DependentUpon>EditarUtilizadoresForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCartas.resx">
       <DependentUpon>FormCartas.cs</DependentUpon>
