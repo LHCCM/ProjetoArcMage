@@ -39,6 +39,7 @@
             this.buttonAdicionarCartaBaralho = new System.Windows.Forms.Button();
             this.buttonVoltar = new System.Windows.Forms.Button();
             this.buttonRemoverCartaBaralho = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelEditarBaralho
@@ -65,15 +66,15 @@
             this.listBoxTotalCartas.FormattingEnabled = true;
             this.listBoxTotalCartas.Location = new System.Drawing.Point(12, 85);
             this.listBoxTotalCartas.Name = "listBoxTotalCartas";
-            this.listBoxTotalCartas.Size = new System.Drawing.Size(135, 251);
+            this.listBoxTotalCartas.Size = new System.Drawing.Size(154, 251);
             this.listBoxTotalCartas.TabIndex = 2;
             // 
             // listBoxCartasBaralho
             // 
             this.listBoxCartasBaralho.FormattingEnabled = true;
-            this.listBoxCartasBaralho.Location = new System.Drawing.Point(206, 85);
+            this.listBoxCartasBaralho.Location = new System.Drawing.Point(172, 85);
             this.listBoxCartasBaralho.Name = "listBoxCartasBaralho";
-            this.listBoxCartasBaralho.Size = new System.Drawing.Size(135, 251);
+            this.listBoxCartasBaralho.Size = new System.Drawing.Size(164, 251);
             this.listBoxCartasBaralho.TabIndex = 3;
             // 
             // label1
@@ -105,14 +106,15 @@
             // 
             // textBoxProcura
             // 
-            this.textBoxProcura.Location = new System.Drawing.Point(15, 358);
+            this.textBoxProcura.Location = new System.Drawing.Point(12, 386);
             this.textBoxProcura.Name = "textBoxProcura";
-            this.textBoxProcura.Size = new System.Drawing.Size(122, 20);
+            this.textBoxProcura.Size = new System.Drawing.Size(314, 20);
             this.textBoxProcura.TabIndex = 7;
+            this.textBoxProcura.TextChanged += new System.EventHandler(this.textBoxProcura_TextChanged);
             // 
             // buttonAdicionarCartaBaralho
             // 
-            this.buttonAdicionarCartaBaralho.Location = new System.Drawing.Point(15, 387);
+            this.buttonAdicionarCartaBaralho.Location = new System.Drawing.Point(15, 412);
             this.buttonAdicionarCartaBaralho.Name = "buttonAdicionarCartaBaralho";
             this.buttonAdicionarCartaBaralho.Size = new System.Drawing.Size(100, 23);
             this.buttonAdicionarCartaBaralho.TabIndex = 8;
@@ -121,7 +123,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(226, 387);
+            this.buttonVoltar.Location = new System.Drawing.Point(121, 412);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(99, 23);
             this.buttonVoltar.TabIndex = 9;
@@ -130,18 +132,29 @@
             // 
             // buttonRemoverCartaBaralho
             // 
-            this.buttonRemoverCartaBaralho.Location = new System.Drawing.Point(226, 358);
+            this.buttonRemoverCartaBaralho.Location = new System.Drawing.Point(226, 412);
             this.buttonRemoverCartaBaralho.Name = "buttonRemoverCartaBaralho";
             this.buttonRemoverCartaBaralho.Size = new System.Drawing.Size(100, 23);
             this.buttonRemoverCartaBaralho.TabIndex = 10;
             this.buttonRemoverCartaBaralho.Text = "Remover Carta";
             this.buttonRemoverCartaBaralho.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 358);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Procurar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EditarBaralhoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 419);
+            this.ClientSize = new System.Drawing.Size(348, 447);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonRemoverCartaBaralho);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonAdicionarCartaBaralho);
@@ -173,5 +186,6 @@
         private System.Windows.Forms.Button buttonAdicionarCartaBaralho;
         private System.Windows.Forms.Button buttonVoltar;
         private System.Windows.Forms.Button buttonRemoverCartaBaralho;
+        private System.Windows.Forms.Button button1;
     }
 }

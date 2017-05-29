@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             this.buttonVoltar = new System.Windows.Forms.Button();
-            this.buttonRemoverJogador = new System.Windows.Forms.Button();
             this.buttonApagarEquipa = new System.Windows.Forms.Button();
-            this.buttonAdicionarJogador = new System.Windows.Forms.Button();
-            this.listBoxJogador = new System.Windows.Forms.ListBox();
             this.listBoxEquipas = new System.Windows.Forms.ListBox();
             this.labelListaEquipas = new System.Windows.Forms.Label();
             this.labelInfoEquipa = new System.Windows.Forms.Label();
             this.labelGerirEquipas = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxProcura = new System.Windows.Forms.TextBox();
             this.labelPesquisa = new System.Windows.Forms.Label();
             this.buttonNovaEquipa = new System.Windows.Forms.Button();
-            this.textBoxNovoNome = new System.Windows.Forms.TextBox();
-            this.buttonMudar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelP1 = new System.Windows.Forms.Label();
+            this.labelP2 = new System.Windows.Forms.Label();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonProcurar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(180, 391);
+            this.buttonVoltar.Location = new System.Drawing.Point(175, 360);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(121, 23);
             this.buttonVoltar.TabIndex = 33;
@@ -60,19 +61,9 @@
             this.buttonVoltar.UseVisualStyleBackColor = true;
             this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // buttonRemoverJogador
-            // 
-            this.buttonRemoverJogador.Location = new System.Drawing.Point(11, 110);
-            this.buttonRemoverJogador.Name = "buttonRemoverJogador";
-            this.buttonRemoverJogador.Size = new System.Drawing.Size(121, 23);
-            this.buttonRemoverJogador.TabIndex = 32;
-            this.buttonRemoverJogador.Text = "Remover Jogador";
-            this.buttonRemoverJogador.UseVisualStyleBackColor = true;
-            this.buttonRemoverJogador.Click += new System.EventHandler(this.buttonRemoverJogador_Click);
-            // 
             // buttonApagarEquipa
             // 
-            this.buttonApagarEquipa.Location = new System.Drawing.Point(17, 389);
+            this.buttonApagarEquipa.Location = new System.Drawing.Point(175, 332);
             this.buttonApagarEquipa.Name = "buttonApagarEquipa";
             this.buttonApagarEquipa.Size = new System.Drawing.Size(121, 23);
             this.buttonApagarEquipa.TabIndex = 31;
@@ -80,31 +71,14 @@
             this.buttonApagarEquipa.UseVisualStyleBackColor = true;
             this.buttonApagarEquipa.Click += new System.EventHandler(this.buttonApagarEquipa_Click);
             // 
-            // buttonAdicionarJogador
-            // 
-            this.buttonAdicionarJogador.Location = new System.Drawing.Point(11, 81);
-            this.buttonAdicionarJogador.Name = "buttonAdicionarJogador";
-            this.buttonAdicionarJogador.Size = new System.Drawing.Size(121, 23);
-            this.buttonAdicionarJogador.TabIndex = 30;
-            this.buttonAdicionarJogador.Text = "AdicionarJogador";
-            this.buttonAdicionarJogador.UseVisualStyleBackColor = true;
-            this.buttonAdicionarJogador.Click += new System.EventHandler(this.buttonAdicionarJogador_Click);
-            // 
-            // listBoxJogador
-            // 
-            this.listBoxJogador.FormattingEnabled = true;
-            this.listBoxJogador.Location = new System.Drawing.Point(8, 19);
-            this.listBoxJogador.Name = "listBoxJogador";
-            this.listBoxJogador.Size = new System.Drawing.Size(124, 56);
-            this.listBoxJogador.TabIndex = 29;
-            // 
             // listBoxEquipas
             // 
             this.listBoxEquipas.FormattingEnabled = true;
             this.listBoxEquipas.Location = new System.Drawing.Point(12, 71);
             this.listBoxEquipas.Name = "listBoxEquipas";
-            this.listBoxEquipas.Size = new System.Drawing.Size(126, 238);
+            this.listBoxEquipas.Size = new System.Drawing.Size(126, 212);
             this.listBoxEquipas.TabIndex = 28;
+            this.listBoxEquipas.SelectedIndexChanged += new System.EventHandler(this.listBoxEquipas_SelectedIndexChanged);
             // 
             // labelListaEquipas
             // 
@@ -136,31 +110,31 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(175, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(161, 70);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 132);
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // textBoxProcura
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 334);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 35;
+            this.textBoxProcura.Location = new System.Drawing.Point(17, 302);
+            this.textBoxProcura.Name = "textBoxProcura";
+            this.textBoxProcura.Size = new System.Drawing.Size(121, 20);
+            this.textBoxProcura.TabIndex = 35;
             // 
             // labelPesquisa
             // 
             this.labelPesquisa.AutoSize = true;
-            this.labelPesquisa.Location = new System.Drawing.Point(14, 318);
+            this.labelPesquisa.Location = new System.Drawing.Point(14, 286);
             this.labelPesquisa.Name = "labelPesquisa";
-            this.labelPesquisa.Size = new System.Drawing.Size(99, 13);
+            this.labelPesquisa.Size = new System.Drawing.Size(83, 13);
             this.labelPesquisa.TabIndex = 36;
-            this.labelPesquisa.Text = "Procurar Jogadores";
+            this.labelPesquisa.Text = "Procurar Equipa";
             // 
             // buttonNovaEquipa
             // 
-            this.buttonNovaEquipa.Location = new System.Drawing.Point(17, 360);
+            this.buttonNovaEquipa.Location = new System.Drawing.Point(175, 303);
             this.buttonNovaEquipa.Name = "buttonNovaEquipa";
             this.buttonNovaEquipa.Size = new System.Drawing.Size(121, 23);
             this.buttonNovaEquipa.TabIndex = 37;
@@ -168,55 +142,112 @@
             this.buttonNovaEquipa.UseVisualStyleBackColor = true;
             this.buttonNovaEquipa.Click += new System.EventHandler(this.buttonNovaEquipa_Click);
             // 
-            // textBoxNovoNome
+            // label1
             // 
-            this.textBoxNovoNome.Location = new System.Drawing.Point(6, 19);
-            this.textBoxNovoNome.Name = "textBoxNovoNome";
-            this.textBoxNovoNome.Size = new System.Drawing.Size(121, 20);
-            this.textBoxNovoNome.TabIndex = 40;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(158, 205);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "ID:";
             // 
-            // buttonMudar
+            // labelID
             // 
-            this.buttonMudar.Location = new System.Drawing.Point(6, 45);
-            this.buttonMudar.Name = "buttonMudar";
-            this.buttonMudar.Size = new System.Drawing.Size(121, 23);
-            this.buttonMudar.TabIndex = 41;
-            this.buttonMudar.Text = "Mudar Nome";
-            this.buttonMudar.UseVisualStyleBackColor = true;
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(185, 205);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(0, 13);
+            this.labelID.TabIndex = 45;
             // 
-            // groupBox1
+            // label2
             // 
-            this.groupBox1.Controls.Add(this.listBoxJogador);
-            this.groupBox1.Controls.Add(this.buttonAdicionarJogador);
-            this.groupBox1.Controls.Add(this.buttonRemoverJogador);
-            this.groupBox1.Location = new System.Drawing.Point(169, 244);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(138, 141);
-            this.groupBox1.TabIndex = 42;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Jogadores";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(158, 227);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Nome:";
             // 
-            // groupBox2
+            // labelNome
             // 
-            this.groupBox2.Controls.Add(this.textBoxNovoNome);
-            this.groupBox2.Controls.Add(this.buttonMudar);
-            this.groupBox2.Location = new System.Drawing.Point(169, 169);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(138, 77);
-            this.groupBox2.TabIndex = 43;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Novo Nome";
+            this.labelNome.AutoSize = true;
+            this.labelNome.Location = new System.Drawing.Point(202, 227);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(0, 13);
+            this.labelNome.TabIndex = 47;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(158, 249);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "P1:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(158, 273);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "P2:";
+            // 
+            // labelP1
+            // 
+            this.labelP1.AutoSize = true;
+            this.labelP1.Location = new System.Drawing.Point(187, 249);
+            this.labelP1.Name = "labelP1";
+            this.labelP1.Size = new System.Drawing.Size(0, 13);
+            this.labelP1.TabIndex = 50;
+            // 
+            // labelP2
+            // 
+            this.labelP2.AutoSize = true;
+            this.labelP2.Location = new System.Drawing.Point(187, 273);
+            this.labelP2.Name = "labelP2";
+            this.labelP2.Size = new System.Drawing.Size(0, 13);
+            this.labelP2.TabIndex = 51;
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(17, 361);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(121, 23);
+            this.buttonEditar.TabIndex = 52;
+            this.buttonEditar.Text = "Editar Equipa";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // buttonProcurar
+            // 
+            this.buttonProcurar.Location = new System.Drawing.Point(17, 332);
+            this.buttonProcurar.Name = "buttonProcurar";
+            this.buttonProcurar.Size = new System.Drawing.Size(121, 23);
+            this.buttonProcurar.TabIndex = 53;
+            this.buttonProcurar.Text = "Procurar";
+            this.buttonProcurar.UseVisualStyleBackColor = true;
+            this.buttonProcurar.Click += new System.EventHandler(this.buttonProcurar_Click);
             // 
             // GerirEquipasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 435);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(326, 393);
+            this.Controls.Add(this.buttonProcurar);
+            this.Controls.Add(this.buttonEditar);
+            this.Controls.Add(this.labelP2);
+            this.Controls.Add(this.labelP1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelNome);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonNovaEquipa);
             this.Controls.Add(this.labelPesquisa);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxProcura);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonApagarEquipa);
@@ -227,9 +258,6 @@
             this.Name = "GerirEquipasForm";
             this.Text = "GerirEquipas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,21 +266,24 @@
         #endregion
 
         private System.Windows.Forms.Button buttonVoltar;
-        private System.Windows.Forms.Button buttonRemoverJogador;
         private System.Windows.Forms.Button buttonApagarEquipa;
-        private System.Windows.Forms.Button buttonAdicionarJogador;
-        private System.Windows.Forms.ListBox listBoxJogador;
         private System.Windows.Forms.ListBox listBoxEquipas;
         private System.Windows.Forms.Label labelListaEquipas;
         private System.Windows.Forms.Label labelInfoEquipa;
         private System.Windows.Forms.Label labelGerirEquipas;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxProcura;
         private System.Windows.Forms.Label labelPesquisa;
         private System.Windows.Forms.Button buttonNovaEquipa;
-        private System.Windows.Forms.TextBox textBoxNovoNome;
-        private System.Windows.Forms.Button buttonMudar;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelNome;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelP1;
+        private System.Windows.Forms.Label labelP2;
+        private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.Button buttonProcurar;
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Projeto
 {
-    public partial class EditarUtilizadorForm : Form
+    public partial class EditarArbitroForm : Form
     {
-        public EditarUtilizadorForm()
+        public EditarArbitroForm()
         {
             InitializeComponent();
-        }
-
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

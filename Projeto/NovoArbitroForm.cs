@@ -7,28 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto
 {
-    public partial class NovoJogadorForm : Form
+    public partial class NovoArbitroForm : Form
     {
-        public Player NovoJogador { get; private set; }
+        public Referee NovoArbitro { get; private set; }
+
+        //string destinationpath = @"C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Avatares";
+
 
         DialogResult result;
 
-        public NovoJogadorForm()
+        public NovoArbitroForm()
         {
             InitializeComponent();
+
         }
 
-        private void buttonCancelarNovoJogador_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void buttonConfirmNovoJogador_Click(object sender, EventArgs e)
+        private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if (textBoxNome.Text.Length == 0 || textBoxNick.Text.Length == 0 || textBoxEmail.Text.Length == 0)
+            if (textBoxNome.Text.Length == 0 || textBoxNickname.Text.Length == 0 || textBoxPassword.Text.Length == 0)
             {
                 MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -38,47 +43,47 @@ namespace Projeto
 
                 if (result == DialogResult.Yes)
                 {
-                    NovoJogadorFunc();
+                    NovoArbitroFunc();
                 }
             }
             else
             {
-                NovoJogadorFunc();
+                NovoArbitroFunc();
             }
+
         }
 
         private void buttonEscolherAvatar_Click(object sender, EventArgs e)
         {
-
             openFileDialog1.Filter = "Image Files(*.png, *.jpg) | *.png; *.jpg";
             openFileDialog1.FilterIndex = 1;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
-                this.textBoxAvatar.Text = openFileDialog1.FileName;
+                
+                this.textBoxAvatar.Text = openFileDialog1.FileName;              
                 Image imagem = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
+
+                //File.Copy(openFileDialog1.FileName, destinationpath);
             }
         }
 
-        private void NovoJogadorFunc()
+        private void NovoArbitroFunc()
         {
             string nome = textBoxNome.Text.Trim();
-            string nick = textBoxNick.Text.Trim();
-            string email = textBoxEmail.Text.Trim();
+            string nickname = textBoxNickname.Text.Trim();
+            string password = textBoxPassword.Text.Trim();
             string avatar = textBoxAvatar.Text.Trim();
 
-            NovoJogador = new Player()
+            NovoArbitro = new Referee()
             {
                 Name = nome,
-                Nickname = nick,
-                Email = email,
-
-                Age = (int)numericUpDownIdade.Value,
+                Username = nickname,
+                Password = password,
                 Avatar = avatar,
-
             };
+
             DialogResult = DialogResult.OK;
             Close();
         }

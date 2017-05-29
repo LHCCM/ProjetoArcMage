@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8871b3d7cced40e48437b0a35118b2fa" Name="Diagram1" ZoomLevel="72" >
+        <EntityTypeShape EntityType="DBDiagrama.User" Width="1.5" PointX="2.5" PointY="6.5" />
+        <EntityTypeShape EntityType="DBDiagrama.Referee" Width="1.5" PointX="3.5" PointY="8.875" />
+        <EntityTypeShape EntityType="DBDiagrama.Administrator" Width="1.5" PointX="0.5" PointY="8.875" />
+        <EntityTypeShape EntityType="DBDiagrama.Game" Width="1.5" PointX="1.375" PointY="12.25" />
+        <EntityTypeShape EntityType="DBDiagrama.Deck" Width="1.5" PointX="4.125" PointY="12.375" />
+        <EntityTypeShape EntityType="DBDiagrama.Card" Width="1.5" PointX="6.75" PointY="11.75" />
+        <EntityTypeShape EntityType="DBDiagrama.StandardGame" Width="1.5" PointX="1.375" PointY="19.375" />
+        <EntityTypeShape EntityType="DBDiagrama.TeamGame" Width="1.5" PointX="2.875" PointY="16.75" />
+        <EntityTypeShape EntityType="DBDiagrama.Tournament" Width="1.5" PointX="11" PointY="11.25" />
+        <EntityTypeShape EntityType="DBDiagrama.TeamTournament" Width="1.5" PointX="10" PointY="14" />
+        <EntityTypeShape EntityType="DBDiagrama.StandardTournament" Width="1.5" PointX="12.75" PointY="14.875" />
+        <EntityTypeShape EntityType="DBDiagrama.Team" Width="1.5" PointX="10" PointY="16.125" />
+        <EntityTypeShape EntityType="DBDiagrama.Player" Width="1.5" PointX="13" PointY="18" />
+        <AssociationConnector Association="DBDiagrama.GameReferee" />
+        <AssociationConnector Association="DBDiagrama.DeckCard" />
+        <AssociationConnector Association="DBDiagrama.DeckGame1" />
+        <AssociationConnector Association="DBDiagrama.DeckGame2" />
+        <AssociationConnector Association="DBDiagrama.PlayerStandardGame1" />
+        <AssociationConnector Association="DBDiagrama.PlayerStandardGame2" />
+        <AssociationConnector Association="DBDiagrama.TeamTeamGame1" />
+        <AssociationConnector Association="DBDiagrama.TeamTeamGame2" />
+        <AssociationConnector Association="DBDiagrama.TournamentGame" />
+        <AssociationConnector Association="DBDiagrama.TeamTournamentTeam1" />
+        <AssociationConnector Association="DBDiagrama.TeamTournamentTeam2" />
+        <AssociationConnector Association="DBDiagrama.PlayerStandardTournament1" />
+        <AssociationConnector Association="DBDiagrama.PlayerStandardTournament2" />
+        <InheritanceConnector EntityType="DBDiagrama.StandardGame" />
+        <InheritanceConnector EntityType="DBDiagrama.StandardTournament" />
+        <InheritanceConnector EntityType="DBDiagrama.TeamTournament" />
+        <InheritanceConnector EntityType="DBDiagrama.Referee" />
+        <InheritanceConnector EntityType="DBDiagrama.Administrator" />
+        <InheritanceConnector EntityType="DBDiagrama.TeamGame" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

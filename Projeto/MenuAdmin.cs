@@ -12,9 +12,17 @@ namespace Projeto
 {
     public partial class MenuAdminForm : Form
     {
+
+        List<Card> cartas;
+        List<Player> jogadores;
+
         public MenuAdminForm()
         {
             InitializeComponent();
+
+            cartas = new List<Card>();
+            jogadores = new List<Player>();
+
         }
 
         private void buttonTorneiosAdmin_Click(object sender, EventArgs e)
@@ -48,6 +56,7 @@ namespace Projeto
 
         private void buttonCartasAdmin_Click(object sender, EventArgs e)
         {
+            
             CartasForm cartasF = new CartasForm();
             cartasF.Show();
             this.Close();

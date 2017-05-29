@@ -30,13 +30,9 @@ namespace Projeto
             {
                 MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (comboBoxTipoCarta.SelectedIndex < 1)
+            else if (comboBoxTipoCarta.SelectedIndex == -1 || comboBoxFacao.SelectedIndex == -1)
             {
-                MessageBox.Show("Selecione um Tipo para a carta, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (comboBoxFacao.SelectedIndex < 1)
-            {
-                MessageBox.Show("Selecione uma Fação para a carta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione um Tipo/Fação para a carta, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -60,6 +56,7 @@ namespace Projeto
                 DialogResult = DialogResult.OK;
                 Close();
             }
+
         }
     }
 }

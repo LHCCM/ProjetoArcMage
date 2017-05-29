@@ -29,16 +29,26 @@
         private void InitializeComponent()
         {
             this.labelGerirJogadores = new System.Windows.Forms.Label();
-            this.labelInfoJogador = new System.Windows.Forms.Label();
             this.labelListaJogadores = new System.Windows.Forms.Label();
             this.listBoxJogadores = new System.Windows.Forms.ListBox();
-            this.listBoxInfo = new System.Windows.Forms.ListBox();
             this.buttonVoltar = new System.Windows.Forms.Button();
             this.buttonEditarJogador = new System.Windows.Forms.Button();
             this.buttonApagarJogador = new System.Windows.Forms.Button();
             this.buttonNovoJogador = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelIdade = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelNick = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelGerirJogadores
@@ -51,19 +61,10 @@
             this.labelGerirJogadores.TabIndex = 1;
             this.labelGerirJogadores.Text = "Gerir Jogadores";
             // 
-            // labelInfoJogador
-            // 
-            this.labelInfoJogador.AutoSize = true;
-            this.labelInfoJogador.Location = new System.Drawing.Point(175, 52);
-            this.labelInfoJogador.Name = "labelInfoJogador";
-            this.labelInfoJogador.Size = new System.Drawing.Size(106, 13);
-            this.labelInfoJogador.TabIndex = 4;
-            this.labelInfoJogador.Text = "Informações Jogador";
-            // 
             // labelListaJogadores
             // 
             this.labelListaJogadores.AutoSize = true;
-            this.labelListaJogadores.Location = new System.Drawing.Point(12, 52);
+            this.labelListaJogadores.Location = new System.Drawing.Point(12, 43);
             this.labelListaJogadores.Name = "labelListaJogadores";
             this.labelListaJogadores.Size = new System.Drawing.Size(56, 13);
             this.labelListaJogadores.TabIndex = 5;
@@ -72,18 +73,11 @@
             // listBoxJogadores
             // 
             this.listBoxJogadores.FormattingEnabled = true;
-            this.listBoxJogadores.Location = new System.Drawing.Point(15, 69);
+            this.listBoxJogadores.Location = new System.Drawing.Point(15, 60);
             this.listBoxJogadores.Name = "listBoxJogadores";
-            this.listBoxJogadores.Size = new System.Drawing.Size(126, 238);
+            this.listBoxJogadores.Size = new System.Drawing.Size(126, 251);
             this.listBoxJogadores.TabIndex = 6;
-            // 
-            // listBoxInfo
-            // 
-            this.listBoxInfo.FormattingEnabled = true;
-            this.listBoxInfo.Location = new System.Drawing.Point(178, 184);
-            this.listBoxInfo.Name = "listBoxInfo";
-            this.listBoxInfo.Size = new System.Drawing.Size(194, 121);
-            this.listBoxInfo.TabIndex = 7;
+            this.listBoxJogadores.SelectedIndexChanged += new System.EventHandler(this.listBoxJogadores_SelectedIndexChanged);
             // 
             // buttonVoltar
             // 
@@ -101,7 +95,7 @@
             this.buttonEditarJogador.Name = "buttonEditarJogador";
             this.buttonEditarJogador.Size = new System.Drawing.Size(121, 23);
             this.buttonEditarJogador.TabIndex = 23;
-            this.buttonEditarJogador.Text = "Editar Jogador";
+            this.buttonEditarJogador.Text = "Editar Jogadores";
             this.buttonEditarJogador.UseVisualStyleBackColor = true;
             this.buttonEditarJogador.Click += new System.EventHandler(this.buttonEditarJogador_Click);
             // 
@@ -127,30 +121,135 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(178, 82);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 132);
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelIdade);
+            this.groupBox1.Controls.Add(this.labelEmail);
+            this.groupBox1.Controls.Add(this.labelNick);
+            this.groupBox1.Controls.Add(this.labelNome);
+            this.groupBox1.Controls.Add(this.labelID);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Location = new System.Drawing.Point(147, 52);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(225, 259);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informações Jogador";
+            // 
+            // labelIdade
+            // 
+            this.labelIdade.AutoSize = true;
+            this.labelIdade.Location = new System.Drawing.Point(72, 238);
+            this.labelIdade.Name = "labelIdade";
+            this.labelIdade.Size = new System.Drawing.Size(0, 13);
+            this.labelIdade.TabIndex = 45;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(72, 210);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(0, 13);
+            this.labelEmail.TabIndex = 44;
+            // 
+            // labelNick
+            // 
+            this.labelNick.AutoSize = true;
+            this.labelNick.Location = new System.Drawing.Point(72, 182);
+            this.labelNick.Name = "labelNick";
+            this.labelNick.Size = new System.Drawing.Size(0, 13);
+            this.labelNick.TabIndex = 43;
+            // 
+            // labelNome
+            // 
+            this.labelNome.AutoSize = true;
+            this.labelNome.Location = new System.Drawing.Point(72, 155);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(0, 13);
+            this.labelNome.TabIndex = 42;
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(187, 21);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(0, 13);
+            this.labelID.TabIndex = 41;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 238);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Idade:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 210);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "E-mail:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 182);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Nickname:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Nome:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(160, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "ID:";
             // 
             // GerirJogadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 383);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonEditarJogador);
             this.Controls.Add(this.buttonApagarJogador);
             this.Controls.Add(this.buttonNovoJogador);
-            this.Controls.Add(this.listBoxInfo);
             this.Controls.Add(this.listBoxJogadores);
             this.Controls.Add(this.labelListaJogadores);
-            this.Controls.Add(this.labelInfoJogador);
             this.Controls.Add(this.labelGerirJogadores);
             this.Name = "GerirJogadoresForm";
             this.Text = "Gerir Jogadores";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,14 +258,23 @@
         #endregion
 
         private System.Windows.Forms.Label labelGerirJogadores;
-        private System.Windows.Forms.Label labelInfoJogador;
         private System.Windows.Forms.Label labelListaJogadores;
         private System.Windows.Forms.ListBox listBoxJogadores;
-        private System.Windows.Forms.ListBox listBoxInfo;
         private System.Windows.Forms.Button buttonVoltar;
         private System.Windows.Forms.Button buttonEditarJogador;
         private System.Windows.Forms.Button buttonApagarJogador;
         private System.Windows.Forms.Button buttonNovoJogador;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelIdade;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelNick;
+        private System.Windows.Forms.Label labelNome;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.Label label5;
     }
 }

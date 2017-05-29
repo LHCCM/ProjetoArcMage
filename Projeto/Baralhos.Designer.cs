@@ -74,6 +74,7 @@
             this.listBoxBaralhos.Name = "listBoxBaralhos";
             this.listBoxBaralhos.Size = new System.Drawing.Size(149, 251);
             this.listBoxBaralhos.TabIndex = 6;
+            this.listBoxBaralhos.SelectedIndexChanged += new System.EventHandler(this.listBoxBaralhos_SelectedIndexChanged);
             // 
             // listBoxListaCartas
             // 
@@ -91,28 +92,33 @@
             this.buttonAdicionarBaralho.TabIndex = 8;
             this.buttonAdicionarBaralho.Text = "Adicionar Baralho";
             this.buttonAdicionarBaralho.UseVisualStyleBackColor = true;
+            this.buttonAdicionarBaralho.Click += new System.EventHandler(this.buttonAdicionarBaralho_Click);
             // 
             // buttonApagarBaralho
             // 
+            this.buttonApagarBaralho.Enabled = false;
             this.buttonApagarBaralho.Location = new System.Drawing.Point(12, 343);
             this.buttonApagarBaralho.Name = "buttonApagarBaralho";
             this.buttonApagarBaralho.Size = new System.Drawing.Size(121, 23);
             this.buttonApagarBaralho.TabIndex = 9;
             this.buttonApagarBaralho.Text = "Apagar Baralho";
             this.buttonApagarBaralho.UseVisualStyleBackColor = true;
+            this.buttonApagarBaralho.Click += new System.EventHandler(this.buttonApagarBaralho_Click);
             // 
             // buttonEditarBaralho
             // 
-            this.buttonEditarBaralho.Location = new System.Drawing.Point(232, 309);
+            this.buttonEditarBaralho.Enabled = false;
+            this.buttonEditarBaralho.Location = new System.Drawing.Point(222, 314);
             this.buttonEditarBaralho.Name = "buttonEditarBaralho";
             this.buttonEditarBaralho.Size = new System.Drawing.Size(121, 23);
             this.buttonEditarBaralho.TabIndex = 10;
             this.buttonEditarBaralho.Text = "Editar Baralho";
             this.buttonEditarBaralho.UseVisualStyleBackColor = true;
+            this.buttonEditarBaralho.Click += new System.EventHandler(this.buttonEditarBaralho_Click);
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(232, 338);
+            this.buttonVoltar.Location = new System.Drawing.Point(222, 343);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(121, 23);
             this.buttonVoltar.TabIndex = 11;
@@ -136,6 +142,7 @@
             this.Controls.Add(this.labelCartas);
             this.Name = "BaralhosForm";
             this.Text = "Baralhos";
+            this.Load += new System.EventHandler(this.BaralhosForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
