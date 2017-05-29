@@ -68,10 +68,7 @@ namespace Projeto
         {
             AussiliaryVars Aussi = new AussiliaryVars();
             Deck deck = (Deck)listBoxBaralhos.SelectedItem;
-
-
             Aussi.deck = deck;
-           
             EditarBaralhoForm Open = new EditarBaralhoForm();
             Open.ShowDialog();
         }
