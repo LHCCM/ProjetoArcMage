@@ -28,13 +28,17 @@ namespace Projeto
         private void refreshCartasBaralho()
         {
             Card CartaSelecionada;
+            
             AussiliaryVars Var = new AussiliaryVars();
+            Card CartaDeck = (Card)Var.deck.Card;
             int i = 0;
             listBoxCartasBaralho.Items.Clear();
             do
             {
+                if (listBoxCartasBaralho.Items[i] != null);
                 CartaSelecionada = (Card)listBoxTotalCartas.Items[i];
-                if (CartaSelecionada.Id == Var.deck.Id)
+
+                if (CartaSelecionada.Id == CartaDeck.Id)
                 {
                     listBoxCartasBaralho.Items.Add(CartaSelecionada);
                 }
