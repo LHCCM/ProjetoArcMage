@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxEquipa1 = new System.Windows.Forms.ComboBox();
             this.comboBoxEquipa2 = new System.Windows.Forms.ComboBox();
@@ -37,30 +36,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelID = new System.Windows.Forms.Label();
             this.numericUpDownHora = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDownMin = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonCriar = new System.Windows.Forms.Button();
             this.buttonVoltar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Novo Jogo";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 77);
+            this.label2.Location = new System.Drawing.Point(21, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
@@ -69,7 +61,7 @@
             // comboBoxEquipa1
             // 
             this.comboBoxEquipa1.FormattingEnabled = true;
-            this.comboBoxEquipa1.Location = new System.Drawing.Point(24, 93);
+            this.comboBoxEquipa1.Location = new System.Drawing.Point(24, 64);
             this.comboBoxEquipa1.Name = "comboBoxEquipa1";
             this.comboBoxEquipa1.Size = new System.Drawing.Size(168, 21);
             this.comboBoxEquipa1.TabIndex = 2;
@@ -77,7 +69,7 @@
             // comboBoxEquipa2
             // 
             this.comboBoxEquipa2.FormattingEnabled = true;
-            this.comboBoxEquipa2.Location = new System.Drawing.Point(24, 156);
+            this.comboBoxEquipa2.Location = new System.Drawing.Point(24, 127);
             this.comboBoxEquipa2.Name = "comboBoxEquipa2";
             this.comboBoxEquipa2.Size = new System.Drawing.Size(168, 21);
             this.comboBoxEquipa2.TabIndex = 4;
@@ -85,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 140);
+            this.label3.Location = new System.Drawing.Point(21, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 3;
@@ -94,7 +86,7 @@
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(24, 219);
+            this.comboBox4.Location = new System.Drawing.Point(24, 190);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(168, 21);
             this.comboBox4.TabIndex = 8;
@@ -102,7 +94,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 203);
+            this.label5.Location = new System.Drawing.Point(21, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 7;
@@ -110,7 +102,7 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(234, 94);
+            this.dateTimePicker.Location = new System.Drawing.Point(234, 65);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(167, 20);
             this.dateTimePicker.TabIndex = 9;
@@ -118,24 +110,15 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(231, 78);
+            this.label4.Location = new System.Drawing.Point(231, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Data";
             // 
-            // labelID
-            // 
-            this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(21, 37);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(44, 13);
-            this.labelID.TabIndex = 11;
-            this.labelID.Text = "LabelID";
-            // 
             // numericUpDownHora
             // 
-            this.numericUpDownHora.Location = new System.Drawing.Point(234, 156);
+            this.numericUpDownHora.Location = new System.Drawing.Point(234, 127);
             this.numericUpDownHora.Maximum = new decimal(new int[] {
             23,
             0,
@@ -153,7 +136,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(231, 140);
+            this.label6.Location = new System.Drawing.Point(231, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 13;
@@ -161,7 +144,7 @@
             // 
             // numericUpDownMin
             // 
-            this.numericUpDownMin.Location = new System.Drawing.Point(309, 156);
+            this.numericUpDownMin.Location = new System.Drawing.Point(309, 127);
             this.numericUpDownMin.Maximum = new decimal(new int[] {
             59,
             0,
@@ -175,7 +158,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(291, 156);
+            this.label7.Location = new System.Drawing.Point(291, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(12, 17);
             this.label7.TabIndex = 15;
@@ -183,7 +166,7 @@
             // 
             // buttonCriar
             // 
-            this.buttonCriar.Location = new System.Drawing.Point(39, 273);
+            this.buttonCriar.Location = new System.Drawing.Point(39, 244);
             this.buttonCriar.Name = "buttonCriar";
             this.buttonCriar.Size = new System.Drawing.Size(131, 23);
             this.buttonCriar.TabIndex = 16;
@@ -192,7 +175,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(262, 273);
+            this.buttonVoltar.Location = new System.Drawing.Point(262, 244);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(131, 23);
             this.buttonVoltar.TabIndex = 17;
@@ -200,18 +183,47 @@
             this.buttonVoltar.UseVisualStyleBackColor = true;
             this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(233, 190);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(168, 21);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(231, 174);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Torneios Disponiveis";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(155, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 24);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Novo Jogo";
+            // 
             // NovoJogoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 315);
+            this.ClientSize = new System.Drawing.Size(428, 275);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonCriar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.numericUpDownMin);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.numericUpDownHora);
-            this.Controls.Add(this.labelID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.comboBox4);
@@ -220,7 +232,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxEquipa1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "NovoJogoForm";
             this.Text = "NovoJogo";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHora)).EndInit();
@@ -231,8 +242,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxEquipa1;
         private System.Windows.Forms.ComboBox comboBoxEquipa2;
@@ -241,12 +250,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.NumericUpDown numericUpDownHora;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDownMin;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonCriar;
         private System.Windows.Forms.Button buttonVoltar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label1;
     }
 }
