@@ -57,6 +57,7 @@ namespace Projeto
             Card CartaSelecionada = (Card)listBoxTotalCartas.SelectedItem;
             listBoxCartasBaralho.Items.Add(CartaSelecionada);
         }
+
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
             Deck deck = (Deck)listBoxBaralhos.SelectedItem;
@@ -64,6 +65,7 @@ namespace Projeto
             do {
                 Card DeckCard = (Card)listBoxCartasBaralho.Items[i];
                 deck.Card.Add(DeckCard);
+                i++;
             }while(i < listBoxCartasBaralho.Items.Count);
             container.Deck.Add(deck);
             container.SaveChanges();
