@@ -31,7 +31,7 @@
             this.buttonEliminarUser = new System.Windows.Forms.Button();
             this.listBoxUsers = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxProcura = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,6 +52,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonPesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -59,7 +60,7 @@
             // 
             // buttonEliminarUser
             // 
-            this.buttonEliminarUser.Location = new System.Drawing.Point(24, 486);
+            this.buttonEliminarUser.Location = new System.Drawing.Point(24, 455);
             this.buttonEliminarUser.Name = "buttonEliminarUser";
             this.buttonEliminarUser.Size = new System.Drawing.Size(155, 23);
             this.buttonEliminarUser.TabIndex = 0;
@@ -85,12 +86,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Pesquisa de Utilizador";
             // 
-            // textBox1
+            // textBoxProcura
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 371);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBoxProcura.Location = new System.Drawing.Point(24, 371);
+            this.textBoxProcura.Name = "textBoxProcura";
+            this.textBoxProcura.Size = new System.Drawing.Size(155, 20);
+            this.textBoxProcura.TabIndex = 3;
             // 
             // label3
             // 
@@ -113,7 +114,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(209, 165);
+            this.pictureBox1.Location = new System.Drawing.Point(231, 155);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 132);
             this.pictureBox1.TabIndex = 10;
@@ -192,7 +193,7 @@
             // 
             // buttonEditUser
             // 
-            this.buttonEditUser.Location = new System.Drawing.Point(231, 455);
+            this.buttonEditUser.Location = new System.Drawing.Point(24, 426);
             this.buttonEditUser.Name = "buttonEditUser";
             this.buttonEditUser.Size = new System.Drawing.Size(155, 23);
             this.buttonEditUser.TabIndex = 21;
@@ -202,7 +203,7 @@
             // 
             // buttonVoltar
             // 
-            this.buttonVoltar.Location = new System.Drawing.Point(231, 484);
+            this.buttonVoltar.Location = new System.Drawing.Point(231, 455);
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(155, 23);
             this.buttonVoltar.TabIndex = 22;
@@ -245,7 +246,7 @@
             // radioButtonArbitro
             // 
             this.radioButtonArbitro.AutoSize = true;
-            this.radioButtonArbitro.Location = new System.Drawing.Point(29, 38);
+            this.radioButtonArbitro.Location = new System.Drawing.Point(29, 36);
             this.radioButtonArbitro.Name = "radioButtonArbitro";
             this.radioButtonArbitro.Size = new System.Drawing.Size(60, 17);
             this.radioButtonArbitro.TabIndex = 6;
@@ -271,7 +272,7 @@
             this.groupBox1.Controls.Add(this.radioButtonTodos);
             this.groupBox1.Controls.Add(this.radioButtonAdmin);
             this.groupBox1.Controls.Add(this.radioButtonArbitro);
-            this.groupBox1.Location = new System.Drawing.Point(26, 397);
+            this.groupBox1.Location = new System.Drawing.Point(231, 301);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(153, 81);
             this.groupBox1.TabIndex = 23;
@@ -307,11 +308,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informação";
             // 
+            // buttonPesquisar
+            // 
+            this.buttonPesquisar.Location = new System.Drawing.Point(24, 397);
+            this.buttonPesquisar.Name = "buttonPesquisar";
+            this.buttonPesquisar.Size = new System.Drawing.Size(155, 23);
+            this.buttonPesquisar.TabIndex = 28;
+            this.buttonPesquisar.Text = "Procurar";
+            this.buttonPesquisar.UseVisualStyleBackColor = true;
+            this.buttonPesquisar.Click += new System.EventHandler(this.buttonPesquisar_Click);
+            // 
             // UtilizadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 521);
+            this.ClientSize = new System.Drawing.Size(447, 488);
+            this.Controls.Add(this.buttonPesquisar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.buttonNovoAdmin);
             this.Controls.Add(this.groupBox1);
@@ -321,7 +333,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxProcura);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxUsers);
             this.Controls.Add(this.buttonEliminarUser);
@@ -342,7 +354,7 @@
         private System.Windows.Forms.Button buttonEliminarUser;
         private System.Windows.Forms.ListBox listBoxUsers;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxProcura;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -363,5 +375,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButtonTodos;
+        private System.Windows.Forms.Button buttonPesquisar;
     }
 }
