@@ -15,9 +15,8 @@ namespace Projeto
     {
         public Referee NovoArbitro { get; private set; }
 
-        //string destinationpath = @"C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Avatares";
-
-
+        string destinationpath = @"C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Avatares";
+        
         DialogResult result;
 
         public NovoArbitroForm()
@@ -28,7 +27,8 @@ namespace Projeto
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            result = DialogResult.Cancel;
+            Close();
         }
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
@@ -64,17 +64,24 @@ namespace Projeto
                 this.textBoxAvatar.Text = openFileDialog1.FileName;              
                 Image imagem = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
+            }
 
-                //File.Copy(openFileDialog1.FileName, destinationpath);
+            if (openFileDialog1.FileName != null)
+            {
+                string filename = Path.GetFileName(openFileDialog1.FileName);
+
+                File.Copy(openFileDialog1.FileName, Path.Combine(destinationpath, filename));
             }
         }
 
         private void NovoArbitroFunc()
         {
+            string filename = Path.GetFileName(openFileDialog1.FileName);
+
             string nome = textBoxNome.Text.Trim();
             string nickname = textBoxNickname.Text.Trim();
             string password = textBoxPassword.Text.Trim();
-            string avatar = textBoxAvatar.Text.Trim();
+            string avatar = Path.Combine(destinationpath, filename);
 
             NovoArbitro = new Referee()
             {
