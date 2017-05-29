@@ -68,6 +68,8 @@ namespace Projeto
                 deck.Card.Add(DeckCard);
                 i++;
             } while (i < listBoxCartasBaralho.Items.Count);
+            container.Deck.Add(deck);
+            container.SaveChanges();
         }
 
         private void EditarBaralhoForm_Load(object sender, EventArgs e)
@@ -85,9 +87,7 @@ namespace Projeto
 
         private void buttonRemoverCartaBaralho_Click(object sender, EventArgs e)
         {
-            container.Deck.Remove((Deck)listBoxCartasBaralho.SelectedItem);
-            container.SaveChanges();
-            refreshCartasBaralho();
+            listBoxCartasBaralho.Items.RemoveAt(listBoxCartasBaralho.SelectedIndex);
         }
 
         private void listBoxTotalCartas_SelectedIndexChanged(object sender, EventArgs e)
