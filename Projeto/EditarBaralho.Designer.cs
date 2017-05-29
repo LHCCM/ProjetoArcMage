@@ -123,7 +123,7 @@
             this.buttonVoltar.Name = "buttonVoltar";
             this.buttonVoltar.Size = new System.Drawing.Size(99, 23);
             this.buttonVoltar.TabIndex = 9;
-            this.buttonVoltar.Text = "Guardar e Voltar";
+            this.buttonVoltar.Text = "Guardar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
             this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 

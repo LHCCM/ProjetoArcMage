@@ -55,19 +55,20 @@ namespace Projeto
         private void buttonAdicionarCartaBaralho_Click(object sender, EventArgs e)
         {
             Card CartaSelecionada = (Card)listBoxTotalCartas.SelectedItem;
-            listBoxCartasBaralho.Items.Add(CartaSelecionada.Name);
+            listBoxCartasBaralho.Items.Add(CartaSelecionada);
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
-            int i = 0;
             Deck deck = (Deck)listBoxBaralhos.SelectedItem;
-            do
-            {
+            int i = 0;
+            do {
                 Card DeckCard = (Card)listBoxCartasBaralho.Items[i];
                 deck.Card.Add(DeckCard);
                 i++;
-            } while (i < listBoxCartasBaralho.Items.Count);
+            }while(i < listBoxCartasBaralho.Items.Count);
+            container.Deck.Add(deck);
+            container.SaveChanges();
         }
 
         private void EditarBaralhoForm_Load(object sender, EventArgs e)
@@ -85,9 +86,7 @@ namespace Projeto
 
         private void buttonRemoverCartaBaralho_Click(object sender, EventArgs e)
         {
-            container.Deck.Remove((Deck)listBoxCartasBaralho.SelectedItem);
-            container.SaveChanges();
-            refreshCartasBaralho();
+            listBoxCartasBaralho.Items.RemoveAt(listBoxCartasBaralho.SelectedIndex);
         }
 
         private void listBoxTotalCartas_SelectedIndexChanged(object sender, EventArgs e)
@@ -102,7 +101,7 @@ namespace Projeto
         {
             if(listBoxBaralhos != null)
             {
-                refreshBaralhos();
+                refreshCartasBaralho();
             }
         }
     }
