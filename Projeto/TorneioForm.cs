@@ -19,6 +19,7 @@ namespace Projeto
             InitializeComponent();
 
             refreshTorneios();
+            refreshJogos();
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
@@ -74,6 +75,36 @@ namespace Projeto
         {
             NovoJogoForm form = new NovoJogoForm();
             DialogResult result = form.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                //AdicionarJogoStandard(form.NovoJogoStandard);
+            }
+            else if (result == DialogResult.Abort)
+            {
+                //AdicionarJogoEquipas(form.NovoJogoEquipas);
+            }
+
+            refreshTorneios();
+        }
+
+        private void refreshJogos()
+        {
+            listBoxJogo.Items.Clear();
+            listBoxJogo.Items.AddRange(container.Game.OfType<StandardGame>().ToArray());
+            listBoxJogo.Items.AddRange(container.Game.OfType<TeamGame>().ToArray());
+        }
+
+        private void AdicionarJogoStandard(StandardGame jogo)
+        {
+            container.Game.Add(jogo);
+            container.SaveChanges();
+        }
+
+        private void AdicionarJogoEquipas(TeamGame jogo)
+        {
+            container.Game.Add(jogo);
+            container.SaveChanges();
         }
 
         private void buttonEditarJogo_Click(object sender, EventArgs e)

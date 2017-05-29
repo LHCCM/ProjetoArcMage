@@ -32,21 +32,19 @@
             this.comboBoxEquipa1 = new System.Windows.Forms.ComboBox();
             this.comboBoxEquipa2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBoxArbitro = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDownHora = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDownMin = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
             this.buttonCriar = new System.Windows.Forms.Button();
             this.buttonVoltar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxTorneios = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHora)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).BeginInit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonTeam = new System.Windows.Forms.RadioButton();
+            this.radioButtonStandard = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -83,13 +81,13 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Equipa 2";
             // 
-            // comboBox4
+            // comboBoxArbitro
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(24, 190);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(168, 21);
-            this.comboBox4.TabIndex = 8;
+            this.comboBoxArbitro.FormattingEnabled = true;
+            this.comboBoxArbitro.Location = new System.Drawing.Point(24, 190);
+            this.comboBoxArbitro.Name = "comboBoxArbitro";
+            this.comboBoxArbitro.Size = new System.Drawing.Size(168, 21);
+            this.comboBoxArbitro.TabIndex = 8;
             // 
             // label5
             // 
@@ -116,54 +114,6 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Data";
             // 
-            // numericUpDownHora
-            // 
-            this.numericUpDownHora.Location = new System.Drawing.Point(234, 127);
-            this.numericUpDownHora.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.numericUpDownHora.Name = "numericUpDownHora";
-            this.numericUpDownHora.Size = new System.Drawing.Size(51, 20);
-            this.numericUpDownHora.TabIndex = 12;
-            this.numericUpDownHora.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(231, 111);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Horas";
-            // 
-            // numericUpDownMin
-            // 
-            this.numericUpDownMin.Location = new System.Drawing.Point(309, 127);
-            this.numericUpDownMin.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.numericUpDownMin.Name = "numericUpDownMin";
-            this.numericUpDownMin.Size = new System.Drawing.Size(51, 20);
-            this.numericUpDownMin.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(291, 127);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(12, 17);
-            this.label7.TabIndex = 15;
-            this.label7.Text = ":";
-            // 
             // buttonCriar
             // 
             this.buttonCriar.Location = new System.Drawing.Point(39, 244);
@@ -172,6 +122,7 @@
             this.buttonCriar.TabIndex = 16;
             this.buttonCriar.Text = "Criar";
             this.buttonCriar.UseVisualStyleBackColor = true;
+            this.buttonCriar.Click += new System.EventHandler(this.buttonCriar_Click);
             // 
             // buttonVoltar
             // 
@@ -183,13 +134,13 @@
             this.buttonVoltar.UseVisualStyleBackColor = true;
             this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // comboBox1
+            // comboBoxTorneios
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(233, 190);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 21);
-            this.comboBox1.TabIndex = 18;
+            this.comboBoxTorneios.FormattingEnabled = true;
+            this.comboBoxTorneios.Location = new System.Drawing.Point(233, 190);
+            this.comboBoxTorneios.Name = "comboBoxTorneios";
+            this.comboBoxTorneios.Size = new System.Drawing.Size(168, 21);
+            this.comboBoxTorneios.TabIndex = 18;
             // 
             // label8
             // 
@@ -210,23 +161,53 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Novo Jogo";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButtonStandard);
+            this.groupBox1.Controls.Add(this.radioButtonTeam);
+            this.groupBox1.Location = new System.Drawing.Point(233, 91);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(74, 70);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipo";
+            // 
+            // radioButtonTeam
+            // 
+            this.radioButtonTeam.AutoSize = true;
+            this.radioButtonTeam.Location = new System.Drawing.Point(6, 19);
+            this.radioButtonTeam.Name = "radioButtonTeam";
+            this.radioButtonTeam.Size = new System.Drawing.Size(63, 17);
+            this.radioButtonTeam.TabIndex = 0;
+            this.radioButtonTeam.TabStop = true;
+            this.radioButtonTeam.Text = "Equipas";
+            this.radioButtonTeam.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonStandard
+            // 
+            this.radioButtonStandard.AutoSize = true;
+            this.radioButtonStandard.Location = new System.Drawing.Point(6, 42);
+            this.radioButtonStandard.Name = "radioButtonStandard";
+            this.radioButtonStandard.Size = new System.Drawing.Size(43, 17);
+            this.radioButtonStandard.TabIndex = 1;
+            this.radioButtonStandard.TabStop = true;
+            this.radioButtonStandard.Text = "1v1";
+            this.radioButtonStandard.UseVisualStyleBackColor = true;
+            // 
             // NovoJogoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 275);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxTorneios);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonCriar);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDownMin);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDownHora);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBoxArbitro);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxEquipa2);
             this.Controls.Add(this.label3);
@@ -234,8 +215,8 @@
             this.Controls.Add(this.label2);
             this.Name = "NovoJogoForm";
             this.Text = "NovoJogo";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHora)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMin)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,18 +227,17 @@
         private System.Windows.Forms.ComboBox comboBoxEquipa1;
         private System.Windows.Forms.ComboBox comboBoxEquipa2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBoxArbitro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDownHora;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDownMin;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonCriar;
         private System.Windows.Forms.Button buttonVoltar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxTorneios;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButtonStandard;
+        private System.Windows.Forms.RadioButton radioButtonTeam;
     }
 }
