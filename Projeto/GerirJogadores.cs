@@ -70,11 +70,7 @@ namespace Projeto
             EditarJogadorForm form = new EditarJogadorForm();
             DialogResult result = form.ShowDialog();
 
-            if (result == DialogResult.OK)
-            {
-                //AdicionarJogador(form.NovoJogador);
-            }
-            refreshJogadores();
+            Close();
         }
 
         //Mostrar info do jogador selecionado
