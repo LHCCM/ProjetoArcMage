@@ -65,6 +65,10 @@ namespace Projeto
 
         private void buttonEditarBaralho_Click(object sender, EventArgs e)
         {
+            AussiliaryVars Aussi = new AussiliaryVars();
+            
+            Aussi.Var1 = listBoxBaralhos.SelectedIndex;
+           
             EditarBaralhoForm Open = new EditarBaralhoForm();
             Open.ShowDialog();
         }
