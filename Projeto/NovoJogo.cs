@@ -50,41 +50,36 @@ namespace Projeto
                 {
                     if (radioButtonStandard.Checked == true)
                     {
-                        string p1 = comboBoxEquipa1.SelectedValue.ToString();
-                        string p2 = comboBoxEquipa2.SelectedItem.ToString();
-                        string arb = comboBoxArbitro.SelectedItem.ToString();
-                        string deck1 = comboBoxBaralho1.SelectedItem.ToString();
-                        string deck2 = comboBoxBaralho2.SelectedItem.ToString();
-                        string tor = comboBoxTorneios.SelectedItem.ToString();
-
-                        DateTime date = dateTimePicker.Value;
-
-                        NovoJogoStandard = new StandardGame()
-                        {
-                            Player1 = p1,
-                            Player2 = p2,
-                            Referee = arb,
-                            Deck1 = deck1,
-                            Deck2 = deck2,
-                            Tournament = tor,
-                            Date = date,
-
-                        };
-                        DialogResult = DialogResult.OK;
-                        Close();
+                        //NovoJogoStandardFunc();
                     }
                     else if (radioButtonTeam.Checked == true)
                     {
-                        string t1 = comboBoxEquipa1.SelectedItem.ToString();
-                        string t2 = comboBoxEquipa2.SelectedItem.ToString();
-                        string arb = comboBoxArbitro.SelectedItem.ToString();
-                        string tor = comboBoxTorneios.SelectedItem.ToString();
+                        Team t1 = new Team();
+                        Team t2 = new Team();
+                        Referee arb = new Referee();
+                        Deck deck1 = new Deck();
+                        Deck deck2 = new Deck();
+                        Tournament tor = new Tournament();
+
+                        /*t1 = comboBoxEquipa1.SelectedItem.ToString();
+                        t2 = comboBoxEquipa2.SelectedItem.ToString();*/
+                        //arb = comboBoxArbitro.SelectedItem.ToString();
+                        //tor = comboBoxTorneios.SelectedItem.ToString();
+                        string desc = textBoxDesc.Text.Trim();
 
                         DateTime date = dateTimePicker.Value;
 
                         NovoJogoTeam = new TeamGame()
                         {
+                            Team1 = t1,
+                            Team2 = t2,
+                            Referee = arb,
+                            Deck1 = deck1,
+                            Deck2 = deck2,
+                            Tournament = tor,
+                            Description = desc,
 
+                            Date = date,
                         };
                         DialogResult = DialogResult.Yes;
                         Close();
@@ -92,6 +87,42 @@ namespace Projeto
                 }
             }
         }
+
+        /*private void NovoJogoStandardFunc()
+        {
+            Player p1 = new Player;
+            Player p2 = new Player();
+            Referee arb = new Referee();
+            Deck deck1 = new Deck();
+            Deck deck2 = new Deck();
+            //Tournament tor = new Tournament();
+
+            p1 = comboBoxEquipa1.SelectedItem.ToString();
+            p2 = comboBoxEquipa2.SelectedItem.ToString();
+            arb = comboBoxArbitro.SelectedItem.ToString();
+            //deck1 = comboBoxBaralho1.SelectedItem.ToString();
+            //deck2 = comboBoxBaralho2.SelectedItem.ToString();
+            //tor = comboBoxTorneios.SelectedItem.ToString();
+            string desc = textBoxDesc.Text.Trim();
+
+            DateTime date = dateTimePicker.Value;
+
+            NovoJogoStandard = new StandardGame()
+            {
+                Player1 = p1,
+                Player2 = p2,
+                Referee = arb,
+                Deck1 = deck1,
+                Deck2 = deck2,
+                //Tournament = tor,
+                Description = desc,
+
+                Date = date,
+
+            };
+            DialogResult = DialogResult.OK;
+            Close();
+        }*/
 
         private void radioButtonTeam_CheckedChanged(object sender, EventArgs e)
         {

@@ -69,6 +69,8 @@ namespace Projeto
         {
             EditarTorneioForm form = new EditarTorneioForm();
             DialogResult result = form.ShowDialog();
+
+            Close();
         }
 
         private void buttonCriarJogo_Click(object sender, EventArgs e)
@@ -111,6 +113,17 @@ namespace Projeto
         {
             EditarJogo form = new EditarJogo();
             DialogResult result = form.ShowDialog();
+        }
+
+        private void buttonCancelarTorneio_Click(object sender, EventArgs e)
+        {
+            if (listBoxTorneio.SelectedIndex != -1)
+            {
+                container.Tournament.Remove((Tournament)listBoxTorneio.SelectedItem);
+                container.SaveChanges();
+            }
+
+            refreshTorneios();
         }
     }
 }

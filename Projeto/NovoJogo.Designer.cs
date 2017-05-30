@@ -48,7 +48,7 @@
             this.comboBoxBaralho2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDesc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -236,13 +236,13 @@
             this.label7.TabIndex = 25;
             this.label7.Text = "Baralho 2";
             // 
-            // textBox1
+            // textBoxDesc
             // 
-            this.textBox1.Location = new System.Drawing.Point(431, 132);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 136);
-            this.textBox1.TabIndex = 26;
+            this.textBoxDesc.Location = new System.Drawing.Point(431, 132);
+            this.textBoxDesc.Multiline = true;
+            this.textBoxDesc.Name = "textBoxDesc";
+            this.textBoxDesc.Size = new System.Drawing.Size(149, 136);
+            this.textBoxDesc.TabIndex = 26;
             // 
             // label2
             // 
@@ -259,7 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 340);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxDesc);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxBaralho2);
@@ -308,7 +308,7 @@
         private System.Windows.Forms.ComboBox comboBoxBaralho2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDesc;
         private System.Windows.Forms.Label label2;
     }
 }
