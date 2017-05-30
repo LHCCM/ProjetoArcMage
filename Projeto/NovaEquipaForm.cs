@@ -55,12 +55,17 @@ namespace Projeto
 
                 if (result == DialogResult.Yes)
                 {
-                    NovaEquipaFunc();
+                    string avatar = "";
+
+                    NovaEquipaFunc(avatar);
                 }
             }
             else
             {
-                NovaEquipaFunc();
+                string filename = Path.GetFileName(openFileDialog1.FileName);
+                string avatar = Path.Combine(destinationpath, filename);
+
+                NovaEquipaFunc(avatar);
             }
         }
 
@@ -126,14 +131,12 @@ namespace Projeto
             }
         }
 
-        private void NovaEquipaFunc()
+        private void NovaEquipaFunc(string avatar)
         {
-            string filename = Path.GetFileName(openFileDialog1.FileName);
-
             string nome = textBoxNome.Text.Trim();
             string p1 = listBoxEquipa.Items[0].ToString();
             string p2 = listBoxEquipa.Items[1].ToString();
-            string avatar = Path.Combine(destinationpath, filename);
+            
 
             NovaEquipa = new Team()
             {

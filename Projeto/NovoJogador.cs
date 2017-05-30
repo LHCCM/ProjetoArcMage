@@ -41,12 +41,17 @@ namespace Projeto
 
                 if (result == DialogResult.Yes)
                 {
-                    NovoJogadorFunc();
+                    string avatar = "";
+
+                    NovoJogadorFunc(avatar);
                 }
             }
             else
             {
-                NovoJogadorFunc();
+                string filename = Path.GetFileName(openFileDialog1.FileName);
+                string avatar = Path.Combine(destinationpath, filename);
+
+                NovoJogadorFunc(avatar);
             }
         }
 
@@ -74,14 +79,14 @@ namespace Projeto
             }
         }
 
-        private void NovoJogadorFunc()
+        private void NovoJogadorFunc(string avatar)
         {
-            string filename = Path.GetFileName(openFileDialog1.FileName);
+            
 
             string nome = textBoxNome.Text.Trim();
             string nick = textBoxNick.Text.Trim();
             string email = textBoxEmail.Text.Trim();
-            string avatar = Path.Combine(destinationpath, filename);
+            
 
             NovoJogador = new Player()
             {
