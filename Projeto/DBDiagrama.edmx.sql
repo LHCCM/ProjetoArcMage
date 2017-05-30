@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/26/2017 15:34:47
--- Generated from EDMX file: C:\Repos\ProjetoArcMage\Projeto\DBDiagrama.edmx
+-- Date Created: 05/30/2017 22:12:51
+-- Generated from EDMX file: C:\Users\User\Source\Repos\ProjetoArcMage\Projeto\DBDiagrama.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -154,12 +154,17 @@ CREATE TABLE [dbo].[Game] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Description] nvarchar(max)  NOT NULL,
     [Date] datetime  NOT NULL,
-    [Number] int  NOT NULL,
-    [DeckId] int  NOT NULL,
-    [Referee_Id] int  NOT NULL,
+    [Number] int  NULL,
+    [P1] nvarchar(max)  NOT NULL,
+    [P2] nvarchar(max)  NOT NULL,
+    [D1] nvarchar(max)  NOT NULL,
+    [D2] nvarchar(max)  NOT NULL,
+    [Property1] nvarchar(max)  NOT NULL,
+    [Tour] nvarchar(max)  NOT NULL,
+    [Referee_Id] int  NULL,
     [Deck1_Id] int  NULL,
     [Deck2_Id] int  NULL,
-    [Tournament_Id] int  NOT NULL
+    [Tournament_Id] int  NULL
 );
 GO
 
@@ -227,8 +232,8 @@ GO
 -- Creating table 'Game_StandardGame'
 CREATE TABLE [dbo].[Game_StandardGame] (
     [Id] int  NOT NULL,
-    [Player1_Id] int  NOT NULL,
-    [Player2_Id] int  NOT NULL
+    [Player1_Id] int  NULL,
+    [Player2_Id] int  NULL
 );
 GO
 

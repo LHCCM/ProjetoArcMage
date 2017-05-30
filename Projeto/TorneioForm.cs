@@ -19,7 +19,7 @@ namespace Projeto
             InitializeComponent();
 
             refreshTorneios();
-            refreshJogos();
+            //refreshJogos();
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace Projeto
                 AdicionarJogoEquipas(form.NovoJogoTeam);
             }
 
-            refreshJogos();
+            //refreshJogos();
         }
 
         private void refreshJogos()

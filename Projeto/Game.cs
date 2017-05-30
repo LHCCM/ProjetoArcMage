@@ -17,8 +17,13 @@ namespace Projeto
         public int Id { get; set; }
         public string Description { get; set; }
         public System.DateTime Date { get; set; }
-        public int Number { get; set; }
-        public int DeckId { get; set; }
+        public Nullable<int> Number { get; set; }
+        public string P1 { get; set; }
+        public string P2 { get; set; }
+        public string D1 { get; set; }
+        public string D2 { get; set; }
+        public string Property1 { get; set; }
+        public string Tour { get; set; }
     
         public virtual Referee Referee { get; set; }
         public virtual Deck Deck1 { get; set; }

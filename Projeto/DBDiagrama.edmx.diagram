@@ -18,7 +18,11 @@
         <EntityTypeShape EntityType="DBDiagrama.StandardTournament" Width="1.5" PointX="12.75" PointY="14.875" />
         <EntityTypeShape EntityType="DBDiagrama.Team" Width="1.5" PointX="10" PointY="16.125" />
         <EntityTypeShape EntityType="DBDiagrama.Player" Width="1.5" PointX="13" PointY="18" />
-        <AssociationConnector Association="DBDiagrama.GameReferee" />
+        <AssociationConnector Association="DBDiagrama.GameReferee" ManuallyRouted="true" >
+          <ConnectorPoint PointX="2.46875" PointY="12.25" />
+          <ConnectorPoint PointX="2.46875" PointY="10.309632161458334" />
+          <ConnectorPoint PointX="3.5" PointY="10.309632161458334" />
+        </AssociationConnector>
         <AssociationConnector Association="DBDiagrama.DeckCard" />
         <AssociationConnector Association="DBDiagrama.DeckGame1" />
         <AssociationConnector Association="DBDiagrama.DeckGame2" />
@@ -26,7 +30,13 @@
         <AssociationConnector Association="DBDiagrama.PlayerStandardGame2" />
         <AssociationConnector Association="DBDiagrama.TeamTeamGame1" />
         <AssociationConnector Association="DBDiagrama.TeamTeamGame2" />
-        <AssociationConnector Association="DBDiagrama.TournamentGame" />
+        <AssociationConnector Association="DBDiagrama.TournamentGame" ManuallyRouted="true" >
+          <ConnectorPoint PointX="11" PointY="11.25" />
+          <ConnectorPoint PointX="11" PointY="10.852823067926488" />
+          <ConnectorPoint PointX="3.2085403710925" PointY="10.852823067926488" />
+          <ConnectorPoint PointX="3.2085403710925" PointY="12.25" />
+          <ConnectorPoint PointX="2.8107410894974234" PointY="12.25" />
+        </AssociationConnector>
         <AssociationConnector Association="DBDiagrama.TeamTournamentTeam1" />
         <AssociationConnector Association="DBDiagrama.TeamTournamentTeam2" />
         <AssociationConnector Association="DBDiagrama.PlayerStandardTournament1" />

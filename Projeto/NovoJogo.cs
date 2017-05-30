@@ -38,60 +38,78 @@ namespace Projeto
 
         private void buttonCriar_Click(object sender, EventArgs e)
         {
-            if (comboBoxEquipa1.SelectedIndex == -1 || comboBoxEquipa2.SelectedIndex == -1 || comboBoxArbitro.SelectedIndex == -1)
+            if (comboBoxEquipa1.SelectedIndex == -1 || comboBoxEquipa2.SelectedIndex == -1 || comboBoxArbitro.SelectedIndex == -1 || comboBoxTorneios.SelectedIndex == -1)
             {
                 MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (comboBoxTorneios.SelectedIndex == -1)
-            {
-                result = MessageBox.Show("Não atribuio o jogo a um torneio, continuar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                {
-                    if (radioButtonStandard.Checked == true)
-                    {
-                        string p1 = comboBoxEquipa1.SelectedValue.ToString();
+            else if (radioButtonStandard.Checked)
+            { 
+                        string p1 = comboBoxEquipa1.SelectedItem.ToString();
                         string p2 = comboBoxEquipa2.SelectedItem.ToString();
                         string arb = comboBoxArbitro.SelectedItem.ToString();
                         string deck1 = comboBoxBaralho1.SelectedItem.ToString();
                         string deck2 = comboBoxBaralho2.SelectedItem.ToString();
+                        string desc = textBoxDesc.Text.Trim();
                         string tor = comboBoxTorneios.SelectedItem.ToString();
 
                         DateTime date = dateTimePicker.Value;
 
-                       /* NovoJogoStandard = new StandardGame()
+                        NovoJogoStandard = new StandardGame()
                         {
-                            Player1 = p1,
-                            Player2 = p2,
-                            Referee = arb,
-                            Deck1 = deck1,
-                            Deck2 = deck2,
-                            Tournament = tor,
+                            P1 = p1,
+                            P2 = p2,
+                            Property1 = arb,
+                            D1 = deck1,
+                            D2 = deck2,
+                            Tour = tor,
                             Date = date,
+                            Description = desc,
+                            Referee = null,
+                            Deck1 = null,
+                            Deck2 = null,
+                            Tournament = null,
+                            Player1 = null,
+                            Player2 = null,
 
                         };
                         DialogResult = DialogResult.OK;
-                        Close();*/
+                        Close();
                     }
-                    else if (radioButtonTeam.Checked == true)
+                    else
                     {
                         string t1 = comboBoxEquipa1.SelectedItem.ToString();
                         string t2 = comboBoxEquipa2.SelectedItem.ToString();
                         string arb = comboBoxArbitro.SelectedItem.ToString();
+                        string deck1 = comboBoxBaralho1.SelectedItem.ToString();
+                        string deck2 = comboBoxBaralho2.SelectedItem.ToString();
+                        string desc = textBoxDesc.Text.Trim();
+
                         string tor = comboBoxTorneios.SelectedItem.ToString();
 
                         DateTime date = dateTimePicker.Value;
 
                         NovoJogoTeam = new TeamGame()
                         {
-
+                            P1 = t1,
+                            P2 = t2,
+                            Property1 = arb,
+                            D1 = deck1,
+                            D2 = deck2,
+                            Tour = tor,
+                            Date = date,
+                            Description = desc,
+                            Referee = null,
+                            Deck1 = null,
+                            Deck2 = null,
+                            Tournament = null,
+                            Team1 = null,
+                            Team2 = null,
                         };
                         DialogResult = DialogResult.Yes;
                         Close();
                     }
                 }
-            }
-        }
+            
 
         private void radioButtonTeam_CheckedChanged(object sender, EventArgs e)
         {

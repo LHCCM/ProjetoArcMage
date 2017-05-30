@@ -58,6 +58,7 @@ namespace Projeto
 
             else if (radioButtonAdmin.Checked == true)
             {
+                //crash
                 Administrator administrador = admin.First();
 
                 //Se os dados existirem na base de dados o programa abre o menu
@@ -74,6 +75,7 @@ namespace Projeto
             }
             else if (radioButtonArbitro.Checked==true)
             {
+                //crash
                 Referee arbitro = referee.First<Referee>();
 
                 //Se os dados existirem na base de dados o programa abre o menu

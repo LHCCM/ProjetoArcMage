@@ -10,7 +10,7 @@ namespace Projeto
 {
         public override string ToString()
         {
-            return Player1 + " - " + Player2 + " [1v1]";
+            return P1 + " - " + P2 + " [1v1]";
         }
     }
 }

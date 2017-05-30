@@ -10,7 +10,7 @@ namespace Projeto
 {
         public override string ToString()
         {
-            return Team1 + " - " + Team2 + " [Equipas]";
+            return P1 + " - " + P2 + " [Equipas]";
         }
     }
 }
