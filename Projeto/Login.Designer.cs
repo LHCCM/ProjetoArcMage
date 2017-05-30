@@ -37,6 +37,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.labelErro = new System.Windows.Forms.Label();
+            this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
+            this.radioButtonArbitro = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // buttonLogin
@@ -122,11 +124,35 @@
             this.labelErro.Text = "Erro de Autenticação";
             this.labelErro.Visible = false;
             // 
+            // radioButtonAdmin
+            // 
+            this.radioButtonAdmin.AutoSize = true;
+            this.radioButtonAdmin.Location = new System.Drawing.Point(472, 29);
+            this.radioButtonAdmin.Name = "radioButtonAdmin";
+            this.radioButtonAdmin.Size = new System.Drawing.Size(54, 17);
+            this.radioButtonAdmin.TabIndex = 9;
+            this.radioButtonAdmin.TabStop = true;
+            this.radioButtonAdmin.Text = "Admin";
+            this.radioButtonAdmin.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonArbitro
+            // 
+            this.radioButtonArbitro.AutoSize = true;
+            this.radioButtonArbitro.Location = new System.Drawing.Point(472, 58);
+            this.radioButtonArbitro.Name = "radioButtonArbitro";
+            this.radioButtonArbitro.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonArbitro.TabIndex = 10;
+            this.radioButtonArbitro.TabStop = true;
+            this.radioButtonArbitro.Text = "Arbitro";
+            this.radioButtonArbitro.UseVisualStyleBackColor = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 115);
+            this.ClientSize = new System.Drawing.Size(553, 115);
+            this.Controls.Add(this.radioButtonArbitro);
+            this.Controls.Add(this.radioButtonAdmin);
             this.Controls.Add(this.labelErro);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -154,5 +180,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label labelErro;
+        private System.Windows.Forms.RadioButton radioButtonAdmin;
+        private System.Windows.Forms.RadioButton radioButtonArbitro;
     }
 }

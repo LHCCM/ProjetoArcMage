@@ -44,23 +44,54 @@ namespace Projeto
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            var admin = from user in container.User.OfType<Administrator>() where user.Username == textBoxUser.Text && user.Password == textBoxPass.Text select user;
+
+            var referee = from user in container.User.OfType<Referee>() where user.Username == textBoxUser.Text && user.Password == textBoxPass.Text select user;
+
             string username = textBoxUser.Text;
             string pass = textBoxPass.Text;
 
             if (textBoxUser.Text.Length == 0 || textBoxPass.Text.Length == 0)
             {
-                MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            var users = from utilizador in container.User.OfType<Referee>() where utilizador.Username == textBoxUser.Text && utilizador.Password == textBoxPass.Text select utilizador;
-
-            //Referee arbitro = 
-
-            //Se os dados existirem na base de dados o programa abre o menu
-            if (//arbitro != null)
+            else if (radioButtonAdmin.Checked == true)
             {
-                MenuArbitroForm menuarbitro = new MenuArbitroForm();
-                menuarbitro.ShowDialog();
+                Administrator administrador = admin.First();
+
+                //Se os dados existirem na base de dados o programa abre o menu
+                if (administrador != null)
+                {
+                    MenuAdminForm adminmenu = new MenuAdminForm();
+                    adminmenu.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Utilizador não existente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (radioButtonArbitro.Checked==true)
+            {
+                Referee arbitro = referee.First<Referee>();
+
+                //Se os dados existirem na base de dados o programa abre o menu
+                if (arbitro != null)
+                {
+                    MenuArbitroForm menuarbitro = new MenuArbitroForm();
+                    menuarbitro.ShowDialog();
+
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Utilizador não existente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um tipo de utilizador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
                      
         }
