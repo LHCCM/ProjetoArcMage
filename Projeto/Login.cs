@@ -44,28 +44,23 @@ namespace Projeto
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            users.GetType();
-            string password = textBox2.Text;
+            string username = textBoxUser.Text;
+            string pass = textBoxPass.Text;
 
-            if (users.GetType() == typeof(Administrator))
+            if (textBoxUser.Text.Length == 0 || textBoxPass.Text.Length == 0)
             {
-                ///if (validUser(textBox1.Text, textBox2.Text))
-                //{
-                    MenuAdminForm adminmenu = new MenuAdminForm();
-                    adminmenu.Show();
-
-                //}
+                MessageBox.Show("Preencha as caixas de texto, Por Favor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (users.GetType() == typeof(Referee))
-            {
-                
-            }
-            else
-            {
-                labelErro.Show();
-                textBox1.Text = "";
-                textBox2.Text = "";
 
+            var users = from utilizador in container.User.OfType<Referee>() where utilizador.Username == textBoxUser.Text && utilizador.Password == textBoxPass.Text select utilizador;
+
+            //Referee arbitro = 
+
+            //Se os dados existirem na base de dados o programa abre o menu
+            if (//arbitro != null)
+            {
+                MenuArbitroForm menuarbitro = new MenuArbitroForm();
+                menuarbitro.ShowDialog();
             }
                      
         }
