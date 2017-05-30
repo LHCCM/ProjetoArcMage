@@ -26,8 +26,8 @@ namespace Projeto
         }
         private void refreshCartas()
         {
-            //listBoxListaCartas.Items.Clear();
-            //listBoxListaCartas.Items.AddRange(container.Card.ToArray<Card>());
+            listBoxListaCartas.Items.Clear();
+            listBoxListaCartas.Items.AddRange(container.Card.ToArray<Card>());
         }
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
@@ -47,6 +47,7 @@ namespace Projeto
         {
             if(listBoxBaralhos.Items.Count > 0)
             {
+                refreshCartas();
                 buttonApagarBaralho.Enabled = true;
                 buttonEditarBaralho.Enabled = true;
             }
