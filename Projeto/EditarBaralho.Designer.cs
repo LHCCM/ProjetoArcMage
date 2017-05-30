@@ -109,7 +109,6 @@
             // 
             // buttonAdicionarCartaBaralho
             // 
-            this.buttonAdicionarCartaBaralho.Enabled = false;
             this.buttonAdicionarCartaBaralho.Location = new System.Drawing.Point(193, 357);
             this.buttonAdicionarCartaBaralho.Name = "buttonAdicionarCartaBaralho";
             this.buttonAdicionarCartaBaralho.Size = new System.Drawing.Size(100, 23);
