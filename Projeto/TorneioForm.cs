@@ -14,6 +14,8 @@ namespace Projeto
     {
         DBDiagramaContainer container = new DBDiagramaContainer();
 
+        List<Tournament> torneios = new List<Tournament>();
+
         public TorneioForm()
         {
             InitializeComponent();
@@ -124,6 +126,35 @@ namespace Projeto
             }
 
             refreshTorneios();
+        }
+
+        private void listBoxTorneio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            torneios.GetType();
+            if (listBoxTorneio.SelectedItem.GetType() == typeof(TeamTournament))
+            {
+                TeamTournament team = (TeamTournament)listBoxTorneio.SelectedItem;
+
+                if (team != null)
+                {
+                    
+                    labelNome.Text = team.Nome;
+                    labelDesc.Text = team.Desc;
+                    labelData.Text = Convert.ToString(team.Data);
+                }
+            }
+            else
+            {
+                StandardTournament solo = (StandardTournament)listBoxTorneio.SelectedItem;
+                if (solo != null)
+                {
+                    labelNome.Text = solo.Nome;
+                    labelDesc.Text = solo.Desc;
+                    labelData.Text = Convert.ToString(solo.Data);
+                }
+
+            }
         }
     }
 }
