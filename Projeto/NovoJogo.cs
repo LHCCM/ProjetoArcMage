@@ -59,7 +59,7 @@ namespace Projeto
 
                         DateTime date = dateTimePicker.Value;
 
-                        NovoJogoStandard = new StandardGame()
+                       /* NovoJogoStandard = new StandardGame()
                         {
                             Player1 = p1,
                             Player2 = p2,
@@ -71,7 +71,7 @@ namespace Projeto
 
                         };
                         DialogResult = DialogResult.OK;
-                        Close();
+                        Close();*/
                     }
                     else if (radioButtonTeam.Checked == true)
                     {

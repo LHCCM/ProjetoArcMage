@@ -15,7 +15,7 @@ namespace Projeto
     {
         public Referee NovoArbitro { get; private set; }
 
-        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath);
 
         DialogResult result;
 
@@ -43,12 +43,17 @@ namespace Projeto
 
                 if (result == DialogResult.Yes)
                 {
-                    NovoArbitroFunc();
+                    string avatar = "";
+
+                    NovoArbitroFunc(avatar);
                 }
             }
             else
             {
-                NovoArbitroFunc();
+                string filename = Path.GetFileName(openFileDialog1.FileName);
+                string avatar = Path.Combine(destinationpath, filename);
+               
+                NovoArbitroFunc(avatar);
             }
 
         }
@@ -68,7 +73,7 @@ namespace Projeto
 
             if (openFileDialog1.FileName != null)
             {
-                //acessede apenas ao nome do ficheiro
+                //acede apenas ao nome do ficheiro
                 string filename = Path.GetFileName(openFileDialog1.FileName);
                 
                 //copia o ficheiro para uma pasta e faz overwrite se o ficheiro já exitir
@@ -76,21 +81,20 @@ namespace Projeto
             }
         }
 
-        private void NovoArbitroFunc()
+        private void NovoArbitroFunc(string avatar)
         {
-            string filename = Path.GetFileName(openFileDialog1.FileName);
-
             string nome = textBoxNome.Text.Trim();
             string nickname = textBoxNickname.Text.Trim();
             string password = textBoxPassword.Text.Trim();
-            string avatar = Path.Combine(destinationpath, filename);
+
+
 
             NovoArbitro = new Referee()
             {
                 Name = nome,
                 Username = nickname,
                 Password = password,
-                Avatar = avatar,
+                Avatar = avatar
             };
 
             DialogResult = DialogResult.OK;

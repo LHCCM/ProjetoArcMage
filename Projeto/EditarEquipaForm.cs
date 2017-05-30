@@ -15,7 +15,7 @@ namespace Projeto
     {
         DBDiagramaContainer container = new DBDiagramaContainer();
 
-        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath);
 
         public EditarEquipaForm()
         {
@@ -59,7 +59,16 @@ namespace Projeto
 
                         equipaSelecionada.Player1 = p1;
                         equipaSelecionada.Player2 = p2;
-                        equipaSelecionada.Avatar = avatar;
+
+                        if (textBoxAvatar.Text != equipaSelecionada.Avatar)
+                        {
+                            equipaSelecionada.Avatar = avatar;
+                        }
+                        else
+                        {
+                            equipaSelecionada.Avatar = textBoxAvatar.Text;
+                        }
+                        
 
                         container.SaveChanges();
                     }

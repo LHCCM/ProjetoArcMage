@@ -100,6 +100,7 @@
             this.buttonCancelarTorneio.TabIndex = 5;
             this.buttonCancelarTorneio.Text = "Cancelar Torneio";
             this.buttonCancelarTorneio.UseVisualStyleBackColor = true;
+            this.buttonCancelarTorneio.Click += new System.EventHandler(this.buttonCancelarTorneio_Click);
             // 
             // textBox1
             // 
