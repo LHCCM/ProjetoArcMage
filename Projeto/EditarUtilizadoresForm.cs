@@ -98,32 +98,33 @@ namespace Projeto
 
         private void buttonConfirmar_Click_1(object sender, EventArgs e)
         {
-
-            if (listBoxUsers.SelectedItem.GetType() == typeof(Administrator))
+            if (listBoxUsers.SelectedIndex == null)
             {
-                Administrator adminSelecionado = (Administrator)listBoxUsers.SelectedItem;
-
-                if (adminSelecionado != null)
+                if (listBoxUsers.SelectedItem.GetType() == typeof(Administrator))
                 {
-                    result = MessageBox.Show("Tem a certeza que deseja guardar as alterações ? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    Administrator adminSelecionado = (Administrator)listBoxUsers.SelectedItem;
 
-                    if (result == DialogResult.Yes)
+                    if (adminSelecionado != null)
                     {
-                        string email = textBoxEmail.Text.Trim();
+                        result = MessageBox.Show("Tem a certeza que deseja guardar as alterações ? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                        adminSelecionado.Email = email;
+                        if (result == DialogResult.Yes)
+                        {
+                            string email = textBoxEmail.Text.Trim();
 
-                        container.SaveChanges();
+                            adminSelecionado.Email = email;
+
+                            container.SaveChanges();
+                        }
                     }
-                }               
-            }
-            else //if (listBoxUsers.SelectedItem.GetType() == typeof(Referee))
+                }
+                else
                 {
                     Referee arbitroselecionado = (Referee)listBoxUsers.SelectedItem;
 
                     if (arbitroselecionado != null)
                     {
-                    
+
                         result = MessageBox.Show("Tem a certeza que deseja guardar as alterações ? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                         if (result == DialogResult.Yes)
@@ -135,13 +136,14 @@ namespace Projeto
 
                             container.SaveChanges();
                         }
-                   
+
+                    }
                 }
             }
-            /*else
+            else
             {
                 MessageBox.Show("Nenhum Utilizador selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }*/
+            }
 
 
         }

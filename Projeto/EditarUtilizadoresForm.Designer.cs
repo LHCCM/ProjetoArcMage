@@ -153,7 +153,7 @@
             // 
             this.textBoxAvatar.BackColor = System.Drawing.SystemColors.Menu;
             this.textBoxAvatar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAvatar.Location = new System.Drawing.Point(263, 268);
+            this.textBoxAvatar.Location = new System.Drawing.Point(262, 272);
             this.textBoxAvatar.Name = "textBoxAvatar";
             this.textBoxAvatar.Size = new System.Drawing.Size(232, 13);
             this.textBoxAvatar.TabIndex = 73;
