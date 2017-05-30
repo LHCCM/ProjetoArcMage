@@ -16,7 +16,7 @@ namespace Projeto
 
         DBDiagramaContainer container = new DBDiagramaContainer();
 
-        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath);
 
         public Player Jogador { get; private set; }
         public Team NovaEquipa { get; private set; }

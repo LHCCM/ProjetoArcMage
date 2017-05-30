@@ -15,7 +15,7 @@ namespace Projeto
     {
         public Referee NovoArbitro { get; private set; }
 
-        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath);
 
         DialogResult result;
 
@@ -68,7 +68,7 @@ namespace Projeto
 
             if (openFileDialog1.FileName != null)
             {
-                //acessede apenas ao nome do ficheiro
+                //acede apenas ao nome do ficheiro
                 string filename = Path.GetFileName(openFileDialog1.FileName);
                 
                 //copia o ficheiro para uma pasta e faz overwrite se o ficheiro já exitir
