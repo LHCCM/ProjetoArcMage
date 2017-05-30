@@ -30,8 +30,8 @@
         {
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonSair = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxUser = new System.Windows.Forms.TextBox();
+            this.textBoxPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,20 +59,20 @@
             this.buttonSair.UseVisualStyleBackColor = true;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
-            // textBox1
+            // textBoxUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBoxUser.Location = new System.Drawing.Point(73, 12);
+            this.textBoxUser.Name = "textBoxUser";
+            this.textBoxUser.Size = new System.Drawing.Size(312, 20);
+            this.textBoxUser.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(73, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(312, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxPass.Location = new System.Drawing.Point(73, 42);
+            this.textBoxPass.Name = "textBoxPass";
+            this.textBoxPass.PasswordChar = '*';
+            this.textBoxPass.Size = new System.Drawing.Size(312, 20);
+            this.textBoxPass.TabIndex = 3;
             // 
             // label1
             // 
@@ -132,8 +132,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPass);
+            this.Controls.Add(this.textBoxUser);
             this.Controls.Add(this.buttonSair);
             this.Controls.Add(this.buttonLogin);
             this.Name = "LoginForm";
@@ -147,8 +147,8 @@
 
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonSair;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxUser;
+        private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
