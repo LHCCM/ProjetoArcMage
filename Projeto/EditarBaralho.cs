@@ -62,12 +62,14 @@ namespace Projeto
         {
             Deck deck = (Deck)listBoxBaralhos.SelectedItem;
             int i = 0;
+            
             do {
                 Card DeckCard = (Card)listBoxCartasBaralho.Items[i];
                 deck.Card.Add(DeckCard);
                 i++;
             }while(i < listBoxCartasBaralho.Items.Count);
             container.SaveChanges();
+            
         }
 
         private void EditarBaralhoForm_Load(object sender, EventArgs e)
@@ -90,7 +92,7 @@ namespace Projeto
 
         private void listBoxTotalCartas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxTotalCartas.SelectedIndex != null)
+            if (listBoxCartasBaralho.SelectedIndex != -1)
             {
                 buttonAdicionarCartaBaralho.Enabled = true;
             }
@@ -107,7 +109,9 @@ namespace Projeto
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            BaralhosForm Open = new BaralhosForm();
+            Open.Show();
+            Close();
         }
     }
 }

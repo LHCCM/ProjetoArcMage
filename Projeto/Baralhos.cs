@@ -73,6 +73,7 @@ namespace Projeto
         {
             EditarBaralhoForm Open = new EditarBaralhoForm();
             Open.ShowDialog();
+            Close();
         }
 
         private void BaralhosForm_Load(object sender, EventArgs e)
