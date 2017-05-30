@@ -51,18 +51,23 @@ namespace Projeto
                     {
                         string filename = Path.GetFileName(openFileDialog1.FileName);
 
-                        string nome = textBoxNome.Text.Trim();
                         string nick = textBoxNick.Text.Trim();
                         string email = textBoxEmail.Text.Trim();
                         string avatar = Path.Combine(destinationpath, filename);
 
-                        jogadorSelecionado.Name = nome;
                         jogadorSelecionado.Nickname = nick;
                         jogadorSelecionado.Email = email;
 
                         jogadorSelecionado.Age = (int)numericUpDownIdade.Value;
-                        jogadorSelecionado.Avatar = avatar;
 
+                        if (textBoxAvatar.Text != jogadorSelecionado.Avatar)
+                        {
+                            jogadorSelecionado.Avatar = avatar;
+                        }
+                        else
+                        {
+                            textBoxAvatar.Text = jogadorSelecionado.Avatar;
+                        }
                         container.SaveChanges();
                     }
                 }

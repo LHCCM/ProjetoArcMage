@@ -85,6 +85,7 @@ namespace Projeto
                     textBoxEmail.Hide();
                     textBoxAvatar.Show();
                     textBoxAvatar.Text = utilizadorSelecionado.Avatar;
+
                 }
             }
         }
@@ -98,7 +99,11 @@ namespace Projeto
 
         private void buttonConfirmar_Click_1(object sender, EventArgs e)
         {
-            if (listBoxUsers.SelectedIndex != null)
+            if (listBoxUsers.SelectedItem == null)
+            {
+                MessageBox.Show("Nenhum Utilizador selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else 
             {
                 if (listBoxUsers.SelectedItem.GetType() == typeof(Administrator))
                 {
@@ -142,10 +147,19 @@ namespace Projeto
                             }
                             else
                             {
+                                arbitroselecionado.Name = textBoxNickname.Text.Trim();
+
                                 string filename = Path.GetFileName(openFileDialog1.FileName);
 
-                                arbitroselecionado.Avatar = Path.Combine(destinationpath, filename);
-                                arbitroselecionado.Name = textBoxNickname.Text.Trim();
+                                if (textBoxAvatar.Text != arbitroselecionado.Avatar)
+                                {
+                                    arbitroselecionado.Avatar = Path.Combine(destinationpath, filename);
+                                }
+                                else
+                                {
+                                    arbitroselecionado.Avatar = textBoxAvatar.Text;
+                                }
+                                
 
                                 container.SaveChanges();
 
@@ -155,10 +169,7 @@ namespace Projeto
                     }
                 }
             }
-            else
-            {
-                MessageBox.Show("Nenhum Utilizador selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
 
 
         }
@@ -178,7 +189,7 @@ namespace Projeto
 
             if (openFileDialog1.FileName != null)
             {
-                //acessede apenas ao nome do ficheiro
+                //acede apenas ao nome do ficheiro
                 string filename = Path.GetFileName(openFileDialog1.FileName);
 
                 //copia o ficheiro para uma pasta e faz overwrite se o ficheiro já exitir
