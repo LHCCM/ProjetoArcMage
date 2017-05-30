@@ -15,8 +15,8 @@ namespace Projeto
     {
         public Referee NovoArbitro { get; private set; }
 
-        string destinationpath = @"C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Avatares";
-        
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
+
         DialogResult result;
 
         public NovoArbitroForm()

@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto
 {
     public partial class EditarJogadorForm : Form
     {
         DBDiagramaContainer container = new DBDiagramaContainer();
+
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
 
         public EditarJogadorForm()
         {
@@ -39,19 +42,29 @@ namespace Projeto
 
                 if (result == DialogResult.Yes)
                 {
-                    string nome = textBoxNome.Text.Trim();
-                    string nick = textBoxNick.Text.Trim();
-                    string email = textBoxEmail.Text.Trim();
-                    string avatar = textBoxAvatar.Text.Trim();
+                    if (textBoxEmail.Text == "" && textBoxNick.Text == "")
+                    {
+                        MessageBox.Show("Caixa de texto em branco. Preencha a caixa por favor. ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
 
-                    jogadorSelecionado.Name = nome;
-                    jogadorSelecionado.Nickname = nick;
-                    jogadorSelecionado.Email = email;
+                    else
+                    {
+                        string filename = Path.GetFileName(openFileDialog1.FileName);
 
-                    jogadorSelecionado.Age = (int)numericUpDownIdade.Value;
-                    jogadorSelecionado.Avatar = avatar;
+                        string nome = textBoxNome.Text.Trim();
+                        string nick = textBoxNick.Text.Trim();
+                        string email = textBoxEmail.Text.Trim();
+                        string avatar = Path.Combine(destinationpath, filename);
 
-                    container.SaveChanges();
+                        jogadorSelecionado.Name = nome;
+                        jogadorSelecionado.Nickname = nick;
+                        jogadorSelecionado.Email = email;
+
+                        jogadorSelecionado.Age = (int)numericUpDownIdade.Value;
+                        jogadorSelecionado.Avatar = avatar;
+
+                        container.SaveChanges();
+                    }
                 }
 
             }
@@ -74,7 +87,17 @@ namespace Projeto
                 Image imagem = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
             }
+
+            if (openFileDialog1.FileName != null)
+            {
+                //acessede apenas ao nome do ficheiro
+                string filename = Path.GetFileName(openFileDialog1.FileName);
+
+                //copia o ficheiro para uma pasta e faz overwrite se o ficheiro já exitir
+                File.Copy(openFileDialog1.FileName, Path.Combine(destinationpath, filename), true);
+            }
         }
+    
 
         private void refreshJogadores()
         {

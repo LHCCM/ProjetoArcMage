@@ -15,7 +15,7 @@ namespace Projeto
     {
         DBDiagramaContainer container = new DBDiagramaContainer();
 
-        string destinationpath = @"C:\\Users\\User\\Source\\Repos\\ProjetoArcMage\\Avatares";
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
 
         DialogResult result;
 
@@ -98,7 +98,7 @@ namespace Projeto
 
         private void buttonConfirmar_Click_1(object sender, EventArgs e)
         {
-            if (listBoxUsers.SelectedIndex == null)
+            if (listBoxUsers.SelectedIndex != null)
             {
                 if (listBoxUsers.SelectedItem.GetType() == typeof(Administrator))
                 {
@@ -110,11 +110,18 @@ namespace Projeto
 
                         if (result == DialogResult.Yes)
                         {
-                            string email = textBoxEmail.Text.Trim();
+                            if (textBoxEmail.Text == "")
+                            {
+                                MessageBox.Show("Caixa de texto em branco. Preencha a caixa por favor. ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else
+                            {
+                                string email = textBoxEmail.Text.Trim();
 
-                            adminSelecionado.Email = email;
+                                adminSelecionado.Email = email;
 
-                            container.SaveChanges();
+                                container.SaveChanges();
+                            }
                         }
                     }
                 }
@@ -129,12 +136,20 @@ namespace Projeto
 
                         if (result == DialogResult.Yes)
                         {
-                            string filename = Path.GetFileName(openFileDialog1.FileName);
+                            if (textBoxNickname.Text == "")
+                            {
+                                MessageBox.Show("Caixa de texto em branco. Preencha a caixa por favor. ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else
+                            {
+                                string filename = Path.GetFileName(openFileDialog1.FileName);
 
-                            arbitroselecionado.Avatar = Path.Combine(destinationpath, filename);
-                            arbitroselecionado.Name = textBoxNickname.Text.Trim();
+                                arbitroselecionado.Avatar = Path.Combine(destinationpath, filename);
+                                arbitroselecionado.Name = textBoxNickname.Text.Trim();
 
-                            container.SaveChanges();
+                                container.SaveChanges();
+
+                            }
                         }
 
                     }
@@ -169,6 +184,7 @@ namespace Projeto
                 //copia o ficheiro para uma pasta e faz overwrite se o ficheiro já exitir
                 File.Copy(openFileDialog1.FileName, Path.Combine(destinationpath, filename), true);
             }
+
         }
     }
 }
