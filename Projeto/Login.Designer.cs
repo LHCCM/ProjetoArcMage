@@ -34,8 +34,6 @@
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
             this.radioButtonArbitro = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
@@ -93,30 +91,10 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(391, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "admin";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(391, 58);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "arbitro";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // radioButtonAdmin
             // 
             this.radioButtonAdmin.AutoSize = true;
-            this.radioButtonAdmin.Location = new System.Drawing.Point(472, 29);
+            this.radioButtonAdmin.Location = new System.Drawing.Point(391, 15);
             this.radioButtonAdmin.Name = "radioButtonAdmin";
             this.radioButtonAdmin.Size = new System.Drawing.Size(54, 17);
             this.radioButtonAdmin.TabIndex = 9;
@@ -127,7 +105,7 @@
             // radioButtonArbitro
             // 
             this.radioButtonArbitro.AutoSize = true;
-            this.radioButtonArbitro.Location = new System.Drawing.Point(472, 58);
+            this.radioButtonArbitro.Location = new System.Drawing.Point(391, 44);
             this.radioButtonArbitro.Name = "radioButtonArbitro";
             this.radioButtonArbitro.Size = new System.Drawing.Size(55, 17);
             this.radioButtonArbitro.TabIndex = 10;
@@ -139,11 +117,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 115);
+            this.ClientSize = new System.Drawing.Size(448, 115);
             this.Controls.Add(this.radioButtonArbitro);
             this.Controls.Add(this.radioButtonAdmin);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPass);
@@ -165,8 +141,6 @@
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton radioButtonAdmin;
         private System.Windows.Forms.RadioButton radioButtonArbitro;
     }
