@@ -43,12 +43,17 @@ namespace Projeto
 
                 if (result == DialogResult.Yes)
                 {
-                    NovoArbitroFunc();
+                    string avatar = "";
+
+                    NovoArbitroFunc(avatar);
                 }
             }
             else
             {
-                NovoArbitroFunc();
+                string filename = Path.GetFileName(openFileDialog1.FileName);
+                string avatar = Path.Combine(destinationpath, filename);
+               
+                NovoArbitroFunc(avatar);
             }
 
         }
@@ -76,21 +81,20 @@ namespace Projeto
             }
         }
 
-        private void NovoArbitroFunc()
+        private void NovoArbitroFunc(string avatar)
         {
-            string filename = Path.GetFileName(openFileDialog1.FileName);
-
             string nome = textBoxNome.Text.Trim();
             string nickname = textBoxNickname.Text.Trim();
             string password = textBoxPassword.Text.Trim();
-            string avatar = Path.Combine(destinationpath, filename);
+
+
 
             NovoArbitro = new Referee()
             {
                 Name = nome,
                 Username = nickname,
                 Password = password,
-                Avatar = avatar,
+                Avatar = avatar
             };
 
             DialogResult = DialogResult.OK;

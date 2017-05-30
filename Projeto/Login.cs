@@ -57,11 +57,11 @@ namespace Projeto
             //Referee arbitro = 
 
             //Se os dados existirem na base de dados o programa abre o menu
-            if (//arbitro != null)
-            {
+            //if (arbitro != null)
+            //{
                 MenuArbitroForm menuarbitro = new MenuArbitroForm();
                 menuarbitro.ShowDialog();
-            }
+            //}
                      
         }
 
