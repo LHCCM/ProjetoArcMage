@@ -15,7 +15,7 @@ namespace Projeto
     {
         public Player NovoJogador { get; private set; }
 
-        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath);
 
         DialogResult result;
 

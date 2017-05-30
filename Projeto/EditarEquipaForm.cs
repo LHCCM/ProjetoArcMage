@@ -15,7 +15,7 @@ namespace Projeto
     {
         DBDiagramaContainer container = new DBDiagramaContainer();
 
-        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath);
 
         public EditarEquipaForm()
         {
