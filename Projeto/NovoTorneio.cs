@@ -58,7 +58,7 @@ namespace Projeto
                     Data = date,
                     Desc = desc,
                 };
-                DialogResult = DialogResult.Abort;
+                DialogResult = DialogResult.Yes;
                 Close();
             }
             else

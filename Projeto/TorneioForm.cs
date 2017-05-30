@@ -38,7 +38,7 @@ namespace Projeto
             {
                 AdicionarTorneioStandard(form.NovoTorneioStandard);
             }
-            else if (result == DialogResult.Abort)
+            else if (result == DialogResult.Yes)
             {
                 AdicionarTorneioEquipas(form.NovoTorneioTeam);
             }
@@ -78,14 +78,14 @@ namespace Projeto
 
             if (result == DialogResult.OK)
             {
-                //AdicionarJogoStandard(form.NovoJogoStandard);
+                AdicionarJogoStandard(form.NovoJogoStandard);
             }
-            else if (result == DialogResult.Abort)
+            else if (result == DialogResult.Yes)
             {
-                //AdicionarJogoEquipas(form.NovoJogoEquipas);
+                AdicionarJogoEquipas(form.NovoJogoTeam);
             }
 
-            refreshTorneios();
+            refreshJogos();
         }
 
         private void refreshJogos()
