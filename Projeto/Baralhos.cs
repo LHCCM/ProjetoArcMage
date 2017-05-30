@@ -47,7 +47,9 @@ namespace Projeto
         {
             if(listBoxBaralhos.Items.Count > 0)
             {
-                refreshCartas();
+                Deck deck = (Deck)listBoxBaralhos.SelectedItem;
+                listBoxListaCartas.Items.Clear();
+                listBoxListaCartas.Items.AddRange(deck.Card.ToArray<Card>());
                 buttonApagarBaralho.Enabled = true;
                 buttonEditarBaralho.Enabled = true;
             }
