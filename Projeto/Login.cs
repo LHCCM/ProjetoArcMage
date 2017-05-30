@@ -35,5 +35,11 @@ namespace Projeto
         {
             Application.Exit();
         }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            string utilizador = textBox1.Text;
+            string password = textBox2.Text;           
+        }
     }
 }

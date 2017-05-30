@@ -45,13 +45,15 @@ namespace Projeto
 
         private void listBoxBaralhos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(listBoxBaralhos.Items.Count > 0)
+            if(listBoxBaralhos.SelectedItem != null)
             {
                 Deck deck = (Deck)listBoxBaralhos.SelectedItem;
                 listBoxListaCartas.Items.Clear();
-                listBoxListaCartas.Items.AddRange(deck.Card.ToArray<Card>());
+                if(deck.Card != null)
+                {
+                    listBoxListaCartas.Items.AddRange(deck.Card.ToArray<Card>());
+                }
                 buttonApagarBaralho.Enabled = true;
-                buttonEditarBaralho.Enabled = true;
             }
         }
 
@@ -69,9 +71,6 @@ namespace Projeto
 
         private void buttonEditarBaralho_Click(object sender, EventArgs e)
         {
-            AussiliaryVars Aussi = new AussiliaryVars();
-            Deck deck = (Deck)listBoxBaralhos.SelectedItem;
-            Aussi.deck = deck;
             EditarBaralhoForm Open = new EditarBaralhoForm();
             Open.ShowDialog();
         }

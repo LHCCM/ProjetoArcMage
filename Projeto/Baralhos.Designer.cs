@@ -107,7 +107,6 @@
             // 
             // buttonEditarBaralho
             // 
-            this.buttonEditarBaralho.Enabled = false;
             this.buttonEditarBaralho.Location = new System.Drawing.Point(222, 314);
             this.buttonEditarBaralho.Name = "buttonEditarBaralho";
             this.buttonEditarBaralho.Size = new System.Drawing.Size(121, 23);

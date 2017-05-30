@@ -90,7 +90,7 @@ namespace Projeto
 
         private void listBoxTotalCartas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxTotalCartas.SelectedIndex != 0)
+            if (listBoxTotalCartas.SelectedIndex != null)
             {
                 buttonAdicionarCartaBaralho.Enabled = true;
             }
@@ -101,6 +101,7 @@ namespace Projeto
             if(listBoxBaralhos != null)
             {
                 refreshCartasBaralho();
+                buttonAdicionarCartaBaralho.Enabled = true;
             }
         }
 
