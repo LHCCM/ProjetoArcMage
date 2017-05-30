@@ -62,7 +62,6 @@ namespace Projeto
         {
             Deck deck = (Deck)listBoxBaralhos.SelectedItem;
             int i = 0;
-            
             do {
                 Card DeckCard = (Card)listBoxCartasBaralho.Items[i];
                 deck.Card.Add(DeckCard);
