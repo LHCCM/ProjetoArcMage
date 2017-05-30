@@ -30,7 +30,6 @@
         {
             this.listBoxTorneio = new System.Windows.Forms.ListBox();
             this.listBoxJogo = new System.Windows.Forms.ListBox();
-            this.listBoxInfo = new System.Windows.Forms.ListBox();
             this.buttonNovoTorneio = new System.Windows.Forms.Button();
             this.buttonEditarTorneio = new System.Windows.Forms.Button();
             this.buttonCancelarTorneio = new System.Windows.Forms.Button();
@@ -40,12 +39,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.buttonCancelarJogo = new System.Windows.Forms.Button();
             this.buttonEditarJogo = new System.Windows.Forms.Button();
             this.buttonCriarJogo = new System.Windows.Forms.Button();
             this.buttonVoltar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
+            this.labelData = new System.Windows.Forms.Label();
+            this.labelDesc = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxTorneio
@@ -55,6 +61,7 @@
             this.listBoxTorneio.Name = "listBoxTorneio";
             this.listBoxTorneio.Size = new System.Drawing.Size(199, 290);
             this.listBoxTorneio.TabIndex = 0;
+            this.listBoxTorneio.SelectedIndexChanged += new System.EventHandler(this.listBoxTorneio_SelectedIndexChanged);
             // 
             // listBoxJogo
             // 
@@ -63,14 +70,6 @@
             this.listBoxJogo.Name = "listBoxJogo";
             this.listBoxJogo.Size = new System.Drawing.Size(199, 290);
             this.listBoxJogo.TabIndex = 1;
-            // 
-            // listBoxInfo
-            // 
-            this.listBoxInfo.FormattingEnabled = true;
-            this.listBoxInfo.Location = new System.Drawing.Point(423, 53);
-            this.listBoxInfo.Name = "listBoxInfo";
-            this.listBoxInfo.Size = new System.Drawing.Size(199, 394);
-            this.listBoxInfo.TabIndex = 2;
             // 
             // buttonNovoTorneio
             // 
@@ -152,15 +151,6 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Jogos";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(492, 37);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Informações";
-            // 
             // buttonCancelarJogo
             // 
             this.buttonCancelarJogo.Location = new System.Drawing.Point(218, 457);
@@ -212,17 +202,83 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "TORNEIOS";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelDesc);
+            this.groupBox1.Controls.Add(this.labelData);
+            this.groupBox1.Controls.Add(this.labelNome);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(423, 53);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(199, 290);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informações do Torneio";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nome";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Data";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 140);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Descrição";
+            // 
+            // labelNome
+            // 
+            this.labelNome.AutoSize = true;
+            this.labelNome.Location = new System.Drawing.Point(61, 20);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(0, 13);
+            this.labelNome.TabIndex = 3;
+            // 
+            // labelData
+            // 
+            this.labelData.AutoSize = true;
+            this.labelData.Location = new System.Drawing.Point(61, 79);
+            this.labelData.Name = "labelData";
+            this.labelData.Size = new System.Drawing.Size(0, 13);
+            this.labelData.TabIndex = 4;
+            // 
+            // labelDesc
+            // 
+            this.labelDesc.AutoSize = true;
+            this.labelDesc.Location = new System.Drawing.Point(69, 140);
+            this.labelDesc.Name = "labelDesc";
+            this.labelDesc.Size = new System.Drawing.Size(0, 13);
+            this.labelDesc.TabIndex = 5;
+            // 
             // TorneioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 495);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.buttonCancelarJogo);
             this.Controls.Add(this.buttonEditarJogo);
             this.Controls.Add(this.buttonCriarJogo);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -232,11 +288,12 @@
             this.Controls.Add(this.buttonCancelarTorneio);
             this.Controls.Add(this.buttonEditarTorneio);
             this.Controls.Add(this.buttonNovoTorneio);
-            this.Controls.Add(this.listBoxInfo);
             this.Controls.Add(this.listBoxJogo);
             this.Controls.Add(this.listBoxTorneio);
             this.Name = "TorneioForm";
             this.Text = "Torneios";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +303,6 @@
 
         private System.Windows.Forms.ListBox listBoxTorneio;
         private System.Windows.Forms.ListBox listBoxJogo;
-        private System.Windows.Forms.ListBox listBoxInfo;
         private System.Windows.Forms.Button buttonNovoTorneio;
         private System.Windows.Forms.Button buttonEditarTorneio;
         private System.Windows.Forms.Button buttonCancelarTorneio;
@@ -256,11 +312,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonCancelarJogo;
         private System.Windows.Forms.Button buttonEditarJogo;
         private System.Windows.Forms.Button buttonCriarJogo;
         private System.Windows.Forms.Button buttonVoltar;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label labelDesc;
+        private System.Windows.Forms.Label labelData;
+        private System.Windows.Forms.Label labelNome;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
     }
 }

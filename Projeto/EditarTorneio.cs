@@ -37,32 +37,14 @@ namespace Projeto
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            if (listBoxTorneio.SelectedIndex != -1)
+            if (listBoxTorneio.SelectedItem == null)
             {
-                if (listBoxTorneio.SelectedItem.GetType() == typeof(StandardGame))
-                {
-                    StandardTournament standard = (StandardTournament)listBoxTorneio.SelectedItem;
+                MessageBox.Show("Nenhum torneio selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
 
-                    if (standard != null)
-                    {
-                        DialogResult result = MessageBox.Show("Tem a certeza que deseja guardar as alterações ? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                        if (result == DialogResult.Yes)
-                        {
-                            string nome = textBoxNome.Text.Trim();
-                            string desc = textBoxDesc.Text.Trim();
-                            DateTime date = dateTimePicker.Value;
-
-                            standard.Nome = nome;
-                            standard.Data = date;
-                            standard.Desc = desc;
-
-                            container.SaveChanges();
-                            refresTorneios();
-                        }
-                    }
-                }
-                else
+            if (listBoxTorneio.SelectedItem.GetType() == typeof(TeamTournament))
                 {
                     TeamTournament team = (TeamTournament)listBoxTorneio.SelectedItem;
 
@@ -73,24 +55,57 @@ namespace Projeto
 
                         if (result == DialogResult.Yes)
                         {
-                            string nome = textBoxNome.Text.Trim();
-                            string desc = textBoxDesc.Text.Trim();
-                            DateTime date = dateTimePicker.Value;
+                            if (textBoxDesc.Text == null || textBoxNome.Text == null)
+                            {
+                                MessageBox.Show("Preencha as caixas de texto, Por favor", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else
+                            {
+                                string nome = textBoxNome.Text.Trim();
+                                string desc = textBoxDesc.Text.Trim();
+                                DateTime date = dateTimePicker.Value;
 
-                            team.Nome = nome;
-                            team.Data = date;
-                            team.Desc = desc;
+                                team.Nome = nome;
+                                team.Data = date;
+                                team.Desc = desc;
 
-                            container.SaveChanges();
-                            refresTorneios();
+                                container.SaveChanges();
+                            }
                         }
+                    }
+                    
+                }
+                else //if(listBoxTorneio.SelectedItem.GetType() == typeof(StandardTournament))
+                {
+                    StandardTournament standard = (StandardTournament)listBoxTorneio.SelectedItem;
 
+                    if (standard != null)
+                    {
+                        DialogResult result = MessageBox.Show("Tem a certeza que deseja guardar as alterações ? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+
+                        if (result == DialogResult.Yes)
+                        {
+                            if (textBoxDesc.Text == null || textBoxNome.Text == null)
+                            {
+                                MessageBox.Show("Preencha as caixas de texto, Por favor", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else
+                            {
+                                string nome = textBoxNome.Text.Trim();
+                                string desc = textBoxDesc.Text.Trim();
+                                DateTime date = dateTimePicker.Value;
+
+                                standard.Nome = nome;
+                                standard.Data = date;
+                                standard.Desc = desc;
+
+                                container.SaveChanges();
+                            }
+                        }
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Nenhum Utilizador selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
         }
 
@@ -103,9 +118,19 @@ namespace Projeto
 
         private void listBoxTorneio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxTorneio.SelectedIndex != -1)
+           if (listBoxTorneio.SelectedItem.GetType() == typeof(TeamTournament))
             {
-                if (listBoxTorneio.SelectedItem.GetType() == typeof(StandardTournament))
+                TeamTournament team = (TeamTournament)listBoxTorneio.SelectedItem;
+
+                if (team != null)
+                {
+                    LabelID.Text = Convert.ToString(team.Id);
+                    textBoxNome.Text = team.Nome;
+                    textBoxDesc.Text = team.Desc;
+
+                }
+            }
+            else //if(listBoxTorneio.SelectedItem.GetType() == typeof(StandardTournament))
                 {
                     StandardTournament standard = (StandardTournament)listBoxTorneio.SelectedItem;
                     if (standard != null)
@@ -113,23 +138,10 @@ namespace Projeto
                         LabelID.Text = Convert.ToString(standard.Id);
                         textBoxNome.Text = standard.Nome;
                         textBoxDesc.Text = standard.Desc;
-
-
                     }
-                }
-                else if (listBoxTorneio.SelectedItem.GetType() == typeof(TeamTournament))
-                {
-                    TeamTournament team = (TeamTournament)listBoxTorneio.SelectedItem;
 
-                    if (team != null)
-                    {
-                        LabelID.Text = Convert.ToString(team.Id);
-                        textBoxNome.Text = team.Nome;
-                        textBoxDesc.Text = team.Desc;
-
-                    }
-                }
-            }
+                }          
+            
         }
     }
 }
