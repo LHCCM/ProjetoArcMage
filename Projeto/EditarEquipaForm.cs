@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto
 {
     public partial class EditarEquipaForm : Form
     {
         DBDiagramaContainer container = new DBDiagramaContainer();
+
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
 
         public EditarEquipaForm()
         {
@@ -48,9 +51,11 @@ namespace Projeto
 
                     else
                     {
+                        string filename = Path.GetFileName(openFileDialog1.FileName);
+
                         string p1 = listBoxEquipa.Items[0].ToString();
                         string p2 = listBoxEquipa.Items[1].ToString();
-                        string avatar = textBoxAvatar.Text.Trim();
+                        string avatar = Path.Combine(destinationpath, filename);
 
                         equipaSelecionada.Player1 = p1;
                         equipaSelecionada.Player2 = p2;
@@ -135,6 +140,15 @@ namespace Projeto
                 Image imagem = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
             }
+
+            if (openFileDialog1.FileName != null)
+            {
+                //acessede apenas ao nome do ficheiro
+                string filename = Path.GetFileName(openFileDialog1.FileName);
+
+                //copia o ficheiro para uma pasta e faz overwrite se o ficheiro já exitir
+                File.Copy(openFileDialog1.FileName, Path.Combine(destinationpath, filename), true);
+            }
         }
 
         private void refreshEquipas()
@@ -168,6 +182,7 @@ namespace Projeto
                 listBoxEquipa.Items.Clear();
                 listBoxEquipa.Items.Add(equipaSelecionada.Player1);
                 listBoxEquipa.Items.Add(equipaSelecionada.Player2);
+                textBoxAvatar.Text = equipaSelecionada.Avatar;
             }
         }
     }

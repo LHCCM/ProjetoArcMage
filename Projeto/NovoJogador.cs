@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto
 {
     public partial class NovoJogadorForm : Form
     {
         public Player NovoJogador { get; private set; }
+
+        string destinationpath = Path.GetDirectoryName(Application.ExecutablePath) + "\\Avatares";
 
         DialogResult result;
 
@@ -60,14 +63,25 @@ namespace Projeto
                 Image imagem = new Bitmap(openFileDialog1.FileName);
                 pictureBox1.Image = new Bitmap(imagem, new Size(153, 132));
             }
+
+            if (openFileDialog1.FileName != null)
+            {
+                //acessede apenas ao nome do ficheiro
+                string filename = Path.GetFileName(openFileDialog1.FileName);
+
+                //copia o ficheiro para uma pasta e faz overwrite se o ficheiro já exitir
+                File.Copy(openFileDialog1.FileName, Path.Combine(destinationpath, filename), true);
+            }
         }
 
         private void NovoJogadorFunc()
         {
+            string filename = Path.GetFileName(openFileDialog1.FileName);
+
             string nome = textBoxNome.Text.Trim();
             string nick = textBoxNick.Text.Trim();
             string email = textBoxEmail.Text.Trim();
-            string avatar = textBoxAvatar.Text.Trim();
+            string avatar = Path.Combine(destinationpath, filename);
 
             NovoJogador = new Player()
             {
