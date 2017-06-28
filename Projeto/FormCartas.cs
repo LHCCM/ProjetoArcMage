@@ -67,12 +67,19 @@ namespace Projeto
         //dis works now :D
         private void buttonApagarCarta_Click(object sender, EventArgs e)
         {
-            if (listBoxCartas.SelectedIndex != -1)
+            /*if ()
             {
-                container.Card.Remove((Card)listBoxCartas.SelectedItem);
-                container.SaveChanges();
+
             }
-           
+            else
+            {*/
+
+                if (listBoxCartas.SelectedIndex != -1)
+                {
+                    container.Card.Remove((Card)listBoxCartas.SelectedItem);
+                    container.SaveChanges();
+                }
+            //}
             refreshCards();
         }
 

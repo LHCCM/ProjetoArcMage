@@ -48,6 +48,10 @@ namespace Projeto
                     NovoArbitroFunc(avatar);
                 }
             }
+            else if(textBoxNickname.Text == NovoArbitro.Name)
+            {
+                MessageBox.Show("Já exite um Árbitro com esse nome.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 string filename = Path.GetFileName(openFileDialog1.FileName);

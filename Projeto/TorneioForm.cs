@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -131,20 +132,19 @@ namespace Projeto
         private void listBoxTorneio_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            torneios.GetType();
+            //torneios.GetType();
             if (listBoxTorneio.SelectedItem.GetType() == typeof(TeamTournament))
             {
                 TeamTournament team = (TeamTournament)listBoxTorneio.SelectedItem;
 
                 if (team != null)
                 {
-                    
                     labelNome.Text = team.Nome;
                     labelDesc.Text = team.Desc;
                     labelData.Text = Convert.ToString(team.Data);
                 }
             }
-            else
+            else if(listBoxTorneio.SelectedItem.GetType() == typeof(StandardTournament))
             {
                 StandardTournament solo = (StandardTournament)listBoxTorneio.SelectedItem;
                 if (solo != null)
@@ -156,5 +156,49 @@ namespace Projeto
 
             }
         }
+
+        private void exportarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           /* string textoMsgBox = "Operação cancelada.";
+            string tituloMsgBox = "Cancelado";
+            string filename = "";
+           
+            if (saveFileDialogExport.ShowDialog() == DialogResult.OK)
+            {
+                filename = saveFileDialogExport.FileName; 
+                using (StreamWriter writter = new StreamWriter(filename))
+                {
+                    try
+                    {
+                        
+                        writter.WriteLine(container.Tournament.Count() + " torneios");
+                        writter.WriteLine("");
+
+                        foreach (Card carta in container.Card)
+                        {
+                            writter.WriteLine(String.Format("Nome: {0}", carta.Name));
+                            writter.WriteLine(String.Format("Facao: {0}", carta.Faction));
+                            writter.WriteLine(String.Format("Tipo: {0}", carta.Type));
+                            writter.WriteLine(String.Format("Custo: {0}", carta.Cost));
+                            writter.WriteLine(String.Format("Lealdade: {0}", carta.Loyal));
+                            writter.WriteLine(String.Format("Regra: {0}", carta.Rules));
+                            writter.WriteLine(String.Format("Ataque: {0}", carta.Atack));
+                            writter.WriteLine(String.Format("Defesa: {0}", carta.Defense));
+                            writter.WriteLine("");
+                        }
+                        writter.Flush();
+
+                        textoMsgBox = "Exportação concluída com sucesso.";
+                        tituloMsgBox = "Exportação Terminada";
+                    }
+                    catch (Exception ex)
+                    {
+                        textoMsgBox = "Não foi possível exportar os dados para o ficheiro selecionado. " + ex.Message;
+                        tituloMsgBox = "Erro de Exportação";
+                    }
+                }
+            }
+            MessageBox.Show(textoMsgBox, tituloMsgBox, MessageBoxButtons.OK);
+        }*/
     }
 }

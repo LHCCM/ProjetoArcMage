@@ -118,30 +118,30 @@ namespace Projeto
 
         private void listBoxTorneio_SelectedIndexChanged(object sender, EventArgs e)
         {
-           if (listBoxTorneio.SelectedItem.GetType() == typeof(TeamTournament))
+
+            if (listBoxTorneio.SelectedItem.GetType() == typeof(TeamTournament))
             {
                 TeamTournament team = (TeamTournament)listBoxTorneio.SelectedItem;
 
                 if (team != null)
                 {
-                    LabelID.Text = Convert.ToString(team.Id);
+
                     textBoxNome.Text = team.Nome;
                     textBoxDesc.Text = team.Desc;
-
+                    dateTimePicker.Value = team.Data;
                 }
             }
-            else //if(listBoxTorneio.SelectedItem.GetType() == typeof(StandardTournament))
+            else
+            {
+                StandardTournament solo = (StandardTournament)listBoxTorneio.SelectedItem;
+                if (solo != null)
                 {
-                    StandardTournament standard = (StandardTournament)listBoxTorneio.SelectedItem;
-                    if (standard != null)
-                    {
-                        LabelID.Text = Convert.ToString(standard.Id);
-                        textBoxNome.Text = standard.Nome;
-                        textBoxDesc.Text = standard.Desc;
-                    }
+                    textBoxNome.Text = solo.Nome;
+                    textBoxDesc.Text = solo.Desc;
+                    dateTimePicker.Value = solo.Data;
+                }
 
-                }          
-            
+            }
         }
     }
 }

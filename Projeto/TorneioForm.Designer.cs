@@ -45,13 +45,18 @@
             this.buttonVoltar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelNome = new System.Windows.Forms.Label();
-            this.labelData = new System.Windows.Forms.Label();
             this.labelDesc = new System.Windows.Forms.Label();
+            this.labelData = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ficheiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialogExport = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxTorneio
@@ -217,23 +222,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações do Torneio";
             // 
-            // label3
+            // labelDesc
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nome";
+            this.labelDesc.AutoSize = true;
+            this.labelDesc.Location = new System.Drawing.Point(69, 140);
+            this.labelDesc.Name = "labelDesc";
+            this.labelDesc.Size = new System.Drawing.Size(0, 13);
+            this.labelDesc.TabIndex = 5;
             // 
-            // label6
+            // labelData
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 79);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Data";
+            this.labelData.AutoSize = true;
+            this.labelData.Location = new System.Drawing.Point(61, 79);
+            this.labelData.Name = "labelData";
+            this.labelData.Size = new System.Drawing.Size(0, 13);
+            this.labelData.TabIndex = 4;
+            // 
+            // labelNome
+            // 
+            this.labelNome.AutoSize = true;
+            this.labelNome.Location = new System.Drawing.Point(61, 20);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(0, 13);
+            this.labelNome.TabIndex = 3;
             // 
             // label8
             // 
@@ -244,29 +255,48 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Descrição";
             // 
-            // labelNome
+            // label6
             // 
-            this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(61, 20);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(0, 13);
-            this.labelNome.TabIndex = 3;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Data";
             // 
-            // labelData
+            // label3
             // 
-            this.labelData.AutoSize = true;
-            this.labelData.Location = new System.Drawing.Point(61, 79);
-            this.labelData.Name = "labelData";
-            this.labelData.Size = new System.Drawing.Size(0, 13);
-            this.labelData.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nome";
             // 
-            // labelDesc
+            // menuStrip1
             // 
-            this.labelDesc.AutoSize = true;
-            this.labelDesc.Location = new System.Drawing.Point(69, 140);
-            this.labelDesc.Name = "labelDesc";
-            this.labelDesc.Size = new System.Drawing.Size(0, 13);
-            this.labelDesc.TabIndex = 5;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ficheiroToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(634, 24);
+            this.menuStrip1.TabIndex = 20;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ficheiroToolStripMenuItem
+            // 
+            this.ficheiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarToolStripMenuItem});
+            this.ficheiroToolStripMenuItem.Name = "ficheiroToolStripMenuItem";
+            this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.ficheiroToolStripMenuItem.Text = "Ficheiro";
+            // 
+            // exportarToolStripMenuItem
+            // 
+            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportarToolStripMenuItem.Text = "Exportar...";
+            this.exportarToolStripMenuItem.Click += new System.EventHandler(this.exportarToolStripMenuItem_Click);
             // 
             // TorneioForm
             // 
@@ -290,10 +320,14 @@
             this.Controls.Add(this.buttonNovoTorneio);
             this.Controls.Add(this.listBoxJogo);
             this.Controls.Add(this.listBoxTorneio);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "TorneioForm";
             this.Text = "Torneios";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +358,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ficheiroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogExport;
     }
 }
