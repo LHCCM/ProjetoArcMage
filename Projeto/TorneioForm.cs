@@ -159,46 +159,55 @@ namespace Projeto
 
         private void exportarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           /* string textoMsgBox = "Operação cancelada.";
-            string tituloMsgBox = "Cancelado";
-            string filename = "";
-           
-            if (saveFileDialogExport.ShowDialog() == DialogResult.OK)
+            try
             {
-                filename = saveFileDialogExport.FileName; 
+                string filename = "";
+                SaveFileDialog SaveHTML = new SaveFileDialog();
+                SaveHTML.Filter = "HTML5 files|*.html";
+                SaveHTML.FileName = "HtmlData.html";
+                if (SaveHTML.ShowDialog() == DialogResult.OK)
+                {
+                    filename = SaveHTML.FileName;
+                }
                 using (StreamWriter writter = new StreamWriter(filename))
                 {
-                    try
+                    StringBuilder builder = new StringBuilder();
+                    builder.AppendFormat("<!-- HTML file");
+                    builder.AppendFormat("<!DOCTYPE HTML>");
+                    builder.AppendFormat("<html lang='pt'");
+                    builder.AppendFormat("<head>");
+                    builder.AppendFormat("<title> Torneios ArcMage</title>");
+                    builder.AppendFormat("</head>");
+                    builder.AppendFormat("<body>");
+                    foreach (Tournament torneio in container.Tournament)
                     {
-                        
-                        writter.WriteLine(container.Tournament.Count() + " torneios");
-                        writter.WriteLine("");
-
-                        foreach (Card carta in container.Card)
+                        foreach (Game jogo in container.Game)
                         {
-                            writter.WriteLine(String.Format("Nome: {0}", carta.Name));
-                            writter.WriteLine(String.Format("Facao: {0}", carta.Faction));
-                            writter.WriteLine(String.Format("Tipo: {0}", carta.Type));
-                            writter.WriteLine(String.Format("Custo: {0}", carta.Cost));
-                            writter.WriteLine(String.Format("Lealdade: {0}", carta.Loyal));
-                            writter.WriteLine(String.Format("Regra: {0}", carta.Rules));
-                            writter.WriteLine(String.Format("Ataque: {0}", carta.Atack));
-                            writter.WriteLine(String.Format("Defesa: {0}", carta.Defense));
-                            writter.WriteLine("");
+                            builder.AppendFormat("<h1>[0]</h1>", torneio.Nome.ToUpper());
+                            builder.AppendFormat("<h3>[0]</h3>", torneio.Data.ToShortDateString());
+                            builder.AppendFormat("<h3>[0]</h3>", torneio.Desc.ToUpper());
+                            builder.AppendFormat("<table>");
+                            builder.AppendFormat("<tr>");
+                            builder.AppendFormat("<th> # </th>");
+                            builder.AppendFormat("<th> Data </th>");
+                            builder.AppendFormat("<th> Árbitro </th>");
+                            builder.AppendFormat("<th> Equipa/Jogador </th>");
+                            builder.AppendFormat("</tr>");
+                            builder.AppendFormat("<tr>");
+                            builder.AppendFormat("<td>[0]</td>", torneio.Id.ToString());
+                            builder.AppendFormat("<td>[0]</td>", jogo.Date.ToShortDateString());
+                            builder.AppendFormat("<td>[0]</td>", jogo.Referee);
+                            builder.AppendFormat("<td>[0]</td>", jogo.P1 + " vs " + jogo.P2);
+                            builder.AppendFormat("</tr>");
                         }
-                        writter.Flush();
-
-                        textoMsgBox = "Exportação concluída com sucesso.";
-                        tituloMsgBox = "Exportação Terminada";
                     }
-                    catch (Exception ex)
-                    {
-                        textoMsgBox = "Não foi possível exportar os dados para o ficheiro selecionado. " + ex.Message;
-                        tituloMsgBox = "Erro de Exportação";
-                    }
+                    builder.AppendFormat("</body>");
                 }
             }
-            MessageBox.Show(textoMsgBox, tituloMsgBox, MessageBoxButtons.OK);
-        }*/
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ocorreu um erro na exportação.");
+            }
+        }
     }
 }
